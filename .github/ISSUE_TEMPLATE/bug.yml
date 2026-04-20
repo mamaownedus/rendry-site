@@ -1,0 +1,102 @@
+name: Bug report
+description: Something captured wrong, crashed, or looks broken
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please fill out the fields below — it helps us reproduce the issue faster.
+
+        Please do **not** paste email addresses, session cookies, or anything from pages behind a login — those end up in bug reports more often than you'd think.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What went wrong?
+      description: A one-line summary. Example - "PDF export is blank on long pages."
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: What did you do? Was it a specific site? (Public URL is optional — if the page is private, describe it instead.)
+      placeholder: |
+        1. Go to ...
+        2. Click the Rendry icon
+        3. Choose PDF
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "Rendry to save a clean PDF of the whole page."
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      placeholder: "The PDF was blank / truncated / corrupted."
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Which format?
+      options:
+        - PNG
+        - PDF
+        - JPEG (Pro)
+        - WebP (Pro)
+        - Not format-specific
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Rendry version
+      description: Shown at the bottom of the popup, or in chrome://extensions
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version
+      description: Go to chrome://version — first line
+      placeholder: "126.0.6478.127"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - ChromeOS
+    validations:
+      required: true
+
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error log (optional)
+      description: If the popup has an "Export error log" button, paste the contents here. Safe to share — it contains no page data.
+      render: shell
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues and this isn't a duplicate
+          required: true

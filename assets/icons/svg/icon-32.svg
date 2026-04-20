@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" shape-rendering="crispEdges">
+  <rect width="32" height="32" rx="6" fill="#4A6CF7"/>
+  <g fill="#FFF" opacity="0.5">
+    <rect x="4" y="4" width="5" height="1"/><rect x="4" y="4" width="1" height="5"/>
+    <rect x="23" y="4" width="5" height="1"/><rect x="27" y="4" width="1" height="5"/>
+    <rect x="4" y="27" width="5" height="1"/><rect x="4" y="23" width="1" height="5"/>
+    <rect x="23" y="27" width="5" height="1"/><rect x="27" y="23" width="1" height="5"/>
+  </g>
+  <g fill="#FFF">
+    <!-- Stem, 2px blocks -->
+    <rect x="7" y="6" width="2" height="2"/><rect x="9" y="6" width="2" height="2"/>
+    <rect x="7" y="8" width="2" height="2"/><rect x="9" y="8" width="2" height="2"/>
+    <rect x="7" y="10" width="2" height="2"/><rect x="9" y="10" width="2" height="2"/>
+    <rect x="7" y="12" width="2" height="2"/><rect x="9" y="12" width="2" height="2"/>
+    <rect x="7" y="14" width="2" height="2"/><rect x="9" y="14" width="2" height="2"/>
+    <rect x="7" y="16" width="2" height="2"/><rect x="9" y="16" width="2" height="2"/>
+    <rect x="7" y="18" width="2" height="2"/><rect x="9" y="18" width="2" height="2"/>
+    <rect x="7" y="20" width="2" height="2"/><rect x="9" y="20" width="2" height="2"/>
+    <rect x="7" y="22" width="2" height="2"/><rect x="9" y="22" width="2" height="2"/>
+    <rect x="7" y="24" width="2" height="2"/><rect x="9" y="24" width="2" height="2"/>
+    <!-- Bowl top -->
+    <rect x="11" y="6" width="2" height="2"/><rect x="13" y="6" width="2" height="2"/>
+    <rect x="15" y="6" width="2" height="2"/><rect x="17" y="6" width="2" height="2"/>
+    <!-- Bowl stepped corner -->
+    <rect x="19" y="6" width="2" height="2"/>
+    <rect x="19" y="8" width="2" height="2"/><rect x="21" y="8" width="2" height="2"/>
+    <!-- Bowl right -->
+    <rect x="21" y="10" width="2" height="2"/>
+    <!-- Bowl bottom stepped -->
+    <rect x="21" y="12" width="2" height="2"/>
+    <rect x="19" y="12" width="2" height="2"/><rect x="19" y="14" width="2" height="2"/>
+    <!-- Bowl bottom -->
+    <rect x="11" y="14" width="2" height="2"/><rect x="13" y="14" width="2" height="2"/>
+    <rect x="15" y="14" width="2" height="2"/><rect x="17" y="14" width="2" height="2"/>
+    <!-- Leg 2w -->
+    <rect x="15" y="16" width="2" height="2"/><rect x="17" y="16" width="2" height="2"/>
+    <rect x="17" y="18" width="2" height="2"/><rect x="19" y="18" width="2" height="2"/>
+    <rect x="19" y="20" width="2" height="2"/><rect x="21" y="20" width="2" height="2"/>
+    <rect x="21" y="22" width="2" height="2"/><rect x="23" y="22" width="2" height="2"/>
+    <rect x="21" y="24" width="2" height="2"/><rect x="23" y="24" width="2" height="2"/>
+  </g>
+</svg>

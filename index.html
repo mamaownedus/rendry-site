@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rendry — Full-page screenshots, private by default</title>
+<meta name="description" content="Capture full-page screenshots as PNG or PDF. One click, no account, no tracking. Screenshots never leave your browser.">
+<meta name="theme-color" content="#4A6CF7">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Rendry — Full-page screenshots, private by default">
+<meta property="og:description" content="Capture full-page screenshots as PNG or PDF. One click, no account, no tracking.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rendry.app/">
+<meta property="og:image" content="https://rendry.app/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/assets/icons/icon-128.png">
+<link rel="apple-touch-icon" href="/assets/icons/icon-128.png">
+<link rel="canonical" href="https://rendry.app/">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Rendry",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome",
+  "description": "Full-page screenshot Chrome extension. PNG and PDF export. Privacy-first — no data leaves your browser.",
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+    { "@type": "Offer", "price": "2", "priceCurrency": "USD", "name": "Rendry Pro (per month)" }
+  ],
+  "url": "https://rendry.app/"
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <img src="/assets/icons/icon-128.png" alt="" width="28" height="28">
+      Rendry
+    </a>
+    <nav class="nav">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#pro">Pro</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#install">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Hero ─────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <h1>Full-page screenshots.<br>Private by default.</h1>
+      <p class="subhead">
+        Capture any web page as PNG or PDF in one click. No account.
+        No tracking. Screenshots never leave your browser.
+      </p>
+      <div class="cta-row" id="install">
+        <a class="btn btn-primary btn-lg" href="#" aria-label="Add Rendry to Chrome (link coming after Web Store approval)">
+          Add to Chrome — Free
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+      </div>
+      <p class="trust-bar">
+        <span>Chrome 116+</span>·<span>No sign-up</span>·<span>No tracking</span>·<span>Works offline</span>
+      </p>
+      <div class="hero-screenshot" aria-hidden="true">
+        <span>Hero screenshot — coming in v1.0 assets drop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Features ─────────────────────────────────────────────── -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">What it does</div>
+        <h2>Everything you need. Nothing you don't.</h2>
+        <p>Every feature below is free. Pro adds annotation and extra formats — not basics.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="ico">↓</div>
+          <h3>Entire page, one click</h3>
+          <p>Works on any page length. Rendry scrolls, captures, and stitches automatically.</p>
+        </div>
+        <div class="card">
+          <div class="ico">PDF</div>
+          <h3>PNG & PDF, free</h3>
+          <p>Both formats ship in the free tier. JPEG and WebP are available in Pro for smaller files.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔒</div>
+          <h3>Private by design</h3>
+          <p>Zero network requests in the free tier. Your screenshots never leave your browser.</p>
+        </div>
+        <div class="card">
+          <div class="ico">✕</div>
+          <h3>No popups in your shot</h3>
+          <p>Auto-hides cookie banners, chat widgets, ad overlays, and modals before capture.</p>
+        </div>
+        <div class="card">
+          <div class="ico">⟳</div>
+          <h3>Lazy images load first</h3>
+          <p>Detects <code>loading="lazy"</code> images and triggers every one before the shot.</p>
+        </div>
+        <div class="card">
+          <div class="ico">⌨</div>
+          <h3><code>Alt+Shift+R</code></h3>
+          <p>Capture the full page with your last-used format without opening the popup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Privacy band ─────────────────────────────────────────── -->
+  <section class="band-privacy">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="color:#93c5fd;">Privacy</div>
+        <h2>The screenshot tool that doesn't screenshot you.</h2>
+        <p class="lead">
+          Rendry does not collect, transmit, or store any personal data.
+          All capture and image processing happens entirely within your browser.
+        </p>
+      </div>
+      <div class="promise-grid">
+        <div class="promise">
+          <strong>Zero server calls</strong>
+          <p>Screenshots never leave your machine. The free tier works identically to a fully offline extension.</p>
+        </div>
+        <div class="promise">
+          <strong>No analytics, no telemetry</strong>
+          <p>No tracking of any kind. We don't know you exist unless you choose to upgrade.</p>
+        </div>
+        <div class="promise">
+          <strong>No cookies read or written</strong>
+          <p>Rendry has no access to cookies — not requested, not used.</p>
+        </div>
+        <div class="promise">
+          <strong>Minimal permissions</strong>
+          <p>Only the permissions required to capture: <code style="background:rgba(255,255,255,0.08);color:#93c5fd;border-color:rgba(255,255,255,0.1)">activeTab</code>, scripting, downloads, storage, offscreen.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:32px;">
+        <a href="/privacy" style="color:#93c5fd;">Read the full privacy policy →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── How it works ─────────────────────────────────────────── -->
+  <section id="how">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Three steps. One click.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>Click the icon</h3>
+          <p>Or press <code>Alt+Shift+R</code>. Rendry reads the page dimensions and plans the capture.</p>
+        </div>
+        <div class="step">
+          <h3>Rendry scrolls and captures</h3>
+          <p>Lazy-loaded images are triggered, cookie banners are hidden, and the page is captured in segments.</p>
+        </div>
+        <div class="step">
+          <h3>You get a clean file</h3>
+          <p>Segments are stitched into a single seamless image and saved as PNG or PDF to your Downloads folder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Why Rendry ───────────────────────────────────────────── -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Why Rendry</div>
+        <h2>Three things that matter.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why">
+          <strong>PDF export is free.</strong>
+          <p>Every format in the free tier captures the full page at high quality — no format paywalls for basics.</p>
+        </div>
+        <div class="why">
+          <strong>Zero network requests.</strong>
+          <p>The free tier never contacts a server. Your screenshots never touch anyone else's hardware.</p>
+        </div>
+        <div class="why">
+          <strong>No account required.</strong>
+          <p>Install, capture, done. The free tier needs nothing from you. Pro users pay via ExtensionPay (email only).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Pro upsell ───────────────────────────────────────────── -->
+  <section id="pro">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Pro</div>
+        <h2>A tip jar with useful extras.</h2>
+        <p>Still 100% local. Still privacy-first. $2/month if you find it useful.</p>
+      </div>
+      <div class="pro-card">
+        <div class="price">$2 <span>/ month</span></div>
+        <p style="color:var(--muted);margin:0 0 8px;">Cancel anytime. 7-day no-questions refund.</p>
+        <ul class="feature-list">
+          <li>JPEG & WebP export</li>
+          <li>Custom filename templates</li>
+          <li>0.5×, 1×, 2×, 3× resolution</li>
+          <li>Multi-page PDF (A4 / Letter)</li>
+          <li>Built-in annotation editor</li>
+          <li>Blur sensitive regions</li>
+          <li>Copy to clipboard</li>
+          <li>Timed capture (3 / 5 / 10s)</li>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="#install">Start with the free tier</a>
+        <p class="fine">Upgrade later from inside the extension popup. Billing by ExtensionPay &amp; Stripe. See <a href="/refunds">refund policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ──────────────────────────────────────────────────── -->
+  <section id="faq" class="faq">
+    <div class="container" style="max-width:720px;">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>Common questions.</h2>
+      </div>
+
+      <details>
+        <summary>Is Rendry really free?</summary>
+        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, removes popups, and detects infinite scroll — all without any server calls. Pro ($2/month) adds extra formats and an annotation editor.</p>
+      </details>
+
+      <details>
+        <summary>Does Rendry track me?</summary>
+        <p>No. The free tier makes zero network requests and has no analytics, telemetry, or cookies. If you upgrade to Pro, ExtensionPay receives your email and subscription status only — never browsing data or screenshots.</p>
+      </details>
+
+      <details>
+        <summary>Does Rendry work offline?</summary>
+        <p>Yes. The capture pipeline (scroll, capture, stitch, export) runs entirely in your browser with no server dependency. The only network calls are license checks for Pro users.</p>
+      </details>
+
+      <details>
+        <summary>Can I use Rendry on any website?</summary>
+        <p>Yes. Rendry uses the <code>activeTab</code> permission, which grants access only when you click the extension. It works on any standard web page — including sites with lazy-loaded images, infinite scroll, and sticky headers.</p>
+      </details>
+
+      <details>
+        <summary>What's the refund policy?</summary>
+        <p>7-day no-questions refund on your first subscription. After that, cancellations stop the next renewal but the current paid month isn't refunded. See the full <a href="/refunds">refund policy</a>.</p>
+      </details>
+
+      <details>
+        <summary>How do I report a bug or request a feature?</summary>
+        <p>Open an issue at <a href="https://github.com/mamaownedus/rendry-site/issues">github.com/mamaownedus/rendry-site/issues</a>. For usage questions, check <a href="https://github.com/mamaownedus/rendry-site/discussions">Discussions</a>.</p>
+      </details>
+
+      <details>
+        <summary>Is Rendry open source?</summary>
+        <p>The landing page and issue tracker are public. The extension source is currently private to keep the billing integration straightforward. That may change — let us know if it matters to you.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/" style="margin-bottom:12px;">
+          <img src="/assets/icons/icon-128.png" alt="" width="28" height="28">
+          Rendry
+        </a>
+        <p style="margin:0;max-width:360px;">
+          Full-page screenshot Chrome extension. Private by default.
+          Made by <a href="https://github.com/mamaownedus">MamaOwned</a>.
+        </p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pro">Pro</a></li>
+          <li><a href="/changelog">Changelog</a></li>
+          <li><a href="/press-kit">Press kit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://github.com/mamaownedus/rendry-site/issues">Report a bug</a></li>
+          <li><a href="https://github.com/mamaownedus/rendry-site/discussions">Discussions</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/refunds">Refunds</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC</span>
+      <span>Chrome is a trademark of Google LLC.</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

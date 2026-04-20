@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog — Rendry</title>
+<meta name="description" content="Rendry release notes and version history.">
+<meta name="theme-color" content="#4A6CF7">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png">
+<link rel="canonical" href="https://rendry.app/changelog">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/icons/icon-128.png" alt="" width="28" height="28">Rendry</a>
+    <nav class="nav">
+      <a class="nav-link" href="/#features">Features</a>
+      <a class="nav-link" href="/#pro">Pro</a>
+      <a class="nav-link" href="/#faq">FAQ</a>
+      <a class="btn btn-primary" href="/#install">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<article class="prose">
+
+<h1>Changelog</h1>
+<p class="meta">Release history. Newer versions on top.</p>
+
+<h2>v1.0.0 — Initial public release</h2>
+<p class="meta">Unreleased — pending Chrome Web Store review</p>
+<h3>Free</h3>
+<ul>
+  <li>Full-page screenshot capture as PNG or PDF</li>
+  <li>Lazy-loaded image detection and triggering</li>
+  <li>Infinite-scroll detection with user warning</li>
+  <li>Noise removal for cookie banners, chat widgets, ads, and popup overlays</li>
+  <li>Sticky-element handling (header/footer captured once, not repeated)</li>
+  <li><code>Alt+Shift+R</code> keyboard shortcut</li>
+  <li>Zero network requests — free tier works fully offline</li>
+</ul>
+<h3>Rendry Pro ($2/month)</h3>
+<ul>
+  <li>JPEG and WebP export</li>
+  <li>Custom filename templates (<code>{domain}</code>, <code>{date}</code>, <code>{time}</code>, <code>{title}</code>, <code>{timestamp}</code>)</li>
+  <li>Resolution control (0.5×, 1×, 2×, 3× device pixel ratio)</li>
+  <li>Multi-page PDF (A4, Letter)</li>
+  <li>Built-in annotation editor (blur, crop, arrows, shapes, text)</li>
+  <li>Copy to clipboard</li>
+  <li>Timed capture (3 / 5 / 10-second countdown)</li>
+</ul>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="legal">
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC</span>
+      <span><a href="/">Home</a> · <a href="/privacy">Privacy</a> · <a href="/refunds">Refunds</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

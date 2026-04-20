@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Rendry</title>
+<meta name="description" content="Rendry's privacy policy. No data collection, no tracking, no analytics. Screenshots never leave your browser.">
+<meta name="theme-color" content="#4A6CF7">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/assets/icons/icon-128.png">
+<link rel="canonical" href="https://rendry.app/privacy">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/icons/icon-128.png" alt="" width="28" height="28">Rendry</a>
+    <nav class="nav">
+      <a class="nav-link" href="/#features">Features</a>
+      <a class="nav-link" href="/#pro">Pro</a>
+      <a class="nav-link" href="/#faq">FAQ</a>
+      <a class="btn btn-primary" href="/#install">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<article class="prose">
+
+<h1>Privacy Policy</h1>
+<p class="meta"><strong>Effective date:</strong> April 5, 2026 · <strong>Last updated:</strong> April 19, 2026</p>
+
+<h2>Overview</h2>
+<p>Rendry is a browser extension that captures full-page screenshots. It is designed with a local-first architecture: all capture and image processing happens entirely within your browser. Screenshots never leave your machine.</p>
+
+<h2>Data Collection</h2>
+<p><strong>Rendry does not collect, transmit, or store any personal data.</strong></p>
+<p>Specifically:</p>
+<ul>
+  <li>No screenshots or captured images are sent to any server</li>
+  <li>No browsing history, URLs, or page content is collected</li>
+  <li>No analytics, telemetry, or usage tracking of any kind</li>
+  <li>No cookies are read or written</li>
+</ul>
+
+<h2>Optional Premium (Rendry Pro)</h2>
+<p>Rendry offers an optional paid upgrade ("Rendry Pro") for additional features. Payment processing is handled by <strong>ExtensionPay</strong> (extensionpay.com), which uses <strong>Stripe</strong> (stripe.com) as its payment processor.</p>
+<p><strong>If you choose to upgrade</strong>, the following applies:</p>
+<ul>
+  <li>Your <strong>email address</strong> is collected by ExtensionPay to create your account and manage your subscription</li>
+  <li><strong>Payment information</strong> (card number, Apple Pay, or Google Pay) is processed by Stripe. Rendry never sees or stores your payment details.</li>
+  <li>ExtensionPay stores your <strong>subscription status</strong> (active/inactive) to verify your license</li>
+  <li>No browsing data, screenshots, or page content is ever sent to ExtensionPay or Stripe</li>
+</ul>
+<p><strong>If you do not upgrade</strong>, Rendry's free tier makes <strong>zero network requests</strong> and contacts no external services. The free tier works identically to a fully offline extension.</p>
+<p>You can manage or cancel your subscription at any time through ExtensionPay's account portal.</p>
+
+<h2>Data Storage</h2>
+<p>Rendry stores the following data locally using Chrome's <code>chrome.storage.sync</code> API:</p>
+<ul>
+  <li><strong>Export format</strong> (PNG or PDF)</li>
+  <li><strong>Noise removal toggle</strong> (on or off)</li>
+  <li><strong>Premium license status</strong> (cached locally to avoid unnecessary network checks)</li>
+</ul>
+<p>These preferences sync across your Chrome browsers if you are signed into Chrome. No other data is stored locally.</p>
+
+<h2>Permissions</h2>
+<p>Rendry requests only the minimum permissions required to function:</p>
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>activeTab</code></td><td>Access the current page <strong>only when you click the extension icon</strong> or use the keyboard shortcut. No background access to any tab.</td></tr>
+    <tr><td><code>scripting</code></td><td>Inject the capture script into the current page to scroll and read page dimensions.</td></tr>
+    <tr><td><code>downloads</code></td><td>Save your screenshot to your Downloads folder.</td></tr>
+    <tr><td><code>storage</code></td><td>Store your format and noise removal preferences.</td></tr>
+    <tr><td><code>offscreen</code></td><td>Create a hidden document for canvas-based image stitching. Required by Chrome's Manifest V3 — service workers cannot access the DOM directly.</td></tr>
+    <tr><td><code>clipboardWrite</code></td><td>Copy a capture to the system clipboard <strong>only when you click the Copy action</strong> in the popup or the editor. Pro-only feature.</td></tr>
+  </tbody>
+</table>
+<p>Rendry does <strong>not</strong> request and will <strong>never</strong> request:</p>
+<ul>
+  <li><code>cookies</code></li>
+  <li><code>history</code></li>
+  <li><code>webNavigation</code></li>
+  <li><code>&lt;all_urls&gt;</code> or any host permissions</li>
+  <li>Access to browsing data, bookmarks, or passwords</li>
+</ul>
+
+<h2>Network Requests</h2>
+<p>Rendry's core capture functionality makes <strong>zero network requests</strong>. All image processing, stitching, and format conversion happen locally using browser APIs and a bundled PDF library (jsPDF).</p>
+<p>The only network requests Rendry makes are for <strong>premium license verification</strong> via ExtensionPay. These requests send only your anonymous extension install ID and email (if you signed up for Pro) — never any page content, screenshots, or browsing data.</p>
+
+<h2>Third-Party Libraries and Services</h2>
+<p>Rendry bundles one third-party library:</p>
+<ul>
+  <li><strong>jsPDF</strong> (MIT License) — used for PDF generation. Runs entirely in-browser. Makes no network requests.</li>
+</ul>
+<p>Rendry integrates with two third-party services for optional premium payments only:</p>
+<ul>
+  <li><strong>ExtensionPay</strong> (extensionpay.com) — manages subscription accounts and license verification. <a href="https://extensionpay.com/privacy-policy">Privacy policy</a></li>
+  <li><strong>Stripe</strong> (stripe.com) — processes payments. <a href="https://stripe.com/privacy">Privacy policy</a></li>
+</ul>
+
+<h2>Children's Privacy</h2>
+<p>Rendry does not collect any data from anyone, including children under 13.</p>
+
+<h2>Changes to This Policy</h2>
+<p>If this policy changes, the updated version will be published with the extension update. The "Last updated" date at the top will reflect the most recent revision.</p>
+
+<h2>Contact</h2>
+<p>For questions about this privacy policy or the extension:</p>
+<ul>
+  <li>Email: <a href="mailto:mamaownedus@gmail.com">mamaownedus@gmail.com</a></li>
+  <li>Issues: <a href="https://github.com/mamaownedus/rendry-site/issues">github.com/mamaownedus/rendry-site/issues</a></li>
+</ul>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="legal">
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC</span>
+      <span><a href="/">Home</a> · <a href="/refunds">Refunds</a> · <a href="/changelog">Changelog</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

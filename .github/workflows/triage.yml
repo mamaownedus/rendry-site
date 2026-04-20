@@ -1,0 +1,58 @@
+name: Triage
+
+on:
+  issues:
+    types: [opened]
+  schedule:
+    # Weekly stale sweep: Sundays at 06:00 UTC
+    - cron: "0 6 * * 0"
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  welcome:
+    if: github.event_name == 'issues' && github.event.action == 'opened'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Friendly ack on new issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { issue, repository } = context.payload;
+            // Skip issues opened by maintainers (they don't need an auto-ack).
+            const assoc = issue.author_association;
+            if (['OWNER', 'MEMBER', 'COLLABORATOR'].includes(assoc)) return;
+
+            await github.rest.issues.createComment({
+              owner: repository.owner.login,
+              repo: repository.name,
+              issue_number: issue.number,
+              body: [
+                "Thanks for opening an issue! A maintainer will take a look.",
+                "",
+                "A few things that help us move faster:",
+                "- Usage questions go better in [Discussions](https://github.com/mamaownedus/rendry-site/discussions).",
+                "- If it's a capture bug, the [HOWTO](https://github.com/mamaownedus/rendry-site/blob/main/README.md) troubleshooting section often has a fix.",
+                "- Please don't paste anything from pages behind a login.",
+              ].join("\n"),
+            });
+
+  stale:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 14
+          days-before-close: 7
+          only-labels: "needs-info"
+          stale-issue-label: "stale"
+          stale-issue-message: |
+            This issue has been waiting on more info for 14 days. It'll auto-close in 7 days unless there's an update. Please drop in any additional context when you have a chance.
+          close-issue-message: |
+            Closing due to inactivity. If this is still happening, open a new issue with fresh context — happy to take another look.
+          exempt-all-assignees: true
+          exempt-all-milestones: true
+          operations-per-run: 100

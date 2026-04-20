@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/mamaownedus/rendry-site/discussions
+    about: For usage questions, "is this the right tool for X?", or general chat, please use Discussions — not Issues.
+  - name: Privacy or security concern
+    url: mailto:mamaownedus@gmail.com
+    about: If your report involves personal data or a security issue, email us directly instead of filing a public issue.
+  - name: Billing or refund
+    url: mailto:mamaownedus@gmail.com
+    about: For subscription questions, email us. See the refund policy at https://rendry.app/refunds.
