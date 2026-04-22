@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A6CF7" />
+      <stop offset="100%" stop-color="#3a5ce5" />
+    </linearGradient>
+    
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Base App Icon Shape (squircle-like) -->
+  <rect width="512" height="512" rx="115" fill="url(#bg-gradient)" />
+  
+  <!-- Focus/Screenshot Corners (Square corners focus) -->
+  <g stroke="#ffffff" stroke-width="28" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+    <!-- Top Left -->
+    <path d="M 128 172 L 128 128 L 172 128" />
+    <!-- Top Right -->
+    <path d="M 384 172 L 384 128 L 340 128" />
+    <!-- Bottom Left -->
+    <path d="M 128 340 L 128 384 L 172 384" />
+    <!-- Bottom Right -->
+    <path d="M 384 340 L 384 384 L 340 384" />
+  </g>
+
+  <!-- Pixelated R (Grid of 6x7, pixel size=24, gap=2) -->
+  <g fill="#ffffff" filter="url(#shadow)">
+    <!-- Row 0 -->
+    <rect x="184" y="172" width="22" height="22" rx="2" />
+    <rect x="208" y="172" width="22" height="22" rx="2" />
+    <rect x="232" y="172" width="22" height="22" rx="2" />
+    <rect x="256" y="172" width="22" height="22" rx="2" />
+    <rect x="280" y="172" width="22" height="22" rx="2" />
+    <!-- Row 1 -->
+    <rect x="184" y="196" width="22" height="22" rx="2" />
+    <rect x="304" y="196" width="22" height="22" rx="2" />
+    <!-- Row 2 -->
+    <rect x="184" y="220" width="22" height="22" rx="2" />
+    <rect x="304" y="220" width="22" height="22" rx="2" />
+    <!-- Row 3 -->
+    <rect x="184" y="244" width="22" height="22" rx="2" />
+    <rect x="208" y="244" width="22" height="22" rx="2" />
+    <rect x="232" y="244" width="22" height="22" rx="2" />
+    <rect x="256" y="244" width="22" height="22" rx="2" />
+    <rect x="280" y="244" width="22" height="22" rx="2" />
+    <!-- Row 4 -->
+    <rect x="184" y="268" width="22" height="22" rx="2" />
+    <rect x="256" y="268" width="22" height="22" rx="2" />
+    <!-- Row 5 -->
+    <rect x="184" y="292" width="22" height="22" rx="2" />
+    <rect x="280" y="292" width="22" height="22" rx="2" />
+    <!-- Row 6 -->
+    <rect x="184" y="316" width="22" height="22" rx="2" />
+    <rect x="304" y="316" width="22" height="22" rx="2" />
+  </g>
+</svg>
