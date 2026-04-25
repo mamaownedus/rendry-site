@@ -18,7 +18,7 @@ One-click full-page screenshots — private, clean, and fast.
 
 ### Small Promo Tile — Pro variant (440 characters max)
 
-Rendry Pro unlocks the power tier for $2/month. Export as PNG, PDF, JPEG, or WebP. Custom filename templates with domain, date, and title tokens. Capture at 0.5× to 3× resolution. Multi-page PDF in A4 or Letter. Built-in editor — blur sensitive regions, crop, add arrows, shapes, and text. Copy straight to clipboard. 3 / 5 / 10-second timed capture for menus and hovers. Still 100% local. Still privacy-first.
+Rendry Pro unlocks the power tier for $2/month. Export as PNG, PDF, JPEG, or WebP. Custom filename templates with domain, date, and title tokens. Capture at different resolutions. Multi-page PDF in A4 or Letter. Built-in editor — blur sensitive regions, crop, add arrows, shapes, and text. Copy straight to clipboard. 3 / 5 / 10-second timed capture for menus and hovers. Still 100% local. Still privacy-first.
 
 ### Marquee Promo — Pro variant
 
