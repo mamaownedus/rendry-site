@@ -95,7 +95,7 @@ If this policy changes, the updated version will be published with the extension
 
 For questions about this privacy policy or the extension:
 
-- Email: mamaownedus@gmail.com
+- Email: support@rendry.app
 
 ---
 
