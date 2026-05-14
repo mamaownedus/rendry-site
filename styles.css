@@ -99,7 +99,7 @@ code {
   backdrop-filter: saturate(180%) blur(8px);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 .site-header .container {
   display: flex;

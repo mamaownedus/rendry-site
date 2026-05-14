@@ -30,8 +30,30 @@
 <h1>Changelog</h1>
 <p class="meta">Release history. Newer versions on top.</p>
 
+<h2>v1.1.0</h2>
+<p class="meta">May 2026</p>
+<h3>Added</h3>
+<ul>
+  <li>Pro users can now choose the compression rate for screenshots. A new <strong>Compression</strong> setting in the popup picks one of four presets &mdash; <em>Smaller files</em>, <em>Balanced</em>, <em>High quality</em>, or <em>Maximum quality</em> &mdash; and applies to JPEG, WebP, and PDF captures. Default is <em>High quality</em>, matching previous behavior.</li>
+  <li>The built-in editor gains a <strong>Compression</strong> button next to the format selector, opening a panel with the same presets plus a fine-tune quality slider and a live estimate of the resulting file size &mdash; so you can dial in the size/quality trade-off per export instead of committing globally.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+  <li>Users granted Pro access on the billing dashboard could stay locked out for up to a week if they confirmed the login link on a different browser or device. The next time the popup opens after Pro is granted, the upgrade now unlocks promptly.</li>
+  <li>Pro users who had &ldquo;Open in Editor&rdquo; turned on still saw their captures download as files instead of opening in the editor. The setting now applies as expected, so captures land in the editor when the toggle is on.</li>
+  <li>Captures of pages with pop-up dialogs, lightboxes, or small floating buttons (such as &ldquo;Book Now&rdquo; or &ldquo;Back to top&rdquo;) sometimes placed those elements in awkward positions in the final image, leaving an empty band running through the middle of the page. Captures now skip these floating elements cleanly, so the underlying page comes through as expected. Sticky headers, footers, and tall narrow side rails continue to capture normally.</li>
+  <li>Pages with videos &mdash; hero videos, product demos, looping background reels &mdash; showed a visible split or mismatched halves in captures where a video was on screen. Videos are now held still during capture and resume normally afterward, so the final image looks continuous.</li>
+  <li>Pages with wide layouts that don&rsquo;t fully fit your browser window &mdash; fixed-width navigation bars, oversized hero sections, dashboard-style headers &mdash; were sometimes captured with the right edge cut off. Rendry now scales the page to fit during capture, so the full design appears in the final image.</li>
+</ul>
+<h3>Improved</h3>
+<ul>
+  <li>Editor wheel-zoom (Ctrl/Cmd + scroll) now zooms toward the cursor instead of the viewport center, so the point under your pointer stays put as you zoom in and out &mdash; matching the feel of Figma, Photoshop, and other image editors.</li>
+  <li>The &ldquo;Unlock Pro Features&rdquo; panel now appears at the top of the popup instead of the bottom, so it&rsquo;s immediately visible when you open it from the header link, a locked Pro control, or a Pro-only format button.</li>
+  <li>Editor toolbar now wraps onto additional rows when the browser window is narrow, instead of letting controls overlap each other. The toolbar stays a single row at normal widths and grows vertically only when needed.</li>
+</ul>
+
 <h2>v1.0.0 — Initial public release</h2>
-<p class="meta">Unreleased — pending Chrome Web Store review</p>
+<p class="meta">May 2026</p>
 <h3>Free</h3>
 <ul>
   <li>Full-page screenshot capture as PNG or PDF</li>
