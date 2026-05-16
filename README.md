@@ -5,7 +5,7 @@ Landing page, privacy policy, and issue tracker for [Rendry](https://rendry.app)
 - **Website:** [rendry.app](https://rendry.app)
 - **Report a bug:** [Issues](https://github.com/mamaownedus/rendry-site/issues)
 - **Ask a question:** [Discussions](https://github.com/mamaownedus/rendry-site/discussions)
-- **Chrome Web Store:** _(coming soon)_
+- **Chrome Web Store:** [Install Rendry](https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn)
 
 The extension source is currently private.
 
