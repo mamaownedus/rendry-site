@@ -1,7 +1,7 @@
 # Rendry — Privacy Policy
 
 **Effective date:** April 5, 2026
-**Last updated:** April 19, 2026
+**Last updated:** April 25, 2026
 
 ---
 
@@ -96,6 +96,7 @@ If this policy changes, the updated version will be published with the extension
 For questions about this privacy policy or the extension:
 
 - Email: support@rendry.app
+- Issues: [github.com/mamaownedus/rendry-site/issues](https://github.com/mamaownedus/rendry-site/issues)
 
 ---
 
