@@ -23,6 +23,8 @@ Automatically hides distracting elements before capture:
 • Cookie consent banners
 • Chat widgets (Intercom, Drift, Crisp, and more)
 • Popup overlays and modals
+• Lightboxes
+• Floating action buttons (e.g. "Book Now", "Back to top")
 • Ad containers
 
 Toggle noise removal on or off from the popup menu.
@@ -39,11 +41,11 @@ Choose your format:
 Unlock the power tier for $2/month. Everything local-first, nothing sent anywhere but Stripe for billing:
 
 • **More export formats** — JPEG and WebP for smaller files
+• **Compression control** — pick from _Smaller files_, _Balanced_, _High quality_, or _Maximum quality_ presets, or fine-tune per export with a live file-size estimate. Applies to JPEG, WebP, and PDF
 • **Custom filename templates** — `{domain}`, `{date}`, `{time}`, `{title}`, `{timestamp}`
 • **Resolution control** — 0.5×, 1×, 2×, or 3× device pixel ratio
 • **Multi-page PDF** — A4 or Letter page sizes (plus full-page default)
 • **Built-in editor** — blur sensitive regions, crop, add arrows, shapes, and text annotations before saving
-• **Copy to clipboard** — paste your capture straight into any app
 • **Timed capture** — 3 / 5 / 10-second countdown for menus, hovers, and tooltips
 
 Upgrade, manage, or cancel anytime from inside the extension popup. Billing is handled by ExtensionPay (powered by Stripe). See the [privacy policy](PRIVACY_POLICY.md) for what is and isn't collected.
