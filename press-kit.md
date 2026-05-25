@@ -2,7 +2,7 @@
 
 ## Small Promo Tile (440 characters max)
 
-Full-page screenshots in one click. Rendry captures entire web pages as PNG or PDF — no scrolling, no stitching, no hassle. Smart lazy-load detection ensures every image appears. Built-in noise removal hides cookie banners, chat widgets, and popups automatically. Your screenshots never leave your browser — zero server calls, zero tracking, zero data collection. Works on any page. Alt+Shift+R for instant capture. Privacy-first by design.
+Full-page screenshots in one click. Rendry captures entire web pages as PNG or PDF — no scrolling, no stitching, no hassle. Smart lazy-load detection ensures every image appears. Built-in noise removal hides cookie banners, chat widgets, and popups automatically. Optional one-toggle copy-to-clipboard for instant pasting. Your screenshots never leave your browser — zero server calls, zero tracking, zero data collection. Works on any page. Alt+Shift+R for instant capture. Privacy-first by design.
 
 ## Marquee Promo (if applicable)
 
@@ -18,11 +18,11 @@ One-click full-page screenshots — private, clean, and fast.
 
 ### Small Promo Tile — Pro variant (440 characters max)
 
-Rendry Pro unlocks the power tier for $2/month. Export as PNG, PDF, JPEG, or WebP. Custom filename templates with domain, date, and title tokens. Capture at different resolutions. Multi-page PDF in A4 or Letter. Built-in editor — blur sensitive regions, crop, add arrows, shapes, and text. Copy straight to clipboard. 3 / 5 / 10-second timed capture for menus and hovers. Still 100% local. Still privacy-first.
+Rendry Pro unlocks the power tier for $2/month. Export as PNG, PDF, JPEG, or WebP. Custom filename templates with domain, date, and title tokens. Capture at different resolutions. Multi-page PDF in A4 or Letter. Built-in editor — blur sensitive regions, crop, add arrows, shapes, and text, with one-click copy-to-clipboard from the toolbar. 3 / 5 / 10-second timed capture for menus and hovers. Still 100% local. Still privacy-first.
 
 ### Marquee Promo — Pro variant
 
-Rendry Pro — JPEG, WebP, multi-page PDF, resolution control, clipboard copy, and a built-in blur/crop/annotate editor. $2/month. Still local-first.
+Rendry Pro — JPEG, WebP, multi-page PDF, resolution control, and a built-in blur/crop/annotate editor. $2/month. Still local-first.
 
 ### One-Liner — Pro variant
 

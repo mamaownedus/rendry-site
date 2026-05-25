@@ -29,6 +29,9 @@ Automatically hides distracting elements before capture:
 
 Toggle noise removal on or off from the popup menu.
 
+**Copy to Clipboard**
+Flip the "Copy to clipboard" toggle in the popup (off by default) and every capture is also copied to your system clipboard as a PNG — paste straight into Slack, email, Notes, or any image-aware app. The file still downloads as usual.
+
 **Export as PNG or PDF**
 Choose your format:
 • PNG — pixel-perfect image, ideal for sharing and editing
@@ -73,7 +76,7 @@ We only request the minimum permissions needed:
 • downloads — save your screenshot file
 • storage — remember your format preference
 • offscreen — stitch images using a canvas (required by Chrome's Manifest V3)
-• clipboardWrite — copy captures to the clipboard only when you click the Copy action (Pro)
+• clipboardWrite — copy captures to the clipboard when "Copy to clipboard" is on in the popup, or when you click Copy in the Pro editor
 
 ### Keyboard Shortcut
 
