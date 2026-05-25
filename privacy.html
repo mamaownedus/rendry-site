@@ -15,10 +15,14 @@
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="/"><img src="/assets/icons/icon-128.png" alt="" width="28" height="28">Rendry</a>
+    <a class="brand" href="/">
+      <img src="/assets/logo.svg" alt="Rendry logo" width="32" height="32">
+      Rendry
+    </a>
     <nav class="nav">
       <a class="nav-link" href="/#features">Features</a>
-      <a class="nav-link" href="/#pro">Pro</a>
+      <a class="nav-link" href="/#pro-features">Pro Features</a>
+      <a class="nav-link" href="/#pricing">Pricing</a>
       <a class="nav-link" href="/#faq">FAQ</a>
       <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome</a>
     </nav>
@@ -29,7 +33,7 @@
 <article class="prose">
 
 <h1>Privacy Policy</h1>
-<p class="meta"><strong>Effective date:</strong> April 5, 2026 · <strong>Last updated:</strong> April 25, 2026</p>
+<p class="meta"><strong>Effective date:</strong> April 5, 2026 · <strong>Last updated:</strong> May 24, 2026</p>
 
 <h2>Overview</h2>
 <p>Rendry is a browser extension that captures full-page screenshots. It is designed with a local-first architecture: all capture and image processing happens entirely within your browser. Screenshots never leave your machine.</p>
@@ -61,6 +65,7 @@
 <ul>
   <li><strong>Export format</strong> (PNG or PDF)</li>
   <li><strong>Noise removal toggle</strong> (on or off)</li>
+  <li><strong>Copy to clipboard toggle</strong> (on or off)</li>
   <li><strong>Premium license status</strong> (cached locally to avoid unnecessary network checks)</li>
 </ul>
 <p>These preferences sync across your Chrome browsers if you are signed into Chrome. No other data is stored locally.</p>
@@ -77,7 +82,7 @@
     <tr><td><code>downloads</code></td><td>Save your screenshot to your Downloads folder.</td></tr>
     <tr><td><code>storage</code></td><td>Store your format and noise removal preferences.</td></tr>
     <tr><td><code>offscreen</code></td><td>Create a hidden document for canvas-based image stitching. Required by Chrome's Manifest V3 — service workers cannot access the DOM directly.</td></tr>
-    <tr><td><code>clipboardWrite</code></td><td>Copy a capture to the system clipboard <strong>only when you click the Copy action</strong> in the popup or the editor. Pro-only feature.</td></tr>
+    <tr><td><code>clipboardWrite</code></td><td>Copy a capture to the system clipboard <strong>only when you have enabled "Copy to clipboard"</strong> in the popup, or <strong>only when you click the Copy action</strong> in the Pro editor. Never on its own.</td></tr>
   </tbody>
 </table>
 <p>Rendry does <strong>not</strong> request and will <strong>never</strong> request:</p>
@@ -100,8 +105,8 @@
 </ul>
 <p>Rendry integrates with two third-party services for optional premium payments only:</p>
 <ul>
-  <li><strong>ExtensionPay</strong> (extensionpay.com) — manages subscription accounts and license verification. <a href="https://extensionpay.com/privacy-policy">Privacy policy</a></li>
-  <li><strong>Stripe</strong> (stripe.com) — processes payments. <a href="https://stripe.com/privacy">Privacy policy</a></li>
+  <li><strong>ExtensionPay</strong> (extensionpay.com) — manages subscription accounts and license verification. <a href="https://extensionpay.com/privacy-policy" target="_blank" rel="noopener">Privacy policy</a></li>
+  <li><strong>Stripe</strong> (stripe.com) — processes payments. <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Privacy policy</a></li>
 </ul>
 
 <h2>Children's Privacy</h2>
@@ -114,7 +119,7 @@
 <p>For questions about this privacy policy or the extension:</p>
 <ul>
   <li>Email: <a href="mailto:support@rendry.app">support@rendry.app</a></li>
-  <li>Issues: <a href="https://github.com/mamaownedus/rendry-site/issues">github.com/mamaownedus/rendry-site/issues</a></li>
+  <li>Issues: <a href="https://github.com/mamaownedus/rendry-site/issues" target="_blank" rel="noopener">github.com/mamaownedus/rendry-site/issues</a></li>
 </ul>
 
 </article>
@@ -123,12 +128,14 @@
 <footer class="site-footer">
   <div class="container">
     <div class="legal">
-      <span>&copy; <span id="year">2026</span> MamaOwned LLC</span>
-      <span><a href="/">Home</a> · <a href="/refunds">Refunds</a> · <a href="/changelog">Changelog</a></span>
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
+      <span><a href="/">Home</a> · <a href="/refunds">Refund Policy</a> · <a href="/changelog">Changelog</a></span>
     </div>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

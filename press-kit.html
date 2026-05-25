@@ -14,10 +14,14 @@
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="/"><img src="/assets/icons/icon-128.png" alt="" width="28" height="28">Rendry</a>
+    <a class="brand" href="/">
+      <img src="/assets/logo.svg" alt="Rendry logo" width="32" height="32">
+      Rendry
+    </a>
     <nav class="nav">
       <a class="nav-link" href="/#features">Features</a>
-      <a class="nav-link" href="/#pro">Pro</a>
+      <a class="nav-link" href="/#pro-features">Pro Features</a>
+      <a class="nav-link" href="/#pricing">Pricing</a>
       <a class="nav-link" href="/#faq">FAQ</a>
       <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome</a>
     </nav>
@@ -37,11 +41,11 @@
 <p>Rendry is a Chrome extension that captures entire web pages as PNG or PDF. Privacy-first — everything stays in your browser. No account, no tracking.</p>
 
 <h2>Long pitch (75 words)</h2>
-<p>Rendry is a full-page screenshot Chrome extension built for people who don't want their screenshots leaving their machine. It captures entire pages — including lazy-loaded images — as PNG or PDF, automatically hides cookie banners and chat widgets before the shot, and handles sticky headers without repetition. The free tier makes zero network requests. An optional Pro tier ($2/month) adds JPEG/WebP export, a built-in annotation editor, and clipboard copy.</p>
+<p>Rendry is a full-page screenshot Chrome extension built for people who don't want their screenshots leaving their machine. It captures entire pages — including lazy-loaded images — as PNG or PDF, automatically hides cookie banners and chat widgets before the shot, handles sticky headers without repetition, and can optionally copy each capture to the clipboard for instant pasting. The free tier makes zero network requests. An optional Pro tier ($2/month or $20/year) adds JPEG/WebP export and a built-in annotation editor.</p>
 
 <h2>Key facts</h2>
 <ul>
-  <li><strong>Price:</strong> Free. Optional Pro at $2/month.</li>
+  <li><strong>Price:</strong> Free. Optional Pro at $2/month or $20/year.</li>
   <li><strong>Platform:</strong> Chrome extension, Manifest V3.</li>
   <li><strong>Publisher:</strong> MamaOwned LLC (United States).</li>
   <li><strong>Privacy:</strong> Zero network requests in the free tier. No tracking, no analytics, no cookies.</li>
@@ -82,12 +86,14 @@
 <footer class="site-footer">
   <div class="container">
     <div class="legal">
-      <span>&copy; <span id="year">2026</span> MamaOwned LLC</span>
-      <span><a href="/">Home</a> · <a href="/privacy">Privacy</a> · <a href="/refunds">Refunds</a></span>
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
+      <span><a href="/">Home</a> · <a href="/privacy">Privacy Policy</a> · <a href="/refunds">Refund Policy</a></span>
     </div>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

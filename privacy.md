@@ -1,7 +1,7 @@
 # Rendry — Privacy Policy
 
 **Effective date:** April 5, 2026
-**Last updated:** April 25, 2026
+**Last updated:** May 24, 2026
 
 ---
 
@@ -41,6 +41,7 @@ Rendry stores the following data locally using Chrome's `chrome.storage.sync` AP
 
 - **Export format** (PNG or PDF)
 - **Noise removal toggle** (on or off)
+- **Copy to clipboard toggle** (on or off)
 - **Premium license status** (cached locally to avoid unnecessary network checks)
 
 These preferences sync across your Chrome browsers if you are signed into Chrome. No other data is stored locally.
@@ -56,7 +57,7 @@ Rendry requests only the minimum permissions required to function:
 | `downloads` | Save your screenshot to your Downloads folder. |
 | `storage` | Store your format and noise removal preferences. |
 | `offscreen` | Create a hidden document for canvas-based image stitching. Required by Chrome's Manifest V3 — service workers cannot access the DOM directly. |
-| `clipboardWrite` | Copy a capture to the system clipboard **only when you click the Copy action** in the popup or the editor. Pro-only feature. |
+| `clipboardWrite` | Copy a capture to the system clipboard **only when you have enabled "Copy to clipboard"** in the popup, or **only when you click the Copy action** in the Pro editor. Never on its own. |
 
 Rendry does **not** request and will **never** request:
 

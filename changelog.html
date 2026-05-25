@@ -14,14 +14,18 @@
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="/"><img src="/assets/icons/icon-128.png" alt="" width="28" height="28">Rendry</a>
+    <a class="brand" href="/">
+      <img src="/assets/logo.svg" alt="Rendry logo" width="32" height="32">
+      Rendry
+    </a>
     <nav class="nav">
       <a class="nav-link" href="/#features">Features</a>
-      <a class="nav-link" href="/#pro">Pro</a>
+      <a class="nav-link" href="/#pro-features">Pro Features</a>
+      <a class="nav-link" href="/#pricing">Pricing</a>
       <a class="nav-link" href="/#faq">FAQ</a>
       <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome</a>
     </nav>
-  </div>
+  </div>1
 </header>
 
 <main class="container">
@@ -29,6 +33,18 @@
 
 <h1>Changelog</h1>
 <p class="meta">Release history. Newer versions on top.</p>
+
+<h2>v1.2.0</h2>
+<p class="meta">May 2026</p>
+<h3>Added</h3>
+<ul>
+  <li><strong>Copy to clipboard</strong> &mdash; a new free-tier toggle in the popup (&ldquo;Copy to clipboard&rdquo;, off by default). When enabled, every capture is downloaded as usual <strong>and</strong> copied to your system clipboard as a PNG, ready to paste into Slack, email, or any image-aware app. The dedicated clipboard button in the Pro editor toolbar (next to Export) continues to work for one-click copy after editing.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+  <li>Page titles containing emoji or decorative symbols (&starf; &hearts; &trade; &copy; flag glyphs) could produce screenshot filenames that wouldn&rsquo;t save cleanly on Windows or appeared as garbled boxes when shared across platforms. These characters are now stripped from generated filenames, with any stranded hyphens trimmed, so saved files always have clean, portable names. Non-Latin alphabets (Japanese, Cyrillic, Arabic, accented Latin, CJK) continue to be preserved unchanged.</li>
+  <li>Blur regions in the editor faded toward the original image at high strength &mdash; the underlying screenshot started bleeding through the blur once the strength slider passed about 70, with the worst result at 100. Blur regions now stay fully opaque at every strength.</li>
+</ul>
 
 <h2>v1.1.0</h2>
 <p class="meta">May 2026</p>
@@ -80,12 +96,14 @@
 <footer class="site-footer">
   <div class="container">
     <div class="legal">
-      <span>&copy; <span id="year">2026</span> MamaOwned LLC</span>
-      <span><a href="/">Home</a> · <a href="/privacy">Privacy</a> · <a href="/refunds">Refunds</a></span>
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
+      <span><a href="/">Home</a> · <a href="/privacy">Privacy Policy</a> · <a href="/refunds">Refund Policy</a></span>
     </div>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

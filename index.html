@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rendry — Full-page screenshots, private by default</title>
-<meta name="description" content="Capture full-page screenshots as PNG or PDF. One click, no account, no tracking. Screenshots never leave your browser.">
+<title>Rendry — Full-Page Screenshot Browser Extension</title>
+<meta name="description" content="Capture full-page screenshots as PNG or PDF. Clean output with automatic cookie banner and ad removal. Bundle features include local image annotations (arrows, blurs, text). Privacy-first, offline-first.">
 <meta name="theme-color" content="#4A6CF7">
 
 <!-- Open Graph / social preview -->
-<meta property="og:title" content="Rendry — Full-page screenshots, private by default">
-<meta property="og:description" content="Capture full-page screenshots as PNG or PDF. One click, no account, no tracking.">
+<meta property="og:title" content="Rendry — Full-Page Screenshot Browser Extension">
+<meta property="og:description" content="Capture full-page screenshots as PNG or PDF. Clean output with automatic cookie banner and ad removal. Privacy-first, offline-first.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rendry.app/">
 <meta property="og:image" content="https://rendry.app/assets/og-image.jpg">
@@ -19,7 +19,6 @@
 <link rel="icon" type="image/png" sizes="128x128" href="assets/icons/icon-128.png">
 <link rel="apple-touch-icon" href="assets/icons/icon-128.png">
 <link rel="canonical" href="https://rendry.app/">
-<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -32,7 +31,8 @@
   "description": "Full-page screenshot Chrome extension. PNG and PDF export. Privacy-first — no data leaves your browser.",
   "offers": [
     { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
-    { "@type": "Offer", "price": "2", "priceCurrency": "USD", "name": "Rendry Pro (per month)" }
+    { "@type": "Offer", "price": "2", "priceCurrency": "USD", "name": "Rendry Pro (per month)" },
+    { "@type": "Offer", "price": "20", "priceCurrency": "USD", "name": "Rendry Pro (per year)" }
   ],
   "url": "https://rendry.app/"
 }
@@ -43,14 +43,15 @@
 <header class="site-header">
   <div class="container">
     <a class="brand" href="/">
-      <img src="assets/logo.svg" alt="" width="28" height="28">
+      <img src="assets/logo.svg" alt="Rendry logo" width="32" height="32">
       Rendry
     </a>
     <nav class="nav">
       <a class="nav-link" href="#features">Features</a>
-      <a class="nav-link" href="#pro">Pro</a>
+      <a class="nav-link" href="#pro-features">Pro Features</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
       <a class="nav-link" href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome</a>
+      <a class="btn btn-primary" id="header-cta" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome</a>
     </nav>
   </div>
 </header>
@@ -62,131 +63,365 @@
     <div class="container">
       <h1>Full-page screenshots.<br>Private by default.</h1>
       <p class="subhead">
-        Capture any web page as PNG or PDF in one click. No account.
-        No tracking. Screenshots never leave your browser.
+        Capture any web page as PNG or PDF in one click. Clean output with auto-hidden cookie banners. Local annotations and premium formats run 100% on your machine.
       </p>
-      <div class="cta-row" id="install">
-        <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">
-          Add to Chrome — Free
+      
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" id="hero-primary-cta" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Add to Chrome — It's Free
         </a>
-        <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+        <a class="btn btn-ghost btn-lg" id="hero-secondary-cta" href="#how">See how it works</a>
       </div>
-      <p class="trust-bar">
-        <span>Chrome 116+</span>·<span>No sign-up</span>·<span>No tracking</span>·<span>Works offline</span>
-      </p>
-      <div class="hero-screenshot" aria-hidden="true">
-        <div class="browser-header">
-          <div class="browser-dots"><span></span><span></span><span></span></div>
+      
+      <div class="supported-browsers">
+        <div class="browsers-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7; margin-right: 2px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Supported Browsers
         </div>
-        <div class="blurred-bg">
-          <div class="blur-blob b1"></div>
-          <div class="blur-blob b2"></div>
-          <div class="blur-blob b3"></div>
+        <div class="browsers-list">
+          <span class="browser-badge chrome">Chrome</span>
+          <span class="browser-badge brave">Brave</span>
+          <span class="browser-badge edge">Edge</span>
+          <span class="browser-badge opera">Opera</span>
+          <span class="browser-badge arc">Arc</span>
+          <span class="browser-badge comet">Comet</span>
         </div>
-        
-        <div class="ext-popup">
-          <div class="ext-header">
-            <img src="assets/logo.svg" alt="" width="20" height="20">
-            <span>Rendry</span>
-          </div>
-          <div class="ext-body">
-            <div class="ext-options">
-              <label><input type="radio" checked> PNG</label>
-              <label><input type="radio"> PDF</label>
+      </div>
+      
+      <div class="trust-bar">
+        <span>Manifest V3 Compliant</span>
+        <span>No Sign-up Required</span>
+        <span>Works Offline</span>
+        <span>Zero Data Collection</span>
+      </div>
+
+      <!-- Simulated Browser Interactive Mockup -->
+      <div class="hero-mockup-container state-start" id="hero-mockup">
+        <div class="browser-window">
+          <!-- Browser Header -->
+          <div class="browser-navbar">
+            <div class="browser-controls">
+              <span class="control-dot dot-close"></span>
+              <span class="control-dot dot-minimize"></span>
+              <span class="control-dot dot-expand"></span>
             </div>
-            <button class="ext-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-              Capture Full Page
-            </button>
+            <div class="browser-address-bar">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <span>rendry.app/demo-page</span>
+            </div>
+            <div class="browser-actions">
+              <button class="browser-ext-btn" id="browser-ext-rendry" type="button" aria-label="Open Rendry extension">
+                <img src="assets/logo.svg" alt="" width="16" height="16">
+              </button>
+            </div>
+          </div>
+          
+          <!-- Browser Webpage Viewport -->
+          <div class="browser-content">
+            <!-- Simulated SaaS Page (Dashboard) -->
+            <div class="dashboard-page">
+              <aside class="db-sidebar">
+                <div class="db-logo">
+                  <div class="db-logo-icon"></div>
+                  <div class="db-logo-text"></div>
+                </div>
+                <div class="db-menu">
+                  <div class="db-menu-item active"></div>
+                  <div class="db-menu-item"></div>
+                  <div class="db-menu-item"></div>
+                  <div class="db-menu-item"></div>
+                </div>
+              </aside>
+              <main class="db-main">
+                <header class="db-header">
+                  <div class="db-title-bar"></div>
+                  <div class="db-profile"></div>
+                </header>
+                <div class="db-grid">
+                  <div class="db-card stat-card">
+                    <div class="db-card-header"></div>
+                    <div class="db-card-value blur-target">$1,280,000</div>
+                    <div class="db-card-chart"></div>
+                  </div>
+                  <div class="db-card chart-card">
+                    <div class="db-card-header"></div>
+                    <div class="db-chart-container">
+                      <div class="db-chart-bar" style="--height: 40%"></div>
+                      <div class="db-chart-bar" style="--height: 60%"></div>
+                      <div class="db-chart-bar" style="--height: 45%"></div>
+                      <div class="db-chart-bar arrow-target" style="--height: 80%"></div>
+                      <div class="db-chart-bar" style="--height: 50%"></div>
+                      <div class="db-chart-bar" style="--height: 75%"></div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+            
+            <!-- Simulated Extension Popup Overlay -->
+            <div class="sim-popup" id="sim-popup">
+              <div class="sim-popup-header">
+                <img src="assets/logo.svg" alt="" class="sim-popup-logo" width="16" height="16">
+                <span class="sim-popup-title">Rendry</span>
+                <span class="sim-popup-badge">PRO</span>
+              </div>
+              <div class="sim-popup-body">
+                <div class="sim-format-selector">
+                  <span class="sim-format active">PNG</span>
+                  <span class="sim-format">PDF</span>
+                  <span class="sim-format">JPEG<span class="sim-pro-tag">PRO</span></span>
+                  <span class="sim-format">WebP<span class="sim-pro-tag">PRO</span></span>
+                </div>
+                <div class="sim-toggle-row">
+                  <span>Remove popups &amp; banners</span>
+                  <span class="sim-switch active"></span>
+                </div>
+                <div class="sim-pro-header">
+                  <span>Pro Features</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <button class="sim-capture-btn" id="sim-capture-btn" type="button">Capture Full Page</button>
+              </div>
+            </div>
+            
+            <!-- Simulated Pro Annotation Editor Overlay -->
+            <div class="sim-editor" id="sim-editor">
+              <div class="sim-editor-toolbar">
+                <div class="sim-editor-tools">
+                  <button class="sim-tool-btn" id="sim-tool-select" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></button>
+                  <button class="sim-tool-btn" id="sim-tool-crop" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v14a2 2 0 002 2h14"/><path d="M18 22V8a2 2 0 00-2-2H2"/></svg></button>
+                  <button class="sim-tool-btn" id="sim-tool-blur" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" opacity="0.4"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg></button>
+                  <span class="sim-divider"></span>
+                  <button class="sim-tool-btn" id="sim-tool-arrow" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="12 5 19 5 19 12"/></svg></button>
+                  <button class="sim-tool-btn" id="sim-tool-shape" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></button>
+                  <button class="sim-tool-btn" id="sim-tool-text" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg></button>
+                </div>
+                <div class="sim-editor-actions">
+                  <span>100%</span>
+                  <span class="sim-divider"></span>
+                  <span class="sim-format-label">PNG</span>
+                  <button class="sim-export-btn" type="button">Copy</button>
+                </div>
+              </div>
+              
+              <div class="sim-editor-content">
+                <div class="sim-capture-image">
+                  <!-- Screenshot frame contents -->
+                  <div class="dashboard-page captured">
+                    <aside class="db-sidebar">
+                      <div class="db-logo"><div class="db-logo-icon"></div><div class="db-logo-text"></div></div>
+                      <div class="db-menu">
+                        <div class="db-menu-item active"></div>
+                        <div class="db-menu-item"></div>
+                        <div class="db-menu-item"></div>
+                        <div class="db-menu-item"></div>
+                      </div>
+                    </aside>
+                    <main class="db-main">
+                      <header class="db-header">
+                        <div class="db-title-bar"></div>
+                        <div class="db-profile"></div>
+                      </header>
+                      <div class="db-grid">
+                        <div class="db-card stat-card">
+                          <div class="db-card-header"></div>
+                          <div class="db-card-value blur-target">$1,280,000</div>
+                          <div class="db-card-chart"></div>
+                        </div>
+                        <div class="db-card chart-card">
+                          <div class="db-card-header"></div>
+                          <div class="db-chart-container">
+                            <div class="db-chart-bar" style="--height: 40%"></div>
+                            <div class="db-chart-bar" style="--height: 60%"></div>
+                            <div class="db-chart-bar" style="--height: 45%"></div>
+                            <div class="db-chart-bar arrow-target" style="--height: 80%"></div>
+                            <div class="db-chart-bar" style="--height: 50%"></div>
+                            <div class="db-chart-bar" style="--height: 75%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </main>
+                  </div>
+                  
+                  <!-- Canvas Editor Drawing Layers Mockups -->
+                  <div class="annotation-blur" id="annotation-blur"></div>
+                  
+                  <svg class="annotation-rect-svg" id="annotation-rect-svg" viewBox="0 0 600 400" aria-hidden="true">
+                    <rect x="158" y="193" width="154" height="158" rx="6" stroke="#ef4444" stroke-width="3" fill="none" id="annotation-rect" />
+                  </svg>
+                  
+                  <div class="annotation-text" id="annotation-text">Fix this chart!</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Scanning Laser Line -->
+            <div class="sim-scan-line" id="sim-scan-line"></div>
+            
+            <!-- Toast Feedback -->
+            <div class="sim-toast" id="sim-toast">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Copied to clipboard!</span>
+            </div>
+          </div>
+          
+          <!-- Floating Gliding Cursor Pointer -->
+          <div class="sim-cursor" id="sim-cursor">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="#000" stroke-width="2" aria-hidden="true"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>
           </div>
         </div>
-
-        <div class="ext-cursor">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="#1e293b" stroke-width="2" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>
-        </div>
-
-        <div class="ext-toast">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Saved as PNG
-        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ─── Features ─────────────────────────────────────────────── -->
+  <!-- ─── Features Grid ─────────────────────────────────────────── -->
   <section id="features">
     <div class="container">
       <div class="section-head">
-        <div class="eyebrow">What it does</div>
-        <h2>Everything you need. Nothing you don't.</h2>
-        <p>Every feature below is free. Pro adds annotation and extra formats — not basics.</p>
+        <div class="eyebrow">Core Features</div>
+        <h2>Everything you need. Free forever.</h2>
+        <p>Reliable full-page capture with intelligent handling of modern web quirks.</p>
       </div>
+      
       <div class="grid">
         <div class="card">
           <div class="ico">↓</div>
-          <h3>Entire page, one click</h3>
-          <p>Works on any page length. Rendry scrolls, captures, and stitches automatically.</p>
+          <h3>Full-page auto scroll</h3>
+          <p>Captures everything from top to bottom. Rendry scrolls, records, and stitches segments seamlessly.</p>
         </div>
         <div class="card">
           <div class="ico">PDF</div>
-          <h3>PNG & PDF, free</h3>
-          <p>Both formats ship in the free tier. JPEG and WebP are available in Pro for smaller files.</p>
+          <h3>PNG &amp; PDF formats</h3>
+          <p>Export screenshots as single-page document sheets or lossless images completely free.</p>
         </div>
         <div class="card">
           <div class="ico">🔒</div>
           <h3>Private by design</h3>
-          <p>Zero network requests in the free tier. Your screenshots never leave your browser.</p>
+          <p>No account required. Free tier runs fully locally and makes zero server calls.</p>
         </div>
         <div class="card">
           <div class="ico">✕</div>
-          <h3>No popups in your shot</h3>
-          <p>Auto-hides cookie banners, chat widgets, ads, modals, lightboxes, and floating buttons before capture.</p>
+          <h3>Automatic noise removal</h3>
+          <p>Hides cookie banners, ad slots, and annoying chat widgets before capture, then restores them instantly.</p>
         </div>
         <div class="card">
           <div class="ico">⟳</div>
-          <h3>Lazy images load first</h3>
-          <p>Detects <code>loading="lazy"</code> images and triggers every one before the shot.</p>
+          <h3>Lazy image triggering</h3>
+          <p>Detects lazy-load image tags and triggers their loading process prior to capture so nothing is blank.</p>
         </div>
         <div class="card">
           <div class="ico">⌨</div>
-          <h3><code>Alt+Shift+R</code></h3>
-          <p>Capture the full page with your last-used format without opening the popup.</p>
+          <h3>Alt + Shift + R</h3>
+          <p>Instantly capture full pages using your last settings with a quick global keyboard shortcut.</p>
+        </div>
+        <div class="card copy-card">
+          <div class="ico">📋</div>
+          <h3>Copy to clipboard</h3>
+          <p>Optional one-toggle copy-to-clipboard alongside the download. Paste captures straight into Slack, email, or Notes.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Privacy band ─────────────────────────────────────────── -->
-  <section class="band-privacy">
+  <!-- ─── PRO Annotation Features Highlight ─────────────────────── -->
+  <section class="pro-features-highlight" id="pro-features">
     <div class="container">
       <div class="section-head">
-        <div class="eyebrow" style="color:#93c5fd;">Privacy</div>
+        <div class="eyebrow">Rendry Pro</div>
+        <h2>Polished annotation tools. Local-first.</h2>
+        <p>Markup, highlight, and sanitize your screenshots without ever leaving the page or exposing your data.</p>
+      </div>
+      
+      <div class="pro-features-layout">
+        <div class="pro-features-text">
+          <div class="pro-feature-item active" data-demo="arrow" id="tab-arrow">
+            <h3><span>Vector Arrows &amp; Shapes</span><span class="badge">PRO</span></h3>
+            <p>Draw smooth arrows, borders, and shapes. Perfect for detailing feature designs, highlighting bugs, or creating user walk-throughs.</p>
+          </div>
+          <div class="pro-feature-item" data-demo="blur" id="tab-blur">
+            <h3><span>Privacy Blur &amp; Pixelate</span><span class="badge">PRO</span></h3>
+            <p>Sanitize screenshots in seconds. Cover credit card numbers, passwords, API keys, and personal profiles with native blurred filters.</p>
+          </div>
+          <div class="pro-feature-item" data-demo="text" id="tab-text">
+            <h3><span>Text Annotations</span><span class="badge">PRO</span></h3>
+            <p>Add notes, directions, or headings directly onto your capture image with clean typography that matches your target resolution.</p>
+          </div>
+        </div>
+        
+        <div class="pro-features-demo-window">
+          <div class="demo-canvas-viewport">
+            <div class="demo-image-card">
+              <!-- Basic simulated dashboard layout -->
+              <div class="db-logo" style="margin-bottom:12px;"><div class="db-logo-icon"></div></div>
+              <div style="width:100%;height:10px;background:rgba(255,255,255,0.06);border-radius:2px;margin-bottom:8px;"></div>
+              <div style="width:70%;height:10px;background:rgba(255,255,255,0.04);border-radius:2px;margin-bottom:20px;"></div>
+              <div style="flex-grow:1;display:flex;align-items:center;justify-content:center;">
+                
+                <!-- Arrow demo visualization -->
+                <div class="demo-visual-block active" id="demo-visual-arrow">
+                  <svg class="arrow-demo-svg" viewBox="0 0 400 250" aria-hidden="true">
+                    <rect x="110" y="55" width="180" height="140" rx="6" stroke="#ef4444" stroke-width="4" fill="none" class="rect-glow-line" />
+                  </svg>
+                </div>
+                
+                <!-- Blur demo visualization -->
+                <div class="demo-visual-block" id="demo-visual-blur">
+                  <div class="blur-demo-overlay">
+                    <div class="blur-box-simulation"><span class="blur-text">api_key_8x10f...</span></div>
+                    <span class="blur-label">Gaussian Blur Mask</span>
+                  </div>
+                </div>
+                
+                <!-- Text demo visualization -->
+                <div class="demo-visual-block" id="demo-visual-text">
+                  <div class="text-demo-overlay">Change this typography!</div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Privacy Band ─────────────────────────────────────────── -->
+  <section class="band-privacy" id="privacy">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="color:#818cf8;">Security &amp; Trust</div>
         <h2>The screenshot tool that doesn't screenshot you.</h2>
         <p class="lead">
-          Rendry does not collect, transmit, or store any personal data.
-          All capture and image processing happens entirely within your browser.
+          Rendry is built on a local-first philosophy. Your captures never hit our servers. All compression, stitching, and annotations happen inside your browser.
         </p>
       </div>
+      
       <div class="promise-grid">
         <div class="promise">
-          <strong>Zero server calls</strong>
-          <p>Screenshots never leave your machine. The free tier works identically to a fully offline extension.</p>
+          <strong>Zero Server Calls</strong>
+          <p>Screenshots never leave your machine. The extension works perfectly offline without any external APIs.</p>
         </div>
         <div class="promise">
-          <strong>No analytics, no telemetry</strong>
-          <p>No tracking of any kind. We don't know you exist unless you choose to upgrade.</p>
+          <strong>No Analytics or Tracking</strong>
+          <p>We do not track your usage, URLs, or installation telemetry. We keep no databases of customer captures.</p>
         </div>
         <div class="promise">
-          <strong>No cookies read or written</strong>
-          <p>Rendry has no access to cookies — not requested, not used.</p>
+          <strong>No Cookies Requested</strong>
+          <p>Rendry does not request cookie permissions, keeping your login sessions and web identifiers fully secure.</p>
         </div>
         <div class="promise">
-          <strong>Minimal permissions</strong>
-          <p>Only the permissions required to capture: <code style="background:rgba(255,255,255,0.08);color:#93c5fd;border-color:rgba(255,255,255,0.1)">activeTab</code>, scripting, downloads, storage, offscreen.</p>
+          <strong>Minimal Manifest Permissions</strong>
+          <p>Uses only <code>activeTab</code> and <code>scripting</code> to interact with pages only when clicked. No broad access required.</p>
         </div>
       </div>
-      <p style="text-align:center;margin-top:32px;">
-        <a href="/privacy" style="color:#93c5fd;">Read the full privacy policy →</a>
+      
+      <p style="text-align:center;margin-top:40px;">
+        <a href="/privacy" style="font-weight:600;display:inline-flex;align-items:center;gap:6px;">
+          Read our comprehensive privacy policy
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </p>
     </div>
   </section>
@@ -195,21 +430,22 @@
   <section id="how">
     <div class="container">
       <div class="section-head">
-        <div class="eyebrow">How it works</div>
-        <h2>Three steps. One click.</h2>
+        <div class="eyebrow">Workflow</div>
+        <h2>Seamless three-step capture.</h2>
       </div>
+      
       <div class="steps">
         <div class="step">
           <h3>Click the icon</h3>
-          <p>Or press <code>Alt+Shift+R</code>. Rendry reads the page dimensions and plans the capture.</p>
+          <p>Or trigger the keyboard shortcut <code>Alt+Shift+R</code>. Rendry reads layout sizes and initializes in milliseconds.</p>
         </div>
         <div class="step">
-          <h3>Rendry scrolls and captures</h3>
-          <p>Lazy-loaded images are triggered, cookie banners are hidden, and the page is captured in segments.</p>
+          <h3>Automated capture</h3>
+          <p>Banners are auto-hidden, dynamic images are forced to load, and pages are captured in viewport segments.</p>
         </div>
         <div class="step">
-          <h3>You get a clean file</h3>
-          <p>Segments are stitched into a single seamless image and saved as PNG or PDF to your Downloads folder.</p>
+          <h3>Save or edit</h3>
+          <p>Stitched results download as standard PNG/PDF, or open instantly in the Pro Editor for annotation.</p>
         </div>
       </div>
     </div>
@@ -219,93 +455,192 @@
   <section>
     <div class="container">
       <div class="section-head">
-        <div class="eyebrow">Why Rendry</div>
-        <h2>Three things that matter.</h2>
+        <div class="eyebrow">Differentiators</div>
+        <h2>Built for devs, designers, QAs, &amp; managers.</h2>
       </div>
+      
       <div class="why-grid">
         <div class="why">
-          <strong>PDF export is free.</strong>
-          <p>Every format in the free tier captures the full page at high quality — no format paywalls for basics.</p>
+          <strong>Free PDF exports</strong>
+          <p>Unlike competing extensions, exporting high-fidelity full-page PDFs is entirely included in the free tier.</p>
         </div>
         <div class="why">
-          <strong>Zero network requests.</strong>
-          <p>The free tier never contacts a server. Your screenshots never touch anyone else's hardware.</p>
+          <strong>Completely serverless</strong>
+          <p>No backend accounts or external APIs are involved in your screenshots, guaranteeing zero data exposure.</p>
         </div>
         <div class="why">
-          <strong>No account required.</strong>
-          <p>Install, capture, done. The free tier needs nothing from you. Pro users pay via ExtensionPay (email only).</p>
+          <strong>ExtensionPay checkout</strong>
+          <p>Upgrades are safely processed via Stripe using ExtensionPay. One email checkout, no password management.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Pro upsell ───────────────────────────────────────────── -->
-  <section id="pro">
+  <!-- ─── Pro Pricing and Comparison ────────────────────────────── -->
+  <section class="pricing-section" id="pricing">
     <div class="container">
       <div class="section-head">
-        <div class="eyebrow">Pro</div>
-        <h2>A tip jar with useful extras.</h2>
-        <p>Still 100% local. Still privacy-first. $2/month if you find it useful.</p>
+        <div class="eyebrow">Pricing</div>
+        <h2>Unlock professional workflow tools.</h2>
+        <p>Support independent open development and acquire advanced export and annotation features.</p>
       </div>
+      
       <div class="pro-card">
-        <div class="price">$2 <span>/ month</span></div>
-        <p style="color:var(--muted);margin:0 0 8px;">Cancel anytime. 7-day no-questions refund.</p>
+        <div class="pricing-header">
+          <h3>Rendry Pro</h3>
+          <div class="price-options">
+            <div class="price-block">
+              <div class="price">$2 <span>/ month</span></div>
+              <p style="color:var(--text-muted);font-size:0.85rem;margin:4px 0 0;font-weight:500;">Billed monthly</p>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-block">
+              <div class="price">$20 <span>/ year</span></div>
+              <p style="color:var(--success);font-size:0.85rem;margin:4px 0 0;font-weight:700;">Save 16% — 2 months free!</p>
+            </div>
+          </div>
+          <p style="color:var(--text-muted);margin:16px 0 0;">Cancel anytime. 7-day money-back guarantee.</p>
+        </div>
+        
         <ul class="feature-list">
-          <li>JPEG & WebP export</li>
-          <li>Custom filename templates</li>
-          <li>Resolution control</li>
-          <li>Multi-page PDF (A4 / Letter)</li>
-          <li>Built-in annotation editor</li>
-          <li>Blur sensitive regions</li>
-          <li>Timed capture (3 / 5 / 10s)</li>
+          <li>Full Annotation Editor (blur, arrows, text)</li>
+          <li>Lossy JPEG &amp; WebP formats</li>
+          <li>Resolution scaling (0.5× to 3× retina)</li>
+          <li>Multi-page PDF layout (A4 / Letter)</li>
+          <li>Custom template filename variables</li>
+          <li>One-click copy from the editor toolbar</li>
+          <li>Timed capture delay countdowns</li>
+          <li>Supports offline operation</li>
         </ul>
-        <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Start with the free tier</a>
-        <p class="fine">Upgrade later from inside the extension popup. Billing by ExtensionPay &amp; Stripe. See <a href="/refunds">refund policy</a>.</p>
+        
+        <a class="btn btn-primary btn-lg" id="pricing-pro-cta" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">
+          Get Started with Rendry
+        </a>
+        
+        <p class="fine">
+          Upgrade with one click from inside the extension popup. Secured via ExtensionPay &amp; Stripe. See our <a href="/refunds">refund policy</a>.
+        </p>
+      </div>
+
+      <!-- Feature Comparison Table -->
+      <div class="comparison-container">
+        <h3 style="text-align:center;margin-bottom:24px;">Compare Free vs. Pro</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th style="text-align:center;width:120px;">Free</th>
+              <th style="text-align:center;width:120px;color:var(--blue);">Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-name">Full-Page Scrolling Capture</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">PNG Export Format</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">PDF Full Page Export</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Ad, Banner &amp; Chat Widget Hiding</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Lazy-Loaded Image Force Load</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Global Keyboard Shortcuts</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">JPEG &amp; WebP Export Format</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Multi-Page PDF (A4 &amp; Letter sizes)</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Filename template options</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Built-in Annotation Editor</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Privacy Blur &amp; Pixelate tool</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Copy to Clipboard support</td>
+              <td class="check">✓</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Capture delay countdown timer</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- ─── FAQ ──────────────────────────────────────────────────── -->
   <section id="faq" class="faq">
-    <div class="container" style="max-width:720px;">
+    <div class="container" style="max-width:760px;">
       <div class="section-head">
         <div class="eyebrow">FAQ</div>
-        <h2>Common questions.</h2>
+        <h2>Frequently asked questions.</h2>
       </div>
 
       <details>
         <summary>Is Rendry really free?</summary>
-        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, removes popups, and detects infinite scroll — all without any server calls. Pro ($2/month) adds extra formats and an annotation editor.</p>
+        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, and warns about infinite scroll — all without any server dependencies. Pro adds lossy formats, resolution controls, and the built-in annotation editor.</p>
       </details>
 
       <details>
-        <summary>Does Rendry track me?</summary>
-        <p>No. The free tier makes zero network requests and has no analytics, telemetry, or cookies. If you upgrade to Pro, ExtensionPay receives your email and subscription status only — never browsing data or screenshots.</p>
+        <summary>Does Rendry track my screenshots?</summary>
+        <p>No. We operate on a local-first philosophy. Your captures are kept strictly in browser memory and saved to your local downloads folder. No screenshot data is ever sent to our servers. The free tier makes zero network requests.</p>
       </details>
 
       <details>
-        <summary>Does Rendry work offline?</summary>
-        <p>Yes. The capture pipeline (scroll, capture, stitch, export) runs entirely in your browser with no server dependency. The only network calls are license checks for Pro users.</p>
+        <summary>How does the annotation editor work?</summary>
+        <p>When you toggle "Open in Editor" in the Pro Features menu, Rendry opens a new local tab containing our design editor right after capture. You can draw vectors, blur personal info, write text overlays, and then copy the resulting canvas directly to your clipboard or download it.</p>
       </details>
 
       <details>
-        <summary>Can I use Rendry on any website?</summary>
-        <p>Yes. Rendry uses the <code>activeTab</code> permission, which grants access only when you click the extension. It works on any standard web page — including sites with lazy-loaded images, infinite scroll, and sticky headers.</p>
+        <summary>What is ExtensionPay?</summary>
+        <p>ExtensionPay is a secure paywall service built specifically for browser extensions. It manages licenses through Stripe. This allows us to securely process your payments using your checkout email without running a custom database or requiring a password profile.</p>
       </details>
 
       <details>
-        <summary>What's the refund policy?</summary>
-        <p>7-day no-questions refund on your first subscription. After that, cancellations stop the next renewal but the current paid month isn't refunded. See the full <a href="/refunds">refund policy</a>.</p>
+        <summary>What is the refund policy?</summary>
+        <p>We provide a 7-day money-back guarantee on your first charge of Pro. Simply email support@rendry.app from your checkout address and we will issue a full refund immediately. Cancellations stop renewals for the next period.</p>
       </details>
 
       <details>
-        <summary>How do I report a bug or request a feature?</summary>
-        <p>Open an issue at <a href="https://github.com/mamaownedus/rendry-site/issues">github.com/mamaownedus/rendry-site/issues</a>. For usage questions, check <a href="https://github.com/mamaownedus/rendry-site/discussions">Discussions</a>.</p>
-      </details>
-
-      <details>
-        <summary>Is Rendry open source?</summary>
-        <p>The landing page and issue tracker are public. The extension source is currently private to keep the billing integration straightforward. That may change — let us know if it matters to you.</p>
+        <summary>How do I report a bug?</summary>
+        <p>Please open a bug ticket or discussion request in our public repository at <a href="https://github.com/mamaownedus/rendry-site/issues">github.com/mamaownedus/rendry-site/issues</a>. We actively review all submissions.</p>
       </details>
     </div>
   </section>
@@ -316,42 +651,197 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="/" style="margin-bottom:12px;">
-          <img src="assets/logo.svg" alt="" width="28" height="28">
+        <a class="brand" href="/" style="margin-bottom:16px;">
+          <img src="assets/logo.svg" alt="Rendry logo" width="32" height="32">
           Rendry
         </a>
-        <p style="margin:0;max-width:360px;">
-          Full-page screenshot Chrome extension. Private by default.
-          Made by <a href="https://github.com/mamaownedus">MamaOwned</a>.
+        <p style="margin:0;max-width:360px;color:var(--text-muted);">
+          Full-page screenshot Chrome extension. Local-first, private by default.
+          Developed by <a href="https://github.com/mamaownedus" target="_blank" rel="noopener">MamaOwned</a>.
         </p>
       </div>
       <div>
         <h4>Product</h4>
         <ul>
           <li><a href="#features">Features</a></li>
-          <li><a href="#pro">Pro</a></li>
+          <li><a href="#pro-features">Pro Features</a></li>
           <li><a href="/changelog">Changelog</a></li>
-          <li><a href="/press-kit">Press kit</a></li>
+          <li><a href="/press-kit">Press Kit</a></li>
         </ul>
       </div>
       <div>
         <h4>Support</h4>
         <ul>
-          <li><a href="https://github.com/mamaownedus/rendry-site/issues">Report a bug</a></li>
-          <li><a href="https://github.com/mamaownedus/rendry-site/discussions">Discussions</a></li>
-          <li><a href="/privacy">Privacy</a></li>
-          <li><a href="/refunds">Refunds</a></li>
+          <li><a href="https://github.com/mamaownedus/rendry-site/issues" target="_blank" rel="noopener">Report an Issue</a></li>
+          <li><a href="https://github.com/mamaownedus/rendry-site/discussions" target="_blank" rel="noopener">Discussions</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/refunds">Refund Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="legal">
-      <span>&copy; <span id="year">2026</span> MamaOwned LLC</span>
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
       <span>Chrome is a trademark of Google LLC.</span>
     </div>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mockup Animation Loop Controller
+const mockup = document.getElementById('hero-mockup');
+const cursor = document.getElementById('sim-cursor');
+
+const mockupSteps = [
+  {
+    state: 'state-start',
+    cursor: { top: '80%', left: '80%' },
+    delay: 1500
+  },
+  {
+    state: 'state-open-popup',
+    cursor: { top: '22px', left: 'calc(50% + 180px)' }, // move to chrome extension icon
+    delay: 1500
+  },
+  {
+    state: 'state-click-capture',
+    cursor: { top: '202px', left: 'calc(100% - 105px)' }, // move to "Capture Full Page" button (158 + 44)
+    delay: 1400
+  },
+  {
+    state: 'state-capturing',
+    cursor: { top: '80%', left: '80%' },
+    delay: 2400
+  },
+  {
+    state: 'state-editor-open',
+    cursor: { top: '68px', left: '120px' }, // move cursor to Shape tool in editor toolbar (24 + 44)
+    delay: 1200
+  },
+  {
+    state: 'state-draw-prepare',
+    cursor: { top: '341px', left: '296px' }, // move cursor to starting point (top-left of rect) (297 + 44)
+    delay: 1000
+  },
+  {
+    state: 'state-draw-arrow',
+    cursor: { top: '505px', left: '496px' }, // drag cursor to bottom-right of rectangle (draws it) (461 + 44)
+    delay: 1800
+  },
+  {
+    state: 'state-write-text',
+    cursor: { top: '289px', left: '315px' }, // move cursor next to text overlay (245 + 44)
+    delay: 1500
+  },
+  {
+    state: 'state-blur',
+    cursor: { top: '296px', left: '396px' }, // move cursor to balance stat (252 + 44)
+    delay: 2000
+  },
+  {
+    state: 'state-export',
+    cursor: { top: '68px', left: 'calc(100% - 24px)' }, // move cursor to "Copy" button in editor toolbar (24 + 44)
+    delay: 2500
+  }
+];
+
+let currentMockupStep = 0;
+
+function runMockupCycle() {
+  const step = mockupSteps[currentMockupStep];
+  
+  // Clear previous states
+  mockupSteps.forEach(s => mockup.classList.remove(s.state));
+  
+  // Apply current state
+  mockup.classList.add(step.state);
+  
+  // Move cursor pointer smoothly
+  cursor.style.top = step.cursor.top;
+  cursor.style.left = step.cursor.left;
+  
+
+  
+  currentMockupStep = (currentMockupStep + 1) % mockupSteps.length;
+  setTimeout(runMockupCycle, step.delay);
+}
+
+// Start animation loop when page is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(runMockupCycle, 500);
+  
+  // Pro Features Interactive demo tabs
+  const tabItems = document.querySelectorAll('.pro-feature-item');
+  const demoVisualBlocks = document.querySelectorAll('.demo-visual-block');
+  
+  let demoInterval = null;
+  let demoTimeouts = [];
+
+  function clearDemoIntervals() {
+    if (demoInterval) {
+      clearInterval(demoInterval);
+      demoInterval = null;
+    }
+    demoTimeouts.forEach(t => clearTimeout(t));
+    demoTimeouts = [];
+  }
+
+  function runDemoCycle(block) {
+    block.classList.remove('draw-line');
+    
+    // Force reflow to reset CSS transitions properly
+    void block.offsetWidth;
+    
+    // 1. Draw line
+    block.classList.add('draw-line');
+    
+    
+    // 2. Reset after total 2.8s
+    const t1 = setTimeout(() => {
+      block.classList.remove('draw-line');
+    }, 2800);
+    demoTimeouts.push(t1);
+  }
+
+  function startDemoLoop(selectedDemo) {
+    clearDemoIntervals();
+    
+    const block = document.getElementById(`demo-visual-${selectedDemo}`);
+    if (!block) return;
+    
+    if (selectedDemo === 'arrow' || selectedDemo === 'blur') {
+      runDemoCycle(block);
+      demoInterval = setInterval(() => {
+        runDemoCycle(block);
+      }, 3200); // 2.8s cycle + 0.4s pause before restart
+    }
+  }
+
+  tabItems.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Toggle active states on text items
+      tabItems.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      // Swap active states on visual panels
+      const selectedDemo = tab.getAttribute('data-demo');
+      demoVisualBlocks.forEach(block => {
+        block.classList.remove('active');
+        if (block.id === `demo-visual-${selectedDemo}`) {
+          block.classList.add('active');
+        }
+      });
+      
+      // Control loops
+      startDemoLoop(selectedDemo);
+    });
+  });
+
+  // Start the default demo loop on load
+  startDemoLoop('arrow');
+});
+</script>
 
 </body>
 </html>
