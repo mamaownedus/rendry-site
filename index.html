@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rendry — Full-Page Screenshot Browser Extension</title>
-<meta name="description" content="Capture full-page screenshots as PNG or PDF. Clean output with automatic cookie banner and ad removal. Bundle features include local image annotations (arrows, blurs, text). Privacy-first, offline-first.">
+<meta name="description" content="Capture full-page screenshots as PNG or PDF. Auto-hides cookie banners and ads. Built-in free screenshot editor to crop and copy captures. Pro markup tools: arrows, blur, text. Privacy-first, offline-first.">
 <meta name="theme-color" content="#4A6CF7">
 
 <!-- Open Graph / social preview -->
@@ -63,7 +63,7 @@
     <div class="container">
       <h1>Full-page screenshots.<br>Private by default.</h1>
       <p class="subhead">
-        Capture any web page as PNG or PDF in one click. Clean output with auto-hidden cookie banners. Local annotations and premium formats run 100% on your machine.
+        Capture any web page as PNG or PDF in one click, with auto-hidden cookie banners. Every capture opens in a built-in editor — crop and copy free, with Pro markup tools a click away. Everything runs 100% on your machine.
       </p>
       
       <div class="cta-row">
@@ -185,7 +185,7 @@
               </div>
             </div>
             
-            <!-- Simulated Pro Annotation Editor Overlay -->
+            <!-- Simulated Editor Overlay -->
             <div class="sim-editor" id="sim-editor">
               <div class="sim-editor-toolbar">
                 <div class="sim-editor-tools">
@@ -316,10 +316,20 @@
           <h3>Alt + Shift + R</h3>
           <p>Instantly capture full pages using your last settings with a quick global keyboard shortcut.</p>
         </div>
-        <div class="card copy-card">
+        <div class="card">
           <div class="ico">📋</div>
           <h3>Copy to clipboard</h3>
           <p>Optional one-toggle copy-to-clipboard alongside the download. Paste captures straight into Slack, email, or Notes.</p>
+        </div>
+        <div class="card">
+          <div class="ico">✎</div>
+          <h3>Free built-in editor</h3>
+          <p>Crop, copy to clipboard, and export captures instantly without leaving the tab. No extra software needed.</p>
+        </div>
+        <div class="card">
+          <div class="ico">⚓</div>
+          <h3>Smart sticky headers</h3>
+          <p>Floating headers, navigation bars, and footers are captured exactly once at the top of the page without repeating.</p>
         </div>
       </div>
     </div>
@@ -331,7 +341,7 @@
       <div class="section-head">
         <div class="eyebrow">Rendry Pro</div>
         <h2>Polished annotation tools. Local-first.</h2>
-        <p>Markup, highlight, and sanitize your screenshots without ever leaving the page or exposing your data.</p>
+        <p>The built-in editor is free for everyone — crop, copy, and export. These markup tools unlock with Pro, so you can highlight and sanitize screenshots without ever leaving the page or exposing your data.</p>
       </div>
       
       <div class="pro-features-layout">
@@ -445,7 +455,7 @@
         </div>
         <div class="step">
           <h3>Save or edit</h3>
-          <p>Stitched results download as standard PNG/PDF, or open instantly in the Pro Editor for annotation.</p>
+          <p>Stitched results download as standard PNG/PDF, or open instantly in the built-in editor to crop, mark up, and export.</p>
         </div>
       </div>
     </div>
@@ -503,12 +513,12 @@
         </div>
         
         <ul class="feature-list">
-          <li>Full Annotation Editor (blur, arrows, text)</li>
+          <li>Editor markup tools (blur, arrows, shapes, text)</li>
           <li>Lossy JPEG &amp; WebP formats</li>
           <li>Resolution scaling (0.5× to 3× retina)</li>
           <li>Multi-page PDF layout (A4 / Letter)</li>
           <li>Custom template filename variables</li>
-          <li>One-click copy from the editor toolbar</li>
+          <li>Compression presets &amp; quality control</li>
           <li>Timed capture delay countdowns</li>
           <li>Supports offline operation</li>
         </ul>
@@ -570,6 +580,11 @@
               <td class="check">✓</td>
             </tr>
             <tr>
+              <td class="feature-name">Built-in Editor (crop, copy, export)</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
               <td class="feature-name">JPEG &amp; WebP Export Format</td>
               <td class="cross">✕</td>
               <td class="check" style="color:var(--blue);">✓</td>
@@ -585,12 +600,7 @@
               <td class="check" style="color:var(--blue);">✓</td>
             </tr>
             <tr>
-              <td class="feature-name">Built-in Annotation Editor</td>
-              <td class="cross">✕</td>
-              <td class="check" style="color:var(--blue);">✓</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Privacy Blur &amp; Pixelate tool</td>
+              <td class="feature-name">Editor markup tools (blur, arrows, shapes, text)</td>
               <td class="cross">✕</td>
               <td class="check" style="color:var(--blue);">✓</td>
             </tr>
@@ -615,7 +625,7 @@
 
       <details>
         <summary>Is Rendry really free?</summary>
-        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, and warns about infinite scroll — all without any server dependencies. Pro adds lossy formats, resolution controls, and the built-in annotation editor.</p>
+        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text).</p>
       </details>
 
       <details>
@@ -625,7 +635,7 @@
 
       <details>
         <summary>How does the annotation editor work?</summary>
-        <p>When you toggle "Open in Editor" in the Pro Features menu, Rendry opens a new local tab containing our design editor right after capture. You can draw vectors, blur personal info, write text overlays, and then copy the resulting canvas directly to your clipboard or download it.</p>
+        <p>"Open in Editor" is on by default for everyone (toggle it off in the popup for a one-click download). Right after capture, Rendry opens a new local tab with our editor. Crop, copy to clipboard, and PNG/PDF export are free; the markup tools — blur, arrows, shapes, and text — are Pro. Everything runs locally; nothing is uploaded.</p>
       </details>
 
       <details>

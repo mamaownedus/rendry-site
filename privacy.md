@@ -57,7 +57,7 @@ Rendry requests only the minimum permissions required to function:
 | `downloads` | Save your screenshot to your Downloads folder. |
 | `storage` | Store your format and noise removal preferences. |
 | `offscreen` | Create a hidden document for canvas-based image stitching. Required by Chrome's Manifest V3 — service workers cannot access the DOM directly. |
-| `clipboardWrite` | Copy a capture to the system clipboard **only when you have enabled "Copy to clipboard"** in the popup, or **only when you click the Copy action** in the Pro editor. Never on its own. |
+| `clipboardWrite` | Copy a capture to the system clipboard **only when you have enabled "Copy to clipboard"** in the popup, or **only when you click the Copy action** in the editor. Never on its own. |
 
 Rendry does **not** request and will **never** request:
 

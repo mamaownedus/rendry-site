@@ -37,6 +37,9 @@ Choose your format:
 • PNG — pixel-perfect image, ideal for sharing and editing
 • PDF — single-page document with metadata, great for archiving
 
+**Built-in Screenshot Editor**
+Every capture opens instantly in a local tab with our built-in editor. Crop, copy to clipboard, and export captures for free — no extra apps needed.
+
 ---
 
 ### Rendry Pro ($2/month)
@@ -48,7 +51,7 @@ Unlock the power tier for $2/month. Everything local-first, nothing sent anywher
 • **Custom filename templates** — `{domain}`, `{date}`, `{time}`, `{title}`, `{timestamp}`
 • **Resolution control** — 0.5×, 1×, 2×, or 3× device pixel ratio
 • **Multi-page PDF** — A4 or Letter page sizes (plus full-page default)
-• **Built-in editor** — blur sensitive regions, crop, add arrows, shapes, and text annotations before saving
+• **Editor markup tools** — draw arrows, boxes, shapes, text annotations, and blur sensitive regions (passwords, credit cards) directly in the editor
 • **Timed capture** — 3 / 5 / 10-second countdown for menus, hovers, and tooltips
 
 Upgrade, manage, or cancel anytime from inside the extension popup. Billing is handled by ExtensionPay (powered by Stripe). See the [privacy policy](PRIVACY_POLICY.md) for what is and isn't collected.
@@ -76,7 +79,7 @@ We only request the minimum permissions needed:
 • downloads — save your screenshot file
 • storage — remember your format preference
 • offscreen — stitch images using a canvas (required by Chrome's Manifest V3)
-• clipboardWrite — copy captures to the clipboard when "Copy to clipboard" is on in the popup, or when you click Copy in the Pro editor
+• clipboardWrite — copy captures to the clipboard when "Copy to clipboard" is on in the popup, or when you click Copy in the editor
 
 ### Keyboard Shortcut
 
