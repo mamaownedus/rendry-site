@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rendry — Full-Page Screenshot Browser Extension</title>
-<meta name="description" content="Capture full-page screenshots as PNG or PDF. Auto-hides cookie banners and ads. Built-in free screenshot editor to crop and copy captures. Pro markup tools: arrows, blur, text. Privacy-first, offline-first.">
+<title>Rendry — Private Full-Page Screenshots (PNG, PDF, JPEG, WebP)</title>
+<meta name="description" content="Capture any full web page in one click as PNG, PDF, JPEG, or WebP — free, no watermark, no signup. Mark it up, hide sensitive details before you save, or copy a page's text, links, and tables. Everything runs on your machine. Works in Chrome, Brave, Edge, Opera, Arc, and Comet.">
 <meta name="theme-color" content="#4A6CF7">
 
 <!-- Open Graph / social preview -->
-<meta property="og:title" content="Rendry — Full-Page Screenshot Browser Extension">
-<meta property="og:description" content="Capture full-page screenshots as PNG or PDF. Clean output with automatic cookie banner and ad removal. Privacy-first, offline-first.">
+<meta property="og:title" content="Rendry — Private Full-Page Screenshots (PNG, PDF, JPEG, WebP)">
+<meta property="og:description" content="Full-page screenshots as PNG, PDF, JPEG, or WebP — free, no watermark. Mark up a capture, hide sensitive details before you save, or copy its text, links, and tables. Everything runs on your machine.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rendry.app/">
 <meta property="og:image" content="https://rendry.app/assets/og-image.jpg">
@@ -27,14 +27,119 @@
   "@type": "SoftwareApplication",
   "name": "Rendry",
   "applicationCategory": "BrowserApplication",
-  "operatingSystem": "Chrome",
-  "description": "Full-page screenshot Chrome extension. PNG and PDF export. Privacy-first — no data leaves your browser.",
-  "offers": [
-    { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
-    { "@type": "Offer", "price": "2", "priceCurrency": "USD", "name": "Rendry Pro (per month)" },
-    { "@type": "Offer", "price": "20", "priceCurrency": "USD", "name": "Rendry Pro (per year)" }
+  "operatingSystem": "Chrome, Brave, Edge, Opera, Arc, Comet",
+  "softwareVersion": "1.4.0",
+  "description": "Privacy-first full-page screenshot browser extension. Capture entire web pages as PNG, PDF, JPEG, or WebP. Smart Redact automatically hides sensitive details; copy clean text, links, and tables from a capture. Screenshots never leave your machine.",
+  "url": "https://rendry.app/",
+  "downloadUrl": "https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn",
+  "featureList": [
+    "Full-page screenshot capture (PNG, PDF, JPEG, WebP)",
+    "Automatic removal of cookie banners, chat widgets, ads, and popups",
+    "Built-in editor: crop, copy, blur, arrows, shapes, text",
+    "Smart Redact: automatically hide sensitive details before you save",
+    "Copy clean text, links, and tables from a capture (Markdown, CSV, TSV)",
+    "Design tokens: a page's colours, fonts, and spacing as CSS variables or JSON",
+    "Element/region capture",
+    "Multi-page PDF, resolution control, custom filenames, timed capture"
   ],
-  "url": "https://rendry.app/"
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "highPrice": "20",
+    "offerCount": "3"
+  },
+  "datePublished": "2025-04-19",
+  "dateModified": "2026-06-28",
+  "creator": { "@id": "https://rendry.app/#organization" },
+  "publisher": { "@id": "https://rendry.app/#organization" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://rendry.app/#organization",
+  "name": "MamaOwned LLC",
+  "url": "https://rendry.app/",
+  "brand": { "@type": "Brand", "name": "Rendry" },
+  "sameAs": [
+    "https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn",
+    "https://github.com/mamaownedus"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Rendry really free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Rendry track my screenshots?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. We operate on a local-first philosophy. Your captures are kept strictly in browser memory and saved to your local downloads folder. No screenshot data is ever sent to our servers. The free tier makes zero network requests." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the annotation editor work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "\"Open in Editor\" is on by default for everyone (toggle it off in the popup for a one-click download). Right after capture, Rendry opens a new local tab with our editor. Crop, copy to clipboard, and PNG/PDF export are free; the markup tools — blur, arrows, shapes, and text — are Pro. Everything runs locally; nothing is uploaded." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ExtensionPay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ExtensionPay is a secure paywall service built specifically for browser extensions. It manages licenses through Stripe. This allows us to securely process your payments using your checkout email without running a custom database or requiring a password profile." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the refund policy?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We provide a 7-day money-back guarantee on your first charge of Pro. Simply email support@rendry.app from your checkout address and we will issue a full refund immediately. Cancellations stop renewals for the next period." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I report a bug?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Please open a bug ticket or discussion request in our public repository at github.com/mamaownedus/rendry-site/issues. We actively review all submissions." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I take a full-page screenshot of a web page?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I save a full web page as a PDF?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose PDF in the Rendry popup before you capture, then click the icon. Rendry saves the entire page as a single clean PDF — including content below the fold — for free. Pro adds multi-page A4/Letter layouts and custom filenames if you need them." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I hide sensitive details in a screenshot before sharing it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Turn on Smart Redact (Pro) in the Rendry popup and it hides sensitive details before you save, then lets you review, undo, or restore each one in the editor — so a bug report or support reply never leaks private information. Everything stays on your machine." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy the text, links, and tables from a webpage capture?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rendry Pro lets you copy clean, ready-to-paste text, a tidy list of links, or a spreadsheet-ready table from any capture via the editor's Extract panel — as Markdown, CSV, or TSV. It's handy for content audits, research, and pasting a page into an AI assistant." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I extract a website's colours and fonts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "With Rendry Pro, the Extract panel turns any page's colours, fonts, and spacing into reusable design tokens — exported as CSS variables or JSON. It's bundled into the capture flow and runs locally, so you can grab a site's look without a separate tool or any upload." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I screenshot just one element on a webpage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose Capture element in the Rendry popup (Pro), then click the element you want. Rendry captures only that element — including the part scrolled below the fold — instead of the whole page. It's great for grabbing a single component for a spec, moodboard, or bug report." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Rendry work in Brave, Edge, Arc, Opera, and Comet?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rendry works across Chromium browsers — Chrome, Brave, Edge, Opera, Arc, and Comet — so you get the same one-click full-page capture, clean-up, and editor everywhere, with the same local-first privacy." }
+    }
+  ]
 }
 </script>
 </head>
@@ -62,6 +167,7 @@
   <section class="hero">
     <div class="container">
       <h1>Full-page screenshots.<br>Private by default.</h1>
+      <p class="hero-definition">Rendry is a privacy-first browser extension that captures an entire web page as a PNG, PDF, JPEG, or WebP in one click — with every capture processed on your own device and never uploaded.</p>
       <p class="subhead">
         Capture any web page as PNG or PDF in one click, with auto-hidden cookie banners. Every capture opens in a built-in editor — crop and copy free, with Pro markup tools a click away. Everything runs 100% on your machine.
       </p>
@@ -276,6 +382,19 @@
     </div>
   </section>
 
+  <!-- ─── Quick stats ──────────────────────────────────────────── -->
+  <section class="stat-band">
+    <div class="container">
+      <ul class="stat-row">
+        <li><strong>4 formats</strong><span>PNG, PDF, JPEG, WebP</span></li>
+        <li><strong>6 browsers</strong><span>Chrome, Brave, Edge, Opera, Arc, Comet</span></li>
+        <li><strong>$0</strong><span>full-page PNG &amp; PDF, clean-up &amp; editor</span></li>
+        <li><strong>$2/mo</strong><span>Pro, with a 7-day free trial</span></li>
+        <li><strong>Zero</strong><span>screenshot data sent to any server</span></li>
+      </ul>
+    </div>
+  </section>
+
   <!-- ─── Features Grid ─────────────────────────────────────────── -->
   <section id="features">
     <div class="container">
@@ -352,7 +471,7 @@
           </div>
           <div class="pro-feature-item" data-demo="blur" id="tab-blur">
             <h3><span>Privacy Blur &amp; Pixelate</span><span class="badge">PRO</span></h3>
-            <p>Sanitize screenshots in seconds. Cover credit card numbers, passwords, API keys, and personal profiles with native blurred filters.</p>
+            <p>Sanitize screenshots in seconds. Cover any sensitive details with a clean blur or pixelate — perfect for sharing bug reports and demos without exposing private information.</p>
           </div>
           <div class="pro-feature-item" data-demo="text" id="tab-text">
             <h3><span>Text Annotations</span><span class="badge">PRO</span></h3>
@@ -380,7 +499,7 @@
                 <div class="demo-visual-block" id="demo-visual-blur">
                   <div class="blur-demo-overlay">
                     <div class="blur-box-simulation"><span class="blur-text">api_key_8x10f...</span></div>
-                    <span class="blur-label">Gaussian Blur Mask</span>
+                    <span class="blur-label">Hidden before you share</span>
                   </div>
                 </div>
                 
@@ -392,6 +511,33 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:72px;">
+        <h2>More in Pro: redact, extract &amp; capture.</h2>
+        <p>Beyond markup, Rendry Pro turns a capture into something you can use — and keeps it all on your machine.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="ico">🛡️</div>
+          <h3>Smart Redact <span class="badge">PRO</span></h3>
+          <p>Automatically hide sensitive details before you save — then review, undo, or restore any of them in the editor. Nothing ever leaves your machine.</p>
+        </div>
+        <div class="card">
+          <div class="ico">📋</div>
+          <h3>Copy text, links &amp; tables <span class="badge">PRO</span></h3>
+          <p>Turn any capture into clean, paste-ready text, a tidy list of links, or a spreadsheet-ready table — as Markdown, CSV, or TSV.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🎨</div>
+          <h3>Design tokens <span class="badge">PRO</span></h3>
+          <p>Grab a page's colours, fonts, and spacing as CSS variables or JSON, bundled right into the capture flow.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🎯</div>
+          <h3>Element capture <span class="badge">PRO</span></h3>
+          <p>Capture just one element — including the part scrolled below the fold — instead of the whole page.</p>
         </div>
       </div>
     </div>
@@ -461,28 +607,39 @@
     </div>
   </section>
 
-  <!-- ─── Why Rendry ───────────────────────────────────────────── -->
-  <section>
+  <!-- ─── Use Cases ────────────────────────────────────────────── -->
+  <section id="use-cases">
     <div class="container">
       <div class="section-head">
-        <div class="eyebrow">Differentiators</div>
-        <h2>Built for devs, designers, QAs, &amp; managers.</h2>
+        <div class="eyebrow">Use Cases</div>
+        <h2>One capture. Many jobs done.</h2>
+        <p>A screenshot is just the start. Turn any page into clean text, links, tables, or design values — mark it up, or hide sensitive details before you share. All on your machine.</p>
       </div>
-      
-      <div class="why-grid">
-        <div class="why">
-          <strong>Free PDF exports</strong>
-          <p>Unlike competing extensions, exporting high-fidelity full-page PDFs is entirely included in the free tier.</p>
-        </div>
-        <div class="why">
-          <strong>Completely serverless</strong>
-          <p>No backend accounts or external APIs are involved in your screenshots, guaranteeing zero data exposure.</p>
-        </div>
-        <div class="why">
-          <strong>ExtensionPay checkout</strong>
-          <p>Upgrades are safely processed via Stripe using ExtensionPay. One email checkout, no password management.</p>
-        </div>
+
+      <div class="use-case-grid">
+        <article class="use-case">
+          <h3>QA &amp; bug reports</h3>
+          <p>File the bug, not the customer's data. Capture the page, mark it up with arrows and notes, and hide sensitive details before you save. Grab just one component — including the part below the fold — or export every link on the page to check for broken ones.</p>
+          <a href="/uses/qa-testing">QA &amp; bug reports with Rendry &rarr;</a>
+        </article>
+        <article class="use-case">
+          <h3>Design &amp; UI</h3>
+          <p>Love a site's look? Take its colours, fonts, and spacing with you as CSS variables or JSON. Capture one component for a spec or moodboard, then mark it up in the built-in editor.</p>
+          <a href="/uses/extract-design-tokens">Extract a website's design tokens &rarr;</a>
+        </article>
+        <article class="use-case">
+          <h3>Content, SEO &amp; research</h3>
+          <p>Skip the copy-paste marathon: copy a page's text clean and paste-ready, pull a table straight into Sheets or Excel, grab every link for an audit, or clip a section as clean Markdown to drop into an AI assistant.</p>
+          <a href="/uses/copy-text-from-webpage">Copy text, links &amp; tables &rarr;</a>
+        </article>
+        <article class="use-case">
+          <h3>Support, legal &amp; compliance</h3>
+          <p>Answer the ticket without leaking the next customer's data. Hide sensitive details before you save — review, undo, or restore each one — then export. Or keep a clean PDF record of a page for your archive. Nothing ever leaves your machine.</p>
+          <a href="/uses/redact-a-screenshot">Redact a screenshot &rarr;</a>
+        </article>
       </div>
+
+      <p class="use-case-personas">Also great for developers and QA filing cleaner bug reports, product managers building specs, designers and front-end engineers grabbing a site's look, competitive-intel analysts mapping a rival's words and design in one pass, accessibility auditors pulling a full link-text inventory, and researchers clipping clean source material.</p>
     </div>
   </section>
 
@@ -609,6 +766,26 @@
               <td class="cross">✕</td>
               <td class="check" style="color:var(--blue);">✓</td>
             </tr>
+            <tr>
+              <td class="feature-name">Smart Redact (auto-hide sensitive details)</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Copy text, links &amp; tables (Markdown / CSV / TSV)</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Design tokens (colours, fonts &amp; spacing)</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Element capture (incl. below the fold)</td>
+              <td class="cross">✕</td>
+              <td class="check" style="color:var(--blue);">✓</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -652,6 +829,42 @@
         <summary>How do I report a bug?</summary>
         <p>Please open a bug ticket or discussion request in our public repository at <a href="https://github.com/mamaownedus/rendry-site/issues">github.com/mamaownedus/rendry-site/issues</a>. We actively review all submissions.</p>
       </details>
+
+      <details>
+        <summary>How do I take a full-page screenshot of a web page?</summary>
+        <p>Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet.</p>
+      </details>
+
+      <details>
+        <summary>How do I save a full web page as a PDF?</summary>
+        <p>Choose PDF in the Rendry popup before you capture, then click the icon. Rendry saves the entire page as a single clean PDF — including content below the fold — for free. Pro adds multi-page A4/Letter layouts and custom filenames if you need them.</p>
+      </details>
+
+      <details>
+        <summary>How do I hide sensitive details in a screenshot before sharing it?</summary>
+        <p>Turn on Smart Redact (Pro) in the Rendry popup and it <a href="/uses/redact-a-screenshot">hides sensitive details</a> before you save, then lets you review, undo, or restore each one in the editor — so a bug report or support reply never leaks private information. Everything stays on your machine.</p>
+      </details>
+
+      <details>
+        <summary>Can I copy the text, links, and tables from a webpage capture?</summary>
+        <p>Yes. Rendry Pro lets you copy clean, ready-to-paste text, a tidy list of links, or a spreadsheet-ready table from any capture via the editor's <a href="/uses/copy-text-from-webpage">Extract panel</a> — as Markdown, CSV, or TSV. It's handy for content audits, research, and pasting a page into an AI assistant.</p>
+      </details>
+
+      <details>
+        <summary>How do I extract a website's colours and fonts?</summary>
+        <p>With Rendry Pro, the Extract panel turns any page's <a href="/uses/extract-design-tokens">colours, fonts, and spacing</a> into reusable design tokens — exported as CSS variables or JSON. It's bundled into the capture flow and runs locally, so you can grab a site's look without a separate tool or any upload.</p>
+      </details>
+
+      <details>
+        <summary>How do I screenshot just one element on a webpage?</summary>
+        <p>Choose <a href="/uses/screenshot-one-element">Capture element</a> in the Rendry popup (Pro), then click the element you want. Rendry captures only that element — including the part scrolled below the fold — instead of the whole page. It's great for grabbing a single component for a spec, moodboard, or bug report.</p>
+      </details>
+
+
+      <details>
+        <summary>Does Rendry work in Brave, Edge, Arc, Opera, and Comet?</summary>
+        <p>Yes. Rendry works across Chromium browsers — Chrome, Brave, Edge, Opera, Arc, and Comet — so you get the same one-click full-page capture, clean-up, and editor everywhere, with the same local-first privacy.</p>
+      </details>
     </div>
   </section>
 
@@ -680,6 +893,16 @@
         </ul>
       </div>
       <div>
+        <h4>Use cases</h4>
+        <ul>
+          <li><a href="/uses/copy-text-from-webpage">Copy text, links &amp; tables</a></li>
+          <li><a href="/uses/extract-design-tokens">Extract design tokens</a></li>
+          <li><a href="/uses/redact-a-screenshot">Redact a screenshot</a></li>
+          <li><a href="/uses/qa-testing">QA &amp; bug reports</a></li>
+          <li><a href="/guides/full-page-screenshot-chrome">Full-page screenshot guide</a></li>
+        </ul>
+      </div>
+      <div>
         <h4>Support</h4>
         <ul>
           <li><a href="https://github.com/mamaownedus/rendry-site/issues" target="_blank" rel="noopener">Report an Issue</a></li>
@@ -691,6 +914,7 @@
     </div>
     <div class="legal">
       <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
+      <span class="updated">Last updated June 2026</span>
       <span>Chrome is a trademark of Google LLC.</span>
     </div>
   </div>

@@ -1,0 +1,62 @@
+# Rendry
+
+> Rendry is a privacy-first, full-page screenshot browser extension for Chromium browsers (Chrome, Brave, Edge, Opera, Arc, Comet). It captures entire web pages as PNG, PDF, JPEG, or WebP in one click. Everything happens in your browser — your screenshots never leave your machine; the only network request it makes is license verification.
+
+## What Rendry does (free)
+
+- Full-page capture: grabs the whole page, including lazy-loaded images, as one clean image.
+- Clean output: automatically hides cookie banners, chat widgets, ads, and popups before capture.
+- Built-in editor: every capture opens in an editor — crop, copy to clipboard, and PNG/PDF export are free.
+- Formats: PNG and PDF are free; JPEG and WebP are Pro.
+- Keyboard shortcut: Alt+Shift+R for instant capture.
+
+## Rendry Pro ($2/month, with a 7-day free trial)
+
+- Smart Redact: automatically hides sensitive details before you save, and lets you review, undo, or restore any of them in the editor.
+- Copy text, links, and tables: turn any capture into clean, ready-to-paste text, a tidy list of links, or a spreadsheet-ready table.
+- Design tokens: grab a page's colours, fonts, and spacing in one click (as CSS variables or JSON).
+- Element capture: click any element to capture just it, including content that scrolls below the fold.
+- Also: JPEG & WebP export, compression control, custom filename templates, resolution control, multi-page PDF (A4/Letter), timed capture, and editor markup tools (blur, arrows, shapes, text).
+
+## What you can do with a capture (use cases)
+
+- Take a full-page screenshot in one click — no scrolling, no DevTools — and save it as PNG or PDF (free).
+- Save a whole web page as a single clean PDF (free), including content below the fold — handy for keeping a record.
+- Mark up a capture with arrows, shapes, text, or blur in the built-in editor (markup tools are Pro; crop/copy/export are free).
+- Copy a page's text, links, and tables — clean and ready to paste into a doc, spreadsheet, or an AI assistant (Markdown / CSV / TSV) (Pro).
+- Extract a website's design tokens — its colours, fonts, and spacing — as CSS variables or JSON (Pro).
+- Capture a single element, including the part scrolled below the fold (Pro).
+- Hide sensitive details before you save, with review, undo, and restore (Pro).
+- Works across Chrome, Brave, Edge, Opera, Arc, and Comet.
+
+## Privacy
+
+- Local-first: all capture and editing happen in your browser. Screenshots never leave your machine.
+- Minimal permissions: no access to other tabs, no analytics, no tracking, no account required.
+- The only outbound network request is license verification (email + subscription status only — never your page content or screenshots).
+
+## FAQ
+
+- Does Rendry upload my screenshots? No. Everything happens in your browser; the only network request is license verification. Your screenshots and page content never leave your machine.
+- How do I hide sensitive data in a screenshot? Turn on "Redact sensitive data" in the Rendry popup. Smart Redact (Pro) automatically hides sensitive details before you save, and you can review or undo each one in the editor.
+- Can I get the text from a screenshot? Yes. Rendry Pro lets you copy clean, ready-to-paste text, links, and tables from any capture via the editor's Extract panel.
+- How do I capture just one element of a page? Use Element capture (Pro): choose "Capture element" in the popup, then click the element you want.
+- Is Rendry free? Yes — full-page PNG/PDF capture, automatic clean-up of banners and popups, and the built-in editor (crop, copy, export) are free forever. Rendry Pro ($2/month) adds the features above, with a 7-day free trial.
+
+## Links
+
+- Home: https://rendry.app/
+- Privacy policy: https://rendry.app/privacy
+- Changelog: https://rendry.app/changelog
+- Refund policy: https://rendry.app/refunds
+- Press kit: https://rendry.app/press-kit
+- Chrome Web Store: https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn
+
+## Use-case pages
+
+- Copy text, links & tables from a web page: https://rendry.app/uses/copy-text-from-webpage
+- Extract a website's design tokens: https://rendry.app/uses/extract-design-tokens
+- Redact a screenshot: https://rendry.app/uses/redact-a-screenshot
+- Screenshots for QA & bug reports: https://rendry.app/uses/qa-testing
+- Screenshot one element of a page: https://rendry.app/uses/screenshot-one-element
+- How to take a full-page screenshot in Chrome: https://rendry.app/guides/full-page-screenshot-chrome
