@@ -1248,13 +1248,18 @@ section + section {
   align-items: center;
   gap: 10px;
 }
-.pro-feature-item h3 span.badge {
+.pro-feature-item h3 span.badge,
+.card h3 .badge {
   background: rgba(251, 191, 36, 0.15);
   color: #fbbf24;
   font-size: 0.65rem;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: 800;
+}
+.card h3 .badge {
+  margin-left: 8px;
+  vertical-align: middle;
 }
 .pro-feature-item p {
   margin: 0;
@@ -1729,7 +1734,7 @@ section + section {
 }
 .site-footer .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
   margin-bottom: 48px;
 }
@@ -1837,6 +1842,126 @@ section + section {
   border: 0;
   border-top: 1px solid var(--border-color);
   margin: 40px 0;
+}
+
+/* ─── Hero definition (answer-first lead) ────────────────────────── */
+.hero-definition {
+  max-width: 720px;
+  margin: 0 auto 8px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+/* ─── Quick stats band ───────────────────────────────────────────── */
+.stat-band {
+  padding: 32px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.015);
+}
+.stat-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 48px;
+}
+.stat-row li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 120px;
+}
+.stat-row strong {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+.stat-row span {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 170px;
+}
+
+/* ─── Use cases ──────────────────────────────────────────────────── */
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.use-case {
+  padding: 28px;
+  border-left: 3px solid var(--blue);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.use-case h3 {
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+  color: #fff;
+}
+.use-case p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.use-case a {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--blue);
+}
+.use-case a:hover {
+  color: var(--blue-hover);
+}
+.use-case-personas {
+  margin: 32px auto 0;
+  max-width: 880px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ─── Compare teaser ─────────────────────────────────────────────── */
+.compare-teaser {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 28px 32px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+.compare-teaser h3 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+.compare-teaser p {
+  margin: 0 auto 20px;
+  max-width: 620px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.compare-teaser-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+}
+.compare-teaser-links a {
+  font-weight: 600;
+  color: var(--blue);
+}
+.compare-teaser-links a:hover {
+  color: var(--blue-hover);
 }
 
 /* ─── Focus ──────────────────────────────────────────────────────── */
