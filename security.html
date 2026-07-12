@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security &amp; Permissions — Rendry</title>
+<meta name="description" content="Every permission Rendry asks for, in plain English — what each one does, and what leaves your machine (your captures never do).">
+<meta name="theme-color" content="#4A6CF7">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png">
+<link rel="canonical" href="https://rendry.app/security">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <img src="/assets/logo.svg" alt="Rendry logo" width="32" height="32">
+      Rendry
+    </a>
+    <nav class="nav">
+      <a class="nav-link" href="/#features">Features</a>
+      <a class="nav-link" href="/#pro-features">Pro Features</a>
+      <a class="nav-link" href="/#pricing">Pricing</a>
+      <a class="nav-link" href="/#faq">FAQ</a>
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<article class="prose">
+
+<h1>Security &amp; Permissions</h1>
+<p class="meta">Every permission Rendry asks for, in plain English — and exactly what leaves your machine. (Spoiler: your captures never do.)</p>
+
+<h2>The short version</h2>
+<p>Rendry can only see a page <strong>when you click its icon or press the keyboard shortcut on that page</strong>. It has no access to your other tabs, your history, or anything in the background. Every capture — including redaction and text extraction — is processed on your own device, on the free tier and Pro alike.</p>
+<p>The only network request Rendry ever makes is the Pro license check via ExtensionPay: your email (if you've signed up) and your subscription status. Never your pages, captures, or browsing data.</p>
+
+<h2>Why this is different</h2>
+<p>Most screenshot extensions request broad host access, which makes Chrome show this warning at install: <strong>"Read and change all your data on all websites."</strong> An extension with that access can technically see every page you visit, all the time.</p>
+<p>Rendry uses <code>activeTab</code> instead — permission for <em>one page, at the moment you click</em>. It structurally cannot read pages you didn't click on. This isn't a promise you have to trust; it's a limit Chrome itself enforces, and you can verify it on our Chrome Web Store listing under "Privacy practices".</p>
+
+<h2>Every permission, explained</h2>
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Why Rendry needs it</th><th>What is sent anywhere</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>activeTab</code></td>
+      <td>Lets Rendry see the current page — <strong>only when you click the icon</strong> or use the keyboard shortcut. No background access to any tab, ever.</td>
+      <td>Nothing. The page is read on your device.</td>
+    </tr>
+    <tr>
+      <td><code>scripting</code></td>
+      <td>Runs the capture routine on the page you clicked: scrolling it, measuring it, and hiding cookie banners for a clean shot.</td>
+      <td>Nothing. Runs entirely in your browser.</td>
+    </tr>
+    <tr>
+      <td><code>downloads</code></td>
+      <td>Saves the finished screenshot or PDF to your Downloads folder.</td>
+      <td>Nothing. The file goes straight to your disk.</td>
+    </tr>
+    <tr>
+      <td><code>storage</code></td>
+      <td>Remembers your preferences (format, toggles) and caches your license status so Rendry doesn't have to check it constantly.</td>
+      <td>Nothing. Preferences sync only through your own Chrome profile if you're signed into Chrome.</td>
+    </tr>
+    <tr>
+      <td><code>offscreen</code></td>
+      <td>Assembles the page segments into one finished image in a hidden page instead of a visible tab. Required by modern Chrome for image work.</td>
+      <td>Nothing. Image assembly happens on your device.</td>
+    </tr>
+    <tr>
+      <td><code>clipboardWrite</code></td>
+      <td>Copies a capture to your clipboard — only when you've turned on "Copy to clipboard" or click Copy in the editor. Never on its own.</td>
+      <td>Nothing. Clipboard stays on your machine.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>What Rendry will never request</h2>
+<ul>
+  <li><code>&lt;all_urls&gt;</code> or any host permissions — the "all your data on all websites" access</li>
+  <li><code>cookies</code>, <code>history</code>, or <code>webNavigation</code></li>
+  <li>Access to your bookmarks, passwords, or other browsing data</li>
+</ul>
+
+<h2>The one thing that does use the network</h2>
+<p>Rendry Pro subscriptions are handled by <a href="https://extensionpay.com" target="_blank" rel="noopener">ExtensionPay</a> with payments processed by Stripe. The license check sends your email address (if you've signed up for Pro or the trial) and receives your subscription status back. That's the complete list — no capture data, no page content, no URLs, no analytics, no telemetry.</p>
+
+<h2>Verify it yourself</h2>
+<ul>
+  <li><a href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Chrome Web Store listing</a> — see the declared permissions and privacy practices Google displays for Rendry</li>
+  <li><a href="/privacy">Privacy policy</a> — the full policy, including data storage and third-party services</li>
+  <li><a href="https://github.com/mamaownedus/rendry-site/issues" target="_blank" rel="noopener">Public issue tracker</a> — bug reports and answers, in the open</li>
+  <li><a href="/changelog">Changelog</a> — every release, documented</li>
+</ul>
+
+<h2>Questions</h2>
+<p>Security question we haven't answered here? Email <a href="mailto:support@rendry.app">support@rendry.app</a> — we'd rather over-explain than leave you guessing.</p>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="legal">
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
+      <span><a href="/">Home</a> · <a href="/privacy">Privacy Policy</a> · <a href="/changelog">Changelog</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

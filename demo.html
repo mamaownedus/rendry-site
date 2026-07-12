@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Redact Demo — Rendry</title>
+<meta name="description" content="A sample page seeded with fake emails, card numbers, and API keys. Capture it with Rendry and watch Smart Redact find every one — entirely on your device.">
+<meta name="theme-color" content="#4A6CF7">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png">
+<link rel="canonical" href="https://rendry.app/demo">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.demo-console {
+  border: 1px solid var(--border, #e2e5ec);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 32px 0;
+}
+.demo-console-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.demo-console-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: #4A6CF7; }
+.demo-console-body { padding: 20px 24px; background: #fff; color: #1a1a2e; }
+.demo-console-body h3 { margin: 24px 0 10px; color: #1a1a2e; font-size: 1.05rem; }
+.demo-console-body h3:first-child { margin-top: 0; }
+.demo-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.demo-table th, .demo-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eef0f4; }
+.demo-table td { color: #333a4d; }
+.demo-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #6c757d; }
+.demo-keys { background: #f6f7fb; border-radius: 8px; padding: 14px 16px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; line-height: 1.8; overflow-x: auto; color: #1a1a2e; }
+.demo-note { font-size: 14px; color: #6c757d; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <img src="/assets/logo.svg" alt="Rendry logo" width="32" height="32">
+      Rendry
+    </a>
+    <nav class="nav">
+      <a class="nav-link" href="/#features">Features</a>
+      <a class="nav-link" href="/#pro-features">Pro Features</a>
+      <a class="nav-link" href="/#pricing">Pricing</a>
+      <a class="nav-link" href="/#faq">FAQ</a>
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<article class="prose">
+
+<h1>Try Smart Redact on this page</h1>
+<p class="meta">Everything below is <strong>fake, generated sample data</strong> — the kind of thing that sneaks into real screenshots every day. Capture this page and watch Rendry find it all, without the page ever leaving your machine.</p>
+
+<h2>How to run the demo</h2>
+<ol>
+  <li><a href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Install Rendry</a> (free) and stay on this page.</li>
+  <li>Click the Rendry icon and switch on <strong>Smart Redact</strong>.</li>
+  <li>Click <strong>Capture Full Page</strong>.</li>
+  <li>The editor opens with the verdict: on the free tier Rendry shows you <em>how many</em> sensitive items it detected; on Pro (or the 7-day free trial) every one of them is already blurred — and you can un-redact any match that shouldn't be hidden.</li>
+</ol>
+
+<div class="demo-console">
+  <div class="demo-console-bar"><span class="dot"></span> Acme Support Console — internal</div>
+  <div class="demo-console-body">
+
+    <h3>Recent customers</h3>
+    <table class="demo-table">
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Phone</th><th>Card on file</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Alice Rivera</td><td>alice.rivera@example.com</td><td>+1 415-555-0142</td><td>4111 1111 1111 1111</td></tr>
+        <tr><td>Ben Okafor</td><td>ben.okafor@example.com</td><td>555-123-4567</td><td>5500 0000 0000 0004</td></tr>
+        <tr><td>Chloe Nguyen</td><td>chloe.nguyen@example.com</td><td>212-555-0176</td><td>3400 0000 0000 009</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Account verification</h3>
+    <table class="demo-table">
+      <tbody>
+        <tr><td>SSN on record</td><td>123-45-6789</td></tr>
+        <tr><td>IBAN (payouts)</td><td>DE89370400440532013000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>API credentials</h3>
+    <div class="demo-keys">
+      AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE<br>
+      OPENAI_API_KEY=sk-demo1234567890abcdefghijklmn<br>
+      GITHUB_TOKEN=ghp_1234567890abcdefghijklmnopqrstuvwxyz<br>
+      SESSION_JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.dozjgNryP4J3jVmNHl0w5N_XgL0n3I9PlFUP0THsR8U<br>
+      Authorization: Bearer abcDEF123456ghiJKL
+    </div>
+
+  </div>
+</div>
+
+<h2>What just happened</h2>
+<p>Rendry reads the page the way your browser does, so Smart Redact finds real values — emails, phone numbers, card numbers, SSNs, IBANs, API keys and tokens — and blurs them exactly where they appear in the screenshot. Detection runs entirely on your device: this page, and your capture, are never uploaded anywhere.</p>
+<p class="demo-note">Smart Redact is an assist, not a guarantee — it's built to catch the common patterns that slip into screenshots, and it always shows you what it found so you can review before sharing. For the full picture of what Rendry can and cannot see, read <a href="/security">Security &amp; Permissions</a>.</p>
+
+<h2>Where this saves you time</h2>
+<p>If you attach screenshots to bug reports, support tickets, or documentation, you've probably blurred customer data by hand — box by box, screenshot by screenshot. Smart Redact does that pass for you on every capture. See <a href="/uses/redact-a-screenshot">how to redact a screenshot</a> and <a href="/uses/qa-testing">Rendry for QA &amp; bug reports</a>.</p>
+
+<p><a class="btn btn-primary" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add Rendry to Chrome — free</a></p>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="legal">
+      <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
+      <span><a href="/">Home</a> · <a href="/privacy">Privacy Policy</a> · <a href="/changelog">Changelog</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

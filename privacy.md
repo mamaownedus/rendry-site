@@ -1,7 +1,7 @@
 # Rendry — Privacy Policy
 
 **Effective date:** April 5, 2026
-**Last updated:** May 24, 2026
+**Last updated:** July 12, 2026
 
 ---
 
@@ -31,7 +31,7 @@ Rendry offers an optional paid upgrade ("Rendry Pro") for additional features. P
 - ExtensionPay stores your **subscription status** (active/inactive) to verify your license
 - No browsing data, screenshots, or page content is ever sent to ExtensionPay or Stripe
 
-**If you do not upgrade**, Rendry's free tier makes **zero network requests** and contacts no external services. The free tier works identically to a fully offline extension.
+**Whether or not you upgrade**, every capture is processed entirely on your device — the free tier and Pro handle screenshots identically, and neither ever sends page content, captures, or browsing data anywhere. The only network request Rendry makes on any tier is the ExtensionPay license check described above.
 
 You can manage or cancel your subscription at any time through ExtensionPay's account portal.
 

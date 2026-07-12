@@ -46,6 +46,8 @@
 ## Links
 
 - Home: https://rendry.app/
+- Security & permissions: https://rendry.app/security
+- Smart Redact live demo: https://rendry.app/demo
 - Privacy policy: https://rendry.app/privacy
 - Changelog: https://rendry.app/changelog
 - Refund policy: https://rendry.app/refunds

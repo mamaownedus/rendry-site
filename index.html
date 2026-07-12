@@ -47,7 +47,8 @@
     "priceCurrency": "USD",
     "lowPrice": "0",
     "highPrice": "20",
-    "offerCount": "3"
+    "offerCount": "3",
+    "description": "Free tier included. Rendry Pro is $2/month or $20/year and starts with a 7-day free trial — no card required."
   },
   "datePublished": "2025-04-19",
   "dateModified": "2026-06-28",
@@ -77,12 +78,17 @@
     {
       "@type": "Question",
       "name": "Is Rendry really free?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text)." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free trial?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rendry Pro starts with a 7-day free trial — full Pro access, no card required. Start it with one click from the extension popup or the editor. If Pro isn't for you, do nothing: the trial simply ends and the free tier keeps working forever." }
     },
     {
       "@type": "Question",
       "name": "Does Rendry track my screenshots?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. We operate on a local-first philosophy. Your captures are kept strictly in browser memory and saved to your local downloads folder. No screenshot data is ever sent to our servers. The free tier makes zero network requests." }
+      "acceptedAnswer": { "@type": "Answer", "text": "No. We operate on a local-first philosophy. Your captures are kept strictly in browser memory and saved to your local downloads folder — on the free tier and Pro alike. No screenshot data is ever sent to our servers. The only network request Rendry ever makes is the license check (your email and subscription status) — never your pages or captures." }
     },
     {
       "@type": "Question",
@@ -179,7 +185,8 @@
         </a>
         <a class="btn btn-ghost btn-lg" id="hero-secondary-cta" href="#how">See how it works</a>
       </div>
-      
+      <p style="color:var(--text-muted);font-size:0.85rem;margin:10px 0 0;">Core capture is free forever. Pro starts with a 7-day free trial — no card required.</p>
+
       <div class="supported-browsers">
         <div class="browsers-label">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7; margin-right: 2px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -418,7 +425,7 @@
         <div class="card">
           <div class="ico">🔒</div>
           <h3>Private by design</h3>
-          <p>No account required. Free tier runs fully locally and makes zero server calls.</p>
+          <p>No account required. Every capture is processed on your own device and never uploaded — free tier and Pro alike.</p>
         </div>
         <div class="card">
           <div class="ico">✕</div>
@@ -556,8 +563,8 @@
       
       <div class="promise-grid">
         <div class="promise">
-          <strong>Zero Server Calls</strong>
-          <p>Screenshots never leave your machine. The extension works perfectly offline without any external APIs.</p>
+          <strong>Captures Never Leave Your Machine</strong>
+          <p>Every tier processes screenshots entirely on your device. The only network request Rendry ever makes is the Pro license check — never your pages or captures.</p>
         </div>
         <div class="promise">
           <strong>No Analytics or Tracking</strong>
@@ -574,6 +581,11 @@
       </div>
       
       <p style="text-align:center;margin-top:40px;">
+        <a href="/security" style="font-weight:600;display:inline-flex;align-items:center;gap:6px;">
+          See every permission we ask for — and why
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <span style="margin:0 10px;color:var(--text-muted);">·</span>
         <a href="/privacy" style="font-weight:600;display:inline-flex;align-items:center;gap:6px;">
           Read our comprehensive privacy policy
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -648,13 +660,14 @@
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Pricing</div>
-        <h2>Unlock professional workflow tools.</h2>
-        <p>Support independent open development and acquire advanced export and annotation features.</p>
+        <h2>Everything you capture, ready to share safely.</h2>
+        <p>Smart Redact hides sensitive details before you share, Extract turns any capture into clean text and tables, and markup tools make it presentation-ready.</p>
       </div>
       
       <div class="pro-card">
         <div class="pricing-header">
           <h3>Rendry Pro</h3>
+          <p style="color:var(--success);font-size:1rem;margin:8px 0 0;font-weight:700;">7-day free trial — no card required</p>
           <div class="price-options">
             <div class="price-block">
               <div class="price">$2 <span>/ month</span></div>
@@ -662,14 +675,19 @@
             </div>
             <div class="price-divider"></div>
             <div class="price-block">
+              <span style="display:inline-block;background:var(--success);color:#fff;font-size:0.7rem;font-weight:700;padding:2px 10px;border-radius:999px;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:6px;">Best value</span>
               <div class="price">$20 <span>/ year</span></div>
               <p style="color:var(--success);font-size:0.85rem;margin:4px 0 0;font-weight:700;">Save 16% — 2 months free!</p>
             </div>
           </div>
-          <p style="color:var(--text-muted);margin:16px 0 0;">Cancel anytime. 7-day money-back guarantee.</p>
+          <p style="color:var(--text-muted);margin:16px 0 0;">Try everything free for 7 days. Cancel anytime. 7-day money-back guarantee.</p>
         </div>
         
         <ul class="feature-list">
+          <li>Smart Redact — auto-hide emails, keys &amp; other sensitive details, on your device</li>
+          <li>Extract panel — copy a capture's real text, links &amp; tables (not OCR)</li>
+          <li>Element capture (including content below the fold)</li>
+          <li>Design tokens — a site's colours, fonts &amp; spacing as CSS or JSON</li>
           <li>Editor markup tools (blur, arrows, shapes, text)</li>
           <li>Lossy JPEG &amp; WebP formats</li>
           <li>Resolution scaling (0.5× to 3× retina)</li>
@@ -677,15 +695,14 @@
           <li>Custom template filename variables</li>
           <li>Compression presets &amp; quality control</li>
           <li>Timed capture delay countdowns</li>
-          <li>Supports offline operation</li>
         </ul>
-        
+
         <a class="btn btn-primary btn-lg" id="pricing-pro-cta" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">
-          Get Started with Rendry
+          Start your 7-day free trial
         </a>
-        
+
         <p class="fine">
-          Upgrade with one click from inside the extension popup. Secured via ExtensionPay &amp; Stripe. See our <a href="/refunds">refund policy</a>.
+          Install free from the Chrome Web Store, then start the trial with one click inside the extension — no card required. Secured via ExtensionPay &amp; Stripe. See our <a href="/refunds">refund policy</a>.
         </p>
       </div>
 
@@ -802,12 +819,17 @@
 
       <details>
         <summary>Is Rendry really free?</summary>
-        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text).</p>
+        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text).</p>
+      </details>
+
+      <details>
+        <summary>Is there a free trial?</summary>
+        <p>Yes. Rendry Pro starts with a 7-day free trial — full Pro access, no card required. Start it with one click from the extension popup or the editor. If Pro isn't for you, do nothing: the trial simply ends and the free tier keeps working forever.</p>
       </details>
 
       <details>
         <summary>Does Rendry track my screenshots?</summary>
-        <p>No. We operate on a local-first philosophy. Your captures are kept strictly in browser memory and saved to your local downloads folder. No screenshot data is ever sent to our servers. The free tier makes zero network requests.</p>
+        <p>No. We operate on a local-first philosophy. Your captures are kept strictly in browser memory and saved to your local downloads folder — on the free tier and Pro alike. No screenshot data is ever sent to our servers. The only network request Rendry ever makes is the license check (your email and subscription status) — never your pages or captures.</p>
       </details>
 
       <details>
@@ -889,6 +911,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#pro-features">Pro Features</a></li>
           <li><a href="/changelog">Changelog</a></li>
+          <li><a href="/demo">Smart Redact demo</a></li>
           <li><a href="/press-kit">Press Kit</a></li>
         </ul>
       </div>
@@ -907,6 +930,7 @@
         <ul>
           <li><a href="https://github.com/mamaownedus/rendry-site/issues" target="_blank" rel="noopener">Report an Issue</a></li>
           <li><a href="https://github.com/mamaownedus/rendry-site/discussions" target="_blank" rel="noopener">Discussions</a></li>
+          <li><a href="/security">Security &amp; Permissions</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/refunds">Refund Policy</a></li>
         </ul>
@@ -914,7 +938,7 @@
     </div>
     <div class="legal">
       <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
-      <span class="updated">Last updated June 2026</span>
+      <span class="updated">Last updated July 2026</span>
       <span>Chrome is a trademark of Google LLC.</span>
     </div>
   </div>
