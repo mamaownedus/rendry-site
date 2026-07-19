@@ -2,13 +2,13 @@
 
 ## Short Description (132 characters max)
 
-Capture full-page screenshots as PNG or PDF. Privacy-first — no data leaves your browser. One click, zero config.
+Capture full-page screenshots as PNG, JPEG, or PDF. Privacy-first — no data leaves your browser. One click, zero config.
 
 ## Detailed Description
 
 ### Full-page screenshots, done right.
 
-Rendry captures entire web pages as high-quality PNG or PDF files — no scrolling, no stitching by hand, no hassle. Click once, get a clean screenshot of the full page.
+Rendry captures entire web pages as PNG, high-quality JPEG, or PDF files — no scrolling, no stitching by hand, no hassle. Click once, get a clean screenshot of the full page.
 
 ### Features
 
@@ -32,9 +32,10 @@ Toggle noise removal on or off from the popup menu.
 **Copy to Clipboard**
 Flip the "Copy to clipboard" toggle in the popup (off by default) and every capture is also copied to your system clipboard as a PNG — paste straight into Slack, email, Notes, or any image-aware app. The file still downloads as usual.
 
-**Export as PNG or PDF**
+**Export as PNG, JPEG, or PDF**
 Choose your format:
 • PNG — pixel-perfect image, ideal for sharing and editing
+• JPEG — compact high-quality image, ideal for smaller files
 • PDF — single-page document with metadata, great for archiving
 
 **Built-in Screenshot Editor**
@@ -46,7 +47,7 @@ Every capture opens instantly in a local tab with our built-in editor. Crop, cop
 
 Unlock the power tier for $2/month. Everything local-first, nothing sent anywhere but Stripe for billing:
 
-• **More export formats** — JPEG and WebP for smaller files
+• **WebP export** — compact files with modern image compression
 • **Compression control** — pick from _Smaller files_, _Balanced_, _High quality_, or _Maximum quality_ presets, or fine-tune per export with a live file-size estimate. Applies to JPEG, WebP, and PDF
 • **Custom filename templates** — `{domain}`, `{date}`, `{time}`, `{title}`, `{timestamp}`
 • **Resolution control** — 0.5×, 1×, 2×, or 3× device pixel ratio

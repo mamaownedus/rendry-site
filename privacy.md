@@ -1,7 +1,7 @@
 # Rendry — Privacy Policy
 
 **Effective date:** April 5, 2026
-**Last updated:** July 12, 2026
+**Last updated:** July 19, 2026
 
 ---
 
@@ -39,7 +39,7 @@ You can manage or cancel your subscription at any time through ExtensionPay's ac
 
 Rendry stores the following data locally using Chrome's `chrome.storage.sync` API:
 
-- **Export format** (PNG or PDF)
+- **Export format** (PNG, JPEG, PDF, or WebP)
 - **Noise removal toggle** (on or off)
 - **Copy to clipboard toggle** (on or off)
 - **Premium license status** (cached locally to avoid unnecessary network checks)
