@@ -6,8 +6,8 @@
 
 - Full-page capture: grabs the whole page, including lazy-loaded images, as one clean image.
 - Clean output: automatically hides cookie banners, chat widgets, ads, and popups before capture.
-- Built-in editor: every capture opens in an editor — crop, copy to clipboard, and PNG/PDF export are free.
-- Formats: PNG and PDF are free; JPEG and WebP are Pro.
+- Built-in editor: every capture opens in an editor — crop, copy to clipboard, and PNG/JPEG/PDF export are free.
+- Formats: PNG, JPEG, and PDF are free; WebP and adjustable compression are Pro.
 - Keyboard shortcut: Alt+Shift+R for instant capture.
 
 ## Rendry Pro ($2/month, with a 7-day free trial)
@@ -16,11 +16,11 @@
 - Copy text, links, and tables: turn any capture into clean, ready-to-paste text, a tidy list of links, or a spreadsheet-ready table.
 - Design tokens: grab a page's colours, fonts, and spacing in one click (as CSS variables or JSON).
 - Element capture: click any element to capture just it, including content that scrolls below the fold.
-- Also: JPEG & WebP export, compression control, custom filename templates, resolution control, multi-page PDF (A4/Letter), timed capture, and editor markup tools (blur, arrows, shapes, text).
+- Also: WebP export, compression control, custom filename templates, resolution control, multi-page PDF (A4/Letter), timed capture, and editor markup tools (blur, arrows, shapes, text).
 
 ## What you can do with a capture (use cases)
 
-- Take a full-page screenshot in one click — no scrolling, no DevTools — and save it as PNG or PDF (free).
+- Take a full-page screenshot in one click — no scrolling, no DevTools — and save it as PNG, JPEG, or PDF (free).
 - Save a whole web page as a single clean PDF (free), including content below the fold — handy for keeping a record.
 - Mark up a capture with arrows, shapes, text, or blur in the built-in editor (markup tools are Pro; crop/copy/export are free).
 - Copy a page's text, links, and tables — clean and ready to paste into a doc, spreadsheet, or an AI assistant (Markdown / CSV / TSV) (Pro).
@@ -41,7 +41,7 @@
 - How do I hide sensitive data in a screenshot? Turn on "Redact sensitive data" in the Rendry popup. Smart Redact (Pro) automatically hides sensitive details before you save, and you can review or undo each one in the editor.
 - Can I get the text from a screenshot? Yes. Rendry Pro lets you copy clean, ready-to-paste text, links, and tables from any capture via the editor's Extract panel.
 - How do I capture just one element of a page? Use Element capture (Pro): choose "Capture element" in the popup, then click the element you want.
-- Is Rendry free? Yes — full-page PNG/PDF capture, automatic clean-up of banners and popups, and the built-in editor (crop, copy, export) are free forever. Rendry Pro ($2/month) adds the features above, with a 7-day free trial.
+- Is Rendry free? Yes — full-page PNG/JPEG/PDF capture, automatic clean-up of banners and popups, and the built-in editor (crop, copy, export) are free forever. Rendry Pro ($2/month) adds the features above, with a 7-day free trial.
 
 ## Links
 
