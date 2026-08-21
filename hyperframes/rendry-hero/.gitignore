@@ -1,0 +1,6 @@
+.thumbnails/
+snapshots/
+capture/*
+!capture/screenshots/
+capture/screenshots/*
+!capture/screenshots/full-page.png
