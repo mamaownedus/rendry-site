@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rendry — Private Full-Page Screenshots (PNG, PDF, JPEG, WebP)</title>
-<meta name="description" content="Capture any full web page in one click as PNG, PDF, JPEG, or WebP — free, no watermark, no signup. Mark it up, hide sensitive details before you save, or copy a page's text, links, and tables. Everything runs on your machine. Works in Chrome, Brave, Edge, Opera, Arc, and Comet.">
+<meta name="description" content="Capture any full web page in one click as PNG, JPEG, or PDF — free, no watermark, no signup. Pro adds WebP and advanced editing. Everything runs on your machine. Works in Chrome, Brave, Edge, Opera, Arc, and Comet.">
 <meta name="theme-color" content="#4A6CF7">
 
 <!-- Open Graph / social preview -->
 <meta property="og:title" content="Rendry — Private Full-Page Screenshots (PNG, PDF, JPEG, WebP)">
-<meta property="og:description" content="Full-page screenshots as PNG, PDF, JPEG, or WebP — free, no watermark. Mark up a capture, hide sensitive details before you save, or copy its text, links, and tables. Everything runs on your machine.">
+<meta property="og:description" content="Free full-page screenshots as PNG, JPEG, or PDF — no watermark. Pro adds WebP, markup, redaction, and extraction. Everything runs on your machine.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rendry.app/">
 <meta property="og:image" content="https://rendry.app/assets/og-image.jpg">
@@ -28,7 +28,7 @@
   "name": "Rendry",
   "applicationCategory": "BrowserApplication",
   "operatingSystem": "Chrome, Brave, Edge, Opera, Arc, Comet",
-  "softwareVersion": "1.4.0",
+  "softwareVersion": "1.4.2",
   "description": "Privacy-first full-page screenshot browser extension. Capture entire web pages as PNG, PDF, JPEG, or WebP. Smart Redact automatically hides sensitive details; copy clean text, links, and tables from a capture. Screenshots never leave your machine.",
   "url": "https://rendry.app/",
   "downloadUrl": "https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn",
@@ -51,7 +51,7 @@
     "description": "Free tier included. Rendry Pro is $2/month or $20/year and starts with a 7-day free trial — no card required."
   },
   "datePublished": "2025-04-19",
-  "dateModified": "2026-06-28",
+  "dateModified": "2026-07-19",
   "creator": { "@id": "https://rendry.app/#organization" },
   "publisher": { "@id": "https://rendry.app/#organization" }
 }
@@ -78,7 +78,7 @@
     {
       "@type": "Question",
       "name": "Is Rendry really free?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text)." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier captures full pages as PNG, JPEG, or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/JPEG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, WebP export, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text)." }
     },
     {
       "@type": "Question",
@@ -93,7 +93,7 @@
     {
       "@type": "Question",
       "name": "How does the annotation editor work?",
-      "acceptedAnswer": { "@type": "Answer", "text": "\"Open in Editor\" is on by default for everyone (toggle it off in the popup for a one-click download). Right after capture, Rendry opens a new local tab with our editor. Crop, copy to clipboard, and PNG/PDF export are free; the markup tools — blur, arrows, shapes, and text — are Pro. Everything runs locally; nothing is uploaded." }
+      "acceptedAnswer": { "@type": "Answer", "text": "\"Open in Editor\" is on by default for everyone (toggle it off in the popup for a one-click download). Right after capture, Rendry opens a new local tab with our editor. Crop, copy to clipboard, and PNG/JPEG/PDF export are free; the markup tools — blur, arrows, shapes, and text — are Pro. Everything runs locally; nothing is uploaded." }
     },
     {
       "@type": "Question",
@@ -113,7 +113,7 @@
     {
       "@type": "Question",
       "name": "How do I take a full-page screenshot of a web page?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG, JPEG, or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet." }
     },
     {
       "@type": "Question",
@@ -173,9 +173,9 @@
   <section class="hero">
     <div class="container">
       <h1>Full-page screenshots.<br>Private by default.</h1>
-      <p class="hero-definition">Rendry is a privacy-first browser extension that captures an entire web page as a PNG, PDF, JPEG, or WebP in one click — with every capture processed on your own device and never uploaded.</p>
+      <p class="hero-definition">Rendry is a privacy-first browser extension that captures an entire web page as a free PNG, JPEG, or PDF — or WebP with Pro — in one click, with every capture processed on your own device and never uploaded.</p>
       <p class="subhead">
-        Capture any web page as PNG or PDF in one click, with auto-hidden cookie banners. Every capture opens in a built-in editor — crop and copy free, with Pro markup tools a click away. Everything runs 100% on your machine.
+        Capture any web page as PNG, JPEG, or PDF in one click, with auto-hidden cookie banners. Every capture opens in a built-in editor — crop and copy free, with Pro markup tools a click away. Everything runs 100% on your machine.
       </p>
       
       <div class="cta-row">
@@ -216,8 +216,6 @@
         </video>
         <button class="hero-demo-toggle" type="button" aria-label="Pause hero animation">Ⅱ</button>
       </div>
-
-
     </div>
   </section>
 
@@ -227,7 +225,7 @@
       <ul class="stat-row">
         <li><strong>4 formats</strong><span>PNG, PDF, JPEG, WebP</span></li>
         <li><strong>6 browsers</strong><span>Chrome, Brave, Edge, Opera, Arc, Comet</span></li>
-        <li><strong>$0</strong><span>full-page PNG &amp; PDF, clean-up &amp; editor</span></li>
+        <li><strong>$0</strong><span>full-page PNG, JPEG &amp; PDF, clean-up &amp; editor</span></li>
         <li><strong>$2/mo</strong><span>Pro, with a 7-day free trial</span></li>
         <li><strong>Zero</strong><span>screenshot data sent to any server</span></li>
       </ul>
@@ -251,8 +249,8 @@
         </div>
         <div class="card">
           <div class="ico">PDF</div>
-          <h3>PNG &amp; PDF formats</h3>
-          <p>Export screenshots as single-page document sheets or lossless images completely free.</p>
+          <h3>PNG, JPEG &amp; PDF formats</h3>
+          <p>Export as a lossless PNG, compact high-quality JPEG, or single-page PDF completely free.</p>
         </div>
         <div class="card">
           <div class="ico">🔒</div>
@@ -445,7 +443,7 @@
         </div>
         <div class="step">
           <h3>Save or edit</h3>
-          <p>Stitched results download as standard PNG/PDF, or open instantly in the built-in editor to crop, mark up, and export.</p>
+          <p>Stitched results download as standard PNG, JPEG, or PDF, or open instantly in the built-in editor to crop, mark up, and export.</p>
         </div>
       </div>
     </div>
@@ -521,7 +519,7 @@
           <li>Element capture (including content below the fold)</li>
           <li>Design tokens — a site's colours, fonts &amp; spacing as CSS or JSON</li>
           <li>Editor markup tools (blur, arrows, shapes, text)</li>
-          <li>Lossy JPEG &amp; WebP formats</li>
+          <li>WebP export</li>
           <li>Resolution scaling (0.5× to 3× retina)</li>
           <li>Multi-page PDF layout (A4 / Letter)</li>
           <li>Custom template filename variables</li>
@@ -561,6 +559,11 @@
               <td class="check">✓</td>
             </tr>
             <tr>
+              <td class="feature-name">JPEG Export Format</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
               <td class="feature-name">PDF Full Page Export</td>
               <td class="check">✓</td>
               <td class="check">✓</td>
@@ -591,7 +594,7 @@
               <td class="check">✓</td>
             </tr>
             <tr>
-              <td class="feature-name">JPEG &amp; WebP Export Format</td>
+              <td class="feature-name">WebP Export Format</td>
               <td class="cross">✕</td>
               <td class="check" style="color:var(--blue);">✓</td>
             </tr>
@@ -651,7 +654,7 @@
 
       <details>
         <summary>Is Rendry really free?</summary>
-        <p>Yes. The free tier captures full pages as PNG or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, lossy formats, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text).</p>
+        <p>Yes. The free tier captures full pages as PNG, JPEG, or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/JPEG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, WebP export, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text).</p>
       </details>
 
       <details>
@@ -666,7 +669,7 @@
 
       <details>
         <summary>How does the annotation editor work?</summary>
-        <p>"Open in Editor" is on by default for everyone (toggle it off in the popup for a one-click download). Right after capture, Rendry opens a new local tab with our editor. Crop, copy to clipboard, and PNG/PDF export are free; the markup tools — blur, arrows, shapes, and text — are Pro. Everything runs locally; nothing is uploaded.</p>
+        <p>"Open in Editor" is on by default for everyone (toggle it off in the popup for a one-click download). Right after capture, Rendry opens a new local tab with our editor. Crop, copy to clipboard, and PNG/JPEG/PDF export are free; the markup tools — blur, arrows, shapes, and text — are Pro. Everything runs locally; nothing is uploaded.</p>
       </details>
 
       <details>
@@ -686,7 +689,7 @@
 
       <details>
         <summary>How do I take a full-page screenshot of a web page?</summary>
-        <p>Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet.</p>
+        <p>Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG, JPEG, or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet.</p>
       </details>
 
       <details>

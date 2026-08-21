@@ -2,11 +2,11 @@
 
 ## Small Promo Tile (440 characters max)
 
-Full-page screenshots in one click. Rendry captures entire web pages as PNG or PDF — no scrolling, no stitching, no hassle. Smart lazy-load detection ensures every image appears. Built-in noise removal hides cookie banners, chat widgets, and popups automatically. Optional one-toggle copy-to-clipboard for instant pasting. Your screenshots never leave your browser — zero server calls, zero tracking, zero data collection. Works on any page. Alt+Shift+R for instant capture. Privacy-first by design.
+Full-page screenshots in one click. Capture entire web pages as PNG, JPEG, or PDF — no scrolling or stitching. Rendry loads lazy images, hides cookie banners, chat widgets, and popups, and can copy captures to your clipboard. Screenshots never leave your browser: no tracking or data collection. Works on any page. Press Alt+Shift+R to capture. Privacy-first by design.
 
 ## Marquee Promo (if applicable)
 
-Capture full-page screenshots as PNG or PDF. Privacy-first — everything stays in your browser.
+Capture full-page screenshots as PNG, JPEG, or PDF. Privacy-first — everything stays in your browser.
 
 ## One-Liner
 
@@ -18,15 +18,15 @@ One-click full-page screenshots — private, clean, and fast.
 
 ### Small Promo Tile — Pro variant (440 characters max)
 
-Rendry Pro unlocks the power tier for $2/month. Export as PNG, PDF, JPEG, or WebP. Custom filename templates with domain, date, and title tokens. Capture at different resolutions. Multi-page PDF in A4 or Letter. Editor markup tools — blur sensitive regions, add arrows, shapes, and text overlays. 3 / 5 / 10-second timed capture for menus and hovers. Still 100% local. Still privacy-first.
+Rendry Pro unlocks the power tier for $2/month. Add WebP export and adjustable compression to free PNG, JPEG, and PDF. Custom filename templates with domain, date, and title tokens. Capture at different resolutions. Multi-page PDF in A4 or Letter. Editor markup tools — blur sensitive regions, add arrows, shapes, and text overlays. 3 / 5 / 10-second timed capture for menus and hovers. Still 100% local. Still privacy-first.
 
 ### Marquee Promo — Pro variant
 
-Rendry Pro — JPEG, WebP, multi-page PDF, resolution control, and editor markup tools (blur, arrows, shapes, text). $2/month. Still local-first.
+Rendry Pro — WebP, adjustable compression, multi-page PDF, resolution control, and editor markup tools (blur, arrows, shapes, text). $2/month. Still local-first.
 
 ### One-Liner — Pro variant
 
-Rendry Pro: JPEG, WebP, multi-page PDF, resolution control, and editor markup tools (blur, arrows, shapes, text). $2/mo.
+Rendry Pro: WebP, adjustable compression, multi-page PDF, resolution control, and editor markup tools (blur, arrows, shapes, text). $2/mo.
 
 ---
 
