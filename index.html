@@ -210,9 +210,9 @@
       </div>
 
       <div class="hero-video-frame">
-        <video class="hero-demo-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-demo-poster.jpg" aria-label="Rendry captures, stitches, and redacts a full webpage">
-          <source src="assets/hero-demo.webm" type="video/webm">
-          <source src="assets/hero-demo.mp4" type="video/mp4">
+        <video class="hero-demo-video" autoplay muted loop playsinline preload="none" poster="assets/hero-demo.e9006c2f.jpg" aria-label="Rendry captures, stitches, and redacts a full webpage">
+          <source data-src="assets/hero-demo.98cb67c1.webm" type="video/webm">
+          <source data-src="assets/hero-demo.b1e7b0ff.mp4" type="video/mp4">
         </video>
         <button class="hero-demo-toggle" type="button" aria-label="Pause hero animation">Ⅱ</button>
       </div>
@@ -783,16 +783,53 @@ document.getElementById('year').textContent = new Date().getFullYear();
 document.addEventListener('DOMContentLoaded', () => {
   const heroVideo = document.querySelector('.hero-demo-video');
   const heroToggle = document.querySelector('.hero-demo-toggle');
+  const heroSources = [...heroVideo.querySelectorAll('source[data-src]')];
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  heroToggle?.addEventListener('click', () => {
+  function updateHeroToggle() {
+    const isPlaying = !heroVideo.paused;
+    heroToggle.textContent = isPlaying ? 'Ⅱ' : '▶';
+    heroToggle.setAttribute('aria-label', isPlaying ? 'Pause hero animation' : 'Play hero animation');
+  }
+
+  async function enableHeroVideo() {
+    heroSources.forEach((source) => {
+      source.src = source.dataset.src;
+    });
+    heroVideo.load();
+    try {
+      await heroVideo.play();
+    } catch {
+      updateHeroToggle();
+    }
+  }
+
+  function disableHeroVideo() {
+    heroVideo.pause();
+    heroSources.forEach((source) => source.removeAttribute('src'));
+    heroVideo.load();
+    updateHeroToggle();
+  }
+
+  function applyMotionPreference(event) {
+    if (event.matches) disableHeroVideo();
+    else enableHeroVideo();
+  }
+
+  motionPreference.addEventListener('change', applyMotionPreference);
+  heroVideo.addEventListener('play', updateHeroToggle);
+  heroVideo.addEventListener('pause', updateHeroToggle);
+  applyMotionPreference(motionPreference);
+
+  heroToggle?.addEventListener('click', async () => {
     if (heroVideo.paused) {
-      heroVideo.play();
-      heroToggle.textContent = 'Ⅱ';
-      heroToggle.setAttribute('aria-label', 'Pause hero animation');
+      try {
+        await heroVideo.play();
+      } catch {
+        updateHeroToggle();
+      }
     } else {
       heroVideo.pause();
-      heroToggle.textContent = '▶';
-      heroToggle.setAttribute('aria-label', 'Play hero animation');
     }
   });
 

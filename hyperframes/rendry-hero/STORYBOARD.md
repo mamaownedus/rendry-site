@@ -38,4 +38,4 @@
 | Asset | Source | Use |
 |---|---|---|
 | Full demo capture | `capture/screenshots/full-page.png` | scrolling capture and stitched editor canvas |
-| First viewport | `capture/screenshots/scroll-000.png` | opening browser surface |
+| Opening viewport | `capture/screenshots/full-page.png` | opening browser surface, clipped to the top of the page |
