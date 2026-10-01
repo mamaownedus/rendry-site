@@ -8,11 +8,12 @@
 - Clean output: automatically hides cookie banners, chat widgets, ads, and popups before capture.
 - Built-in editor: every capture opens in an editor — crop, copy to clipboard, and PNG/JPEG/PDF export are free.
 - Formats: PNG, JPEG, and PDF are free; WebP and adjustable compression are Pro.
+- Smart Redact preview: find sensitive details locally. The free preview remains unblurred and pauses automatic clipboard copy so you can review the capture.
 - Keyboard shortcut: Alt+Shift+R for instant capture.
 
-## Rendry Pro ($2/month, with a 7-day free trial)
+## Rendry Pro ($2/month or $20/year, with a no-card 7-day free trial)
 
-- Smart Redact: automatically hides sensitive details before you save, and lets you review, undo, or restore any of them in the editor.
+- Smart Redact: starting the Pro trial applies blur to detected details on the same open capture. Review, undo, or restore each match before you export or copy. The trial does not start a subscription automatically.
 - Copy text, links, and tables: turn any capture into clean, ready-to-paste text, a tidy list of links, or a spreadsheet-ready table.
 - Design tokens: grab a page's colours, fonts, and spacing in one click (as CSS variables or JSON).
 - Element capture: click any element to capture just it, including content that scrolls below the fold.
@@ -38,7 +39,7 @@
 ## FAQ
 
 - Does Rendry upload my screenshots? No. Everything happens in your browser; the only network request is license verification. Your screenshots and page content never leave your machine.
-- How do I hide sensitive data in a screenshot? Turn on "Redact sensitive data" in the Rendry popup. Smart Redact (Pro) automatically hides sensitive details before you save, and you can review or undo each one in the editor.
+- How do I hide sensitive data in a screenshot? Turn on Smart Redact in the Rendry popup to detect sensitive details locally. The free preview remains unblurred. Start the Pro trial to blur them on the same capture, then review each match before exporting or copying.
 - Can I get the text from a screenshot? Yes. Rendry Pro lets you copy clean, ready-to-paste text, links, and tables from any capture via the editor's Extract panel.
 - How do I capture just one element of a page? Use Element capture (Pro): choose "Capture element" in the popup, then click the element you want.
 - Is Rendry free? Yes — full-page PNG/JPEG/PDF capture, automatic clean-up of banners and popups, and the built-in editor (crop, copy, export) are free forever. Rendry Pro ($2/month) adds the features above, with a 7-day free trial.

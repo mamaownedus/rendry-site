@@ -1,0 +1,22 @@
+# Development files are not public site assets.
+.git
+.github/
+.gitignore
+.assetsignore
+.codex/
+.agents/
+.wrangler/
+.vscode/
+.idea/
+.DS_Store
+.env*
+.dev.vars*
+node_modules/
+tests/
+hyperframes/
+README.md
+AGENTS.md
+CLAUDE.md
+wrangler.jsonc
+*.log
+*.code-workspace
