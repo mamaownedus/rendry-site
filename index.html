@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rendry — Private Full-Page Screenshots (PNG, PDF, JPEG, WebP)</title>
-<meta name="description" content="Capture any full web page in one click as PNG, JPEG, or PDF — free, no watermark, no signup. Pro adds WebP and advanced editing. Everything runs on your machine. Works in Chrome, Brave, Edge, Opera, Arc, and Comet.">
+<title>Rendry — Share Full-Page Screenshots Without Exposing Private Details</title>
+<meta name="description" content="Capture a full webpage for free. Find sensitive details locally, then use the no-card Pro trial to blur and review them before sharing. Your screenshots stay on your device.">
 <meta name="theme-color" content="#4A6CF7">
 
 <!-- Open Graph / social preview -->
-<meta property="og:title" content="Rendry — Private Full-Page Screenshots (PNG, PDF, JPEG, WebP)">
-<meta property="og:description" content="Free full-page screenshots as PNG, JPEG, or PDF — no watermark. Pro adds WebP, markup, redaction, and extraction. Everything runs on your machine.">
+<meta property="og:title" content="Rendry — Share Full-Page Screenshots Without Exposing Private Details">
+<meta property="og:description" content="Capture a full webpage for free. Find sensitive details locally, then blur and review them with Pro before sharing.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rendry.app/">
 <meta property="og:image" content="https://rendry.app/assets/og-image.jpg">
@@ -28,15 +28,15 @@
   "name": "Rendry",
   "applicationCategory": "BrowserApplication",
   "operatingSystem": "Chrome, Brave, Edge, Opera, Arc, Comet",
-  "softwareVersion": "1.4.2",
-  "description": "Privacy-first full-page screenshot browser extension. Capture entire web pages as PNG, PDF, JPEG, or WebP. Smart Redact automatically hides sensitive details; copy clean text, links, and tables from a capture. Screenshots never leave your machine.",
+  "softwareVersion": "1.4.4",
+  "description": "Privacy-first full-page screenshot browser extension. Capture entire web pages as PNG, PDF, JPEG, or WebP. Smart Redact detects sensitive details locally and blurs them with Pro; copy clean text, links, and tables from a capture. Screenshots never leave your machine.",
   "url": "https://rendry.app/",
   "downloadUrl": "https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn",
   "featureList": [
     "Full-page screenshot capture (PNG, PDF, JPEG, WebP)",
     "Automatic removal of cookie banners, chat widgets, ads, and popups",
     "Built-in editor: crop, copy, blur, arrows, shapes, text",
-    "Smart Redact: automatically hide sensitive details before you save",
+    "Smart Redact: detect locally, blur with Pro, and review before sharing",
     "Copy clean text, links, and tables from a capture (Markdown, CSV, TSV)",
     "Design tokens: a page's colours, fonts, and spacing as CSS variables or JSON",
     "Element/region capture",
@@ -51,7 +51,7 @@
     "description": "Free tier included. Rendry Pro is $2/month or $20/year and starts with a 7-day free trial — no card required."
   },
   "datePublished": "2025-04-19",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-09-30",
   "creator": { "@id": "https://rendry.app/#organization" },
   "publisher": { "@id": "https://rendry.app/#organization" }
 }
@@ -78,7 +78,7 @@
     {
       "@type": "Question",
       "name": "Is Rendry really free?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier captures full pages as PNG, JPEG, or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/JPEG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, WebP export, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text)." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier captures full pages as PNG, JPEG, or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/JPEG/PDF export) — without an account or screenshot uploads. Pro adds Smart Redact blur and review, the Extract panel (copy a page's text, links, tables, and design tokens), element capture, WebP export, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text)." }
     },
     {
       "@type": "Question",
@@ -113,7 +113,7 @@
     {
       "@type": "Question",
       "name": "How do I take a full-page screenshot of a web page?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG, JPEG, or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Install Rendry, open a regular website, and click the Rendry icon — or press Alt+Shift+R. It captures the page top to bottom in one click, including lazy-loaded images, and saves it as a PNG, JPEG, or PDF. Chrome blocks extensions from scripting browser-managed pages such as the Chrome Web Store." }
     },
     {
       "@type": "Question",
@@ -123,7 +123,7 @@
     {
       "@type": "Question",
       "name": "How do I hide sensitive details in a screenshot before sharing it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Turn on Smart Redact (Pro) in the Rendry popup and it hides sensitive details before you save, then lets you review, undo, or restore each one in the editor — so a bug report or support reply never leaks private information. Everything stays on your machine." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Turn on Smart Redact in the Rendry popup to detect sensitive details locally. Start the Pro trial to blur them on the same capture before you save, then review or restore each one in the editor to reduce accidental sharing of private information. Everything stays on your machine." }
     },
     {
       "@type": "Question",
@@ -172,11 +172,8 @@
   <!-- ─── Hero ─────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="container">
-      <h1>Full-page screenshots.<br>Private by default.</h1>
-      <p class="hero-definition">Rendry is a privacy-first browser extension that captures an entire web page as a free PNG, JPEG, or PDF — or WebP with Pro — in one click, with every capture processed on your own device and never uploaded.</p>
-      <p class="subhead">
-        Capture any web page as PNG, JPEG, or PDF in one click, with auto-hidden cookie banners. Every capture opens in a built-in editor — crop and copy free, with Pro markup tools a click away. Everything runs 100% on your machine.
-      </p>
+      <h1>Share the page.<br>Hide the secrets.</h1>
+      <p class="hero-definition">Capture full webpages as PNG, JPEG, or PDF for free. Smart Redact finds sensitive details on your device; Pro blurs them on the same capture for review before sharing.</p>
       
       <div class="cta-row">
         <a class="btn btn-primary btn-lg" id="hero-primary-cta" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">
@@ -210,12 +207,13 @@
       </div>
 
       <div class="hero-video-frame">
-        <video class="hero-demo-video" autoplay muted loop playsinline preload="none" poster="assets/hero-demo.e9006c2f.jpg" aria-label="Rendry captures, stitches, and redacts a full webpage">
+        <video class="hero-demo-video" autoplay muted loop playsinline preload="none" poster="assets/hero-demo.e9006c2f.jpg" aria-label="Rendry Pro trial demo: capture, stitch, and redact a full webpage">
           <source data-src="assets/hero-demo.98cb67c1.webm" type="video/webm">
           <source data-src="assets/hero-demo.b1e7b0ff.mp4" type="video/mp4">
         </video>
         <button class="hero-demo-toggle" type="button" aria-label="Pause hero animation">Ⅱ</button>
       </div>
+      <p class="video-caption">Demo shows Smart Redact with Pro active. Free detection leaves the image unblurred.</p>
     </div>
   </section>
 
@@ -359,7 +357,7 @@
         <div class="card">
           <div class="ico">🛡️</div>
           <h3>Smart Redact <span class="badge">PRO</span></h3>
-          <p>Automatically hide sensitive details before you save — then review, undo, or restore any of them in the editor. Nothing ever leaves your machine.</p>
+          <p>Detect sensitive details locally. Start a no-card Pro trial to blur them on the same capture, then review or restore each match before sharing.</p>
         </div>
         <div class="card">
           <div class="ico">📋</div>
@@ -654,7 +652,7 @@
 
       <details>
         <summary>Is Rendry really free?</summary>
-        <p>Yes. The free tier captures full pages as PNG, JPEG, or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/JPEG/PDF export) — all without any server dependencies. Pro adds Smart Redact (auto-hide sensitive details), the Extract panel (copy a page's text, links, tables, and design tokens), element capture, WebP export, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text).</p>
+        <p>Yes. The free tier captures full pages as PNG, JPEG, or PDF, handles lazy-loaded images, hides annoying cookie banners/chat widgets, warns about infinite scroll, and includes the built-in editor (crop, copy, and PNG/JPEG/PDF export) — without an account or screenshot uploads. Pro adds Smart Redact blur and review, the Extract panel (copy a page's text, links, tables, and design tokens), element capture, WebP export, resolution controls, compression presets, and the editor's markup tools (blur, arrows, shapes, text).</p>
       </details>
 
       <details>
@@ -689,7 +687,7 @@
 
       <details>
         <summary>How do I take a full-page screenshot of a web page?</summary>
-        <p>Install Rendry, open the page, and click the Rendry icon — or press Alt+Shift+R. It captures the entire page top to bottom in one click, including lazy-loaded images, and saves it as a PNG, JPEG, or PDF. No scrolling, no stitching, no DevTools. It works the same across Chrome, Brave, Edge, Opera, Arc, and Comet.</p>
+        <p>Install Rendry, open a regular website, and click the Rendry icon — or press Alt+Shift+R. It captures the page top to bottom in one click, including lazy-loaded images, and saves it as a PNG, JPEG, or PDF. Chrome blocks extensions from scripting browser-managed pages such as the Chrome Web Store.</p>
       </details>
 
       <details>
@@ -699,7 +697,7 @@
 
       <details>
         <summary>How do I hide sensitive details in a screenshot before sharing it?</summary>
-        <p>Turn on Smart Redact (Pro) in the Rendry popup and it <a href="/uses/redact-a-screenshot">hides sensitive details</a> before you save, then lets you review, undo, or restore each one in the editor — so a bug report or support reply never leaks private information. Everything stays on your machine.</p>
+        <p>Turn on Smart Redact in the Rendry popup to detect sensitive details locally. Start the Pro trial to <a href="/uses/redact-a-screenshot">blur them on the same capture</a> before you save, then review or restore each one in the editor to reduce accidental sharing of private information. Everything stays on your machine.</p>
       </details>
 
       <details>
@@ -773,7 +771,7 @@
     </div>
     <div class="legal">
       <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
-      <span class="updated">Last updated July 2026</span>
+      <span class="updated">Last updated September 2026</span>
       <span>Chrome is a trademark of Google LLC.</span>
     </div>
   </div>

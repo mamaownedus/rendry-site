@@ -28,7 +28,26 @@ The extension source is currently private.
     └── workflows/
 ```
 
-No build step. Static files served directly by Cloudflare Pages.
+No build step. Static files are served by the Cloudflare Worker `rendry-site`,
+configured in `wrangler.jsonc`. Its custom domains are `rendry.app` and
+`www.rendry.app`.
+
+## Verify and release
+
+Run `node --test tests/*.test.mjs` and `git diff --check` before release. Check the
+homepage, changelog, edited guides, and press-kit downloads on desktop and mobile.
+
+Workers Builds watches `main` in this repository and runs `npx wrangler deploy`
+after a merge. Other branches run `npx wrangler versions upload`, which prepares
+a version without changing production traffic. These settings were checked in
+Cloudflare on 2026-09-30. A successful PR build is not a production deployment.
+
+Merge only after the corresponding extension version is live in the Chrome Web
+Store and production publication has been authorized. After the build succeeds,
+verify the live homepage version, changelog, guides, install links, and downloads.
+
+`.assetsignore` excludes development files and video source material from the
+public upload. The rendered hero media and public Markdown copies remain assets.
 
 ## License
 

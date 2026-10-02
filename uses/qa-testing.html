@@ -24,7 +24,7 @@
   "headline": "Screenshots for QA & bug reports — capture, mark up, redact",
   "description": "Capture the page, mark it up with arrows and notes, hide sensitive details, and file a clean bug report. Export every link to check for broken ones. Local-first, nothing uploaded.",
   "datePublished": "2026-06-28",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-09-30",
   "author": {
     "@type": "Organization",
     "name": "MamaOwned LLC",
@@ -77,7 +77,7 @@
       "name": "Can I hide sensitive data before sharing a bug screenshot?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Smart Redact (Pro) hides sensitive details before you save, and lets you review, undo, or restore each one in the editor. You can also blur any region by hand. Redaction runs in your browser, so private information never leaves your machine."
+        "text": "Yes. Smart Redact detects potential sensitive details for free, then Pro blurs them on the same capture for review before you save. You can also blur any region by hand. Redaction runs in your browser, so private information never leaves your machine."
       }
     },
     {
@@ -101,7 +101,7 @@
       "name": "Is Rendry free for bug reports?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The core is free: full-page PNG, JPEG, and PDF capture, automatic clean-up of banners and popups, and the editor's crop, copy, and export. Markup tools, Smart Redact, element capture, and copying links are Pro ($2/month) with a 7-day free trial."
+        "text": "The core is free: full-page PNG, JPEG, and PDF capture, automatic clean-up of banners and popups, the editor's crop, copy, and export, and Smart Redact detection. Smart Redact blur and review, markup tools, element capture, and copying links are Pro ($2/month or $20/year) with a no-card 7-day free trial."
       }
     }
   ]
@@ -134,10 +134,10 @@
 
 <h2>How do I capture a screenshot for a bug report?</h2>
 <p>Open the page where the bug appears and press Alt+Shift+R, or click the Rendry icon and hit capture. You get the entire page — including content that loads as you scroll — as a single clean image, so a reviewer sees the full context rather than a cropped viewport. Cookie banners, chat widgets, ads, and popups are tidied away automatically, so the report shows the actual defect and not the clutter around it.</p>
-<p>Full-page PNG, JPEG, and PDF capture is free, with no watermark and no signup. Every capture opens in the built-in editor, where crop, copy to clipboard, and PNG/JPEG/PDF export are also free — enough to attach a precise, readable screenshot to any ticket.</p>
+<p>Full-page PNG, JPEG, and PDF capture is free, with no watermark and no signup. Captures open in the built-in editor by default, where crop, copy to clipboard, and PNG/JPEG/PDF export are also free — enough to attach a precise, readable screenshot to any ticket.</p>
 
 <h2>How do I redact a bug-report screenshot?</h2>
-<p>Bug reports often pass through Jira, Slack, or a shared drive, so a screenshot can quietly expose a customer's email, a token, or an account number. Smart Redact (Pro) hides sensitive details before you save, then lets you review, undo, or restore each one in the editor — so you can file the bug without leaking the next person's data. For anything else, the editor's blur tool covers a region by hand.</p>
+<p>Bug reports often pass through Jira, Slack, or a shared drive, so a screenshot can quietly expose a customer's email, a token, or an account number. Smart Redact detects potential sensitive details in the free preview. The no-card Pro trial blurs them on the same capture so you can review or restore each match before filing the bug. For anything else, the editor's blur tool covers a region by hand.</p>
 <p>Everything stays on your machine; redaction happens in the browser and nothing is uploaded. See <a href="/uses/redact-a-screenshot">how to redact a screenshot</a> for the full walk-through.</p>
 
 <h2>How do I mark up a screenshot with arrows and notes?</h2>
@@ -160,13 +160,13 @@
 <h3>What's the fastest way to take a screenshot for a bug report?</h3>
 <p>Press Alt+Shift+R on the affected page. Rendry captures the entire page in one click — no scrolling or DevTools — and opens it in the editor where you can mark up the issue and export. Full-page PNG, JPEG, and PDF capture is free, with no watermark and no account.</p>
 <h3>Can I hide sensitive data before sharing a bug screenshot?</h3>
-<p>Yes. Smart Redact (Pro) hides sensitive details before you save, and lets you review, undo, or restore each one in the editor. You can also blur any region by hand. Redaction runs in your browser, so private information never leaves your machine.</p>
+<p>Yes. Smart Redact detects potential sensitive details for free, then Pro blurs them on the same capture for review before you save. You can also blur any region by hand. Redaction runs in your browser, so private information never leaves your machine.</p>
 <h3>How do I capture just the broken component instead of the whole page?</h3>
 <p>Use element capture (Pro): choose Capture element in the popup, then click the part of the page you want. Rendry grabs only that element — including content scrolled below the fold — keeping your bug report focused on the defect rather than the surrounding layout.</p>
 <h3>Can Rendry help me find broken links on a page?</h3>
 <p>Yes. With Pro you can copy a page's links from a capture as a clean, complete list, ready to paste into a link checker or spreadsheet. It's a quick way to audit navigation, footers, and CTAs for dead links during QA.</p>
 <h3>Is Rendry free for bug reports?</h3>
-<p>The core is free: full-page PNG, JPEG, and PDF capture, automatic clean-up of banners and popups, and the editor's crop, copy, and export. Markup tools, Smart Redact, element capture, and copying links are Pro ($2/month) with a 7-day free trial.</p>
+<p>The core is free: full-page PNG, JPEG, and PDF capture, automatic clean-up of banners and popups, the editor's crop, copy, and export, and Smart Redact detection. Smart Redact blur and review, markup tools, element capture, and copying links are Pro ($2/month or $20/year) with a no-card 7-day free trial.</p>
 <hr>
 <p><a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/rendry/naobjfpheeabjhmmjhoabikmejgnfejn" target="_blank" rel="noopener">Add to Chrome — it's free</a></p>
 <p class="meta">Free full-page PNG, JPEG &amp; PDF capture, automatic clean-up, and the built-in editor — no signup, no watermark. <a href="/">Back to home</a>.</p>
@@ -217,7 +217,7 @@
     </div>
     <div class="legal">
       <span>&copy; <span id="year">2026</span> MamaOwned LLC. All rights reserved.</span>
-      <span class="updated">Last updated July 2026</span>
+      <span class="updated">Last updated September 2026</span>
       <span>Chrome is a trademark of Google LLC.</span>
     </div>
   </div>

@@ -397,6 +397,13 @@ code {
   height: 100%;
   object-fit: cover;
 }
+.video-caption {
+  max-width: 960px;
+  margin: 12px auto 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
 .hero-demo-toggle {
   position: absolute;
   right: 14px;

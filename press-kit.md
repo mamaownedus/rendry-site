@@ -1,38 +1,25 @@
 # Rendry — Promotional Text
 
-## Small Promo Tile (440 characters max)
+These are optional press and promotional lines for the 1.4.4 update. Capture and page content stay on-device; ExtensionPay handles Pro license verification and billing.
 
-Full-page screenshots in one click. Capture entire web pages as PNG, JPEG, or PDF — no scrolling or stitching. Rendry loads lazy images, hides cookie banners, chat widgets, and popups, and can copy captures to your clipboard. Screenshots never leave your browser: no tracking or data collection. Works on any page. Press Alt+Shift+R to capture. Privacy-first by design.
+## Small promo tile (440 characters max)
 
-## Marquee Promo (if applicable)
+Capture an entire web page as PNG, JPEG, or PDF for free. Rendry loads lazy images and opens the result in a built-in editor. Smart Redact finds sensitive details locally in a free preview that remains unblurred. Start a no-card 7-day Pro trial to blur and review those same details before sharing. Your captures stay on your device.
 
-Capture full-page screenshots as PNG, JPEG, or PDF. Privacy-first — everything stays in your browser.
+## Marquee promo
 
-## One-Liner
+Full-page screenshots, free. Detect sensitive details locally, then blur and review them with Rendry Pro before sharing.
 
-One-click full-page screenshots — private, clean, and fast.
+## One-liner
 
----
+Full-page screenshots that keep captures on your device.
 
-## Rendry Pro ($2/mo)
+## Pro promo
 
-### Small Promo Tile — Pro variant (440 characters max)
+Rendry Pro blurs Smart Redact detections on the same capture so you can review each match before export. It also adds WebP, page-content extraction, element capture, and markup tools. Try it free for 7 days with no card; subscribe for $2/month or $20/year afterward. The trial does not start a subscription automatically.
 
-Rendry Pro unlocks the power tier for $2/month. Add WebP export and adjustable compression to free PNG, JPEG, and PDF. Custom filename templates with domain, date, and title tokens. Capture at different resolutions. Multi-page PDF in A4 or Letter. Editor markup tools — blur sensitive regions, add arrows, shapes, and text overlays. 3 / 5 / 10-second timed capture for menus and hovers. Still 100% local. Still privacy-first.
+## Assets and current copy
 
-### Marquee Promo — Pro variant
-
-Rendry Pro — WebP, adjustable compression, multi-page PDF, resolution control, and editor markup tools (blur, arrows, shapes, text). $2/month. Still local-first.
-
-### One-Liner — Pro variant
-
-Rendry Pro: WebP, adjustable compression, multi-page PDF, resolution control, and editor markup tools (blur, arrows, shapes, text). $2/mo.
-
----
-
-## See also
-
-- [LISTING.md](LISTING.md) — full Chrome Web Store listing copy
-- [PRIVACY_POLICY.md](PRIVACY_POLICY.md) — privacy policy
-- [../README.md](../README.md) — extension overview
-- [../PAYMENT.md](../PAYMENT.md) — how Pro billing works
+- [Five illustrative screenshot previews](https://github.com/mamaownedus/rendry-site/tree/main/assets/screenshots) use sample content.
+- [Prepared Chrome Web Store description](store-listing.md) mirrors the 1.4.4 extension release copy.
+- [Privacy policy](privacy.html) explains local processing and license checks.

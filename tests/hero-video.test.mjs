@@ -11,7 +11,7 @@ test('hero uses an accessible lightweight product demo video', () => {
   assert.match(html, /poster="assets\/hero-demo\.[a-f0-9]{8}\.jpg"/);
   assert.match(html, /<source data-src="assets\/hero-demo\.[a-f0-9]{8}\.webm" type="video\/webm">/);
   assert.match(html, /<source data-src="assets\/hero-demo\.[a-f0-9]{8}\.mp4" type="video\/mp4">/);
-  assert.match(html, /aria-label="Rendry captures, stitches, and redacts a full webpage"/);
+  assert.match(html, /aria-label="Rendry Pro trial demo: capture, stitch, and redact a full webpage"/);
 });
 
 test('hero demo media files exist and remain suitable for a landing page', () => {
