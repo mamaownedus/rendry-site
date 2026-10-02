@@ -207,9 +207,9 @@
       </div>
 
       <div class="hero-video-frame">
-        <video class="hero-demo-video" autoplay muted loop playsinline preload="none" poster="assets/hero-demo.e9006c2f.jpg" aria-label="Rendry Pro trial demo: capture, stitch, and redact a full webpage">
-          <source data-src="assets/hero-demo.98cb67c1.webm" type="video/webm">
-          <source data-src="assets/hero-demo.b1e7b0ff.mp4" type="video/mp4">
+        <video class="hero-demo-video" autoplay muted loop playsinline preload="none" poster="assets/hero-demo.8652381c.jpg" aria-label="Rendry Pro trial demo: capture, stitch, and redact a full webpage">
+          <source data-src="assets/hero-demo.dbebf798.webm" type="video/webm">
+          <source data-src="assets/hero-demo.aab8525a.mp4" type="video/mp4">
         </video>
         <button class="hero-demo-toggle" type="button" aria-label="Pause hero animation">Ⅱ</button>
       </div>
@@ -294,58 +294,78 @@
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Rendry Pro</div>
-        <h2>Polished annotation tools. Local-first.</h2>
-        <p>The built-in editor is free for everyone — crop, copy, and export. These markup tools unlock with Pro, so you can highlight and sanitize screenshots without ever leaving the page or exposing your data.</p>
+        <h2>Turn a capture into a clear bug report.</h2>
+        <p>Point to the problem, protect a private detail, and add the context your team needs. Arrow, Shape, Blur, and Text are Pro tools. Crop, copy, and PNG/JPEG/PDF export are free.</p>
       </div>
-      
-      <div class="pro-features-layout">
-        <div class="pro-features-text">
-          <div class="pro-feature-item active" data-demo="arrow" id="tab-arrow">
-            <h3><span>Vector Arrows &amp; Shapes</span><span class="badge">PRO</span></h3>
-            <p>Draw smooth arrows, borders, and shapes. Perfect for detailing feature designs, highlighting bugs, or creating user walk-throughs.</p>
-          </div>
-          <div class="pro-feature-item" data-demo="blur" id="tab-blur">
-            <h3><span>Privacy Blur &amp; Pixelate</span><span class="badge">PRO</span></h3>
-            <p>Sanitize screenshots in seconds. Cover any sensitive details with a clean blur or pixelate — perfect for sharing bug reports and demos without exposing private information.</p>
-          </div>
-          <div class="pro-feature-item" data-demo="text" id="tab-text">
-            <h3><span>Text Annotations</span><span class="badge">PRO</span></h3>
-            <p>Add notes, directions, or headings directly onto your capture image with clean typography that matches your target resolution.</p>
-          </div>
+
+      <div class="annotation-workflow" data-step="1">
+        <div class="annotation-steps" role="tablist" aria-label="Annotation workflow steps" aria-orientation="vertical">
+          <button class="annotation-step" type="button" role="tab" id="annotation-step-1" aria-controls="annotation-preview" aria-selected="true" data-step="1" data-tool="arrow">
+            <span class="step-number" aria-hidden="true">01</span>
+            <span><strong><span class="step-verb">Point with </span>Arrow <kbd>A</kbd></strong><span class="step-description">Click and drag toward the issue. Adjust the colour and line width.</span></span>
+          </button>
+          <button class="annotation-step" type="button" role="tab" id="annotation-step-2" aria-controls="annotation-preview" aria-selected="false" tabindex="-1" data-step="2" data-tool="shape">
+            <span class="step-number" aria-hidden="true">02</span>
+            <span><strong><span class="step-verb">Outline with </span>Shape <kbd>S</kbd></strong><span class="step-description">Choose Rectangle, then drag around the affected control. Ellipse and Line work too.</span></span>
+          </button>
+          <button class="annotation-step" type="button" role="tab" id="annotation-step-3" aria-controls="annotation-preview" aria-selected="false" tabindex="-1" data-step="3" data-tool="blur">
+            <span class="step-number" aria-hidden="true">03</span>
+            <span><strong><span class="step-verb">Protect with </span>Blur <kbd>B</kbd></strong><span class="step-description">Drag over just the private value. Choose Gaussian or Pixelate and adjust the strength.</span></span>
+          </button>
+          <button class="annotation-step" type="button" role="tab" id="annotation-step-4" aria-controls="annotation-preview" aria-selected="false" tabindex="-1" data-step="4" data-tool="text">
+            <span class="step-number" aria-hidden="true">04</span>
+            <span><strong><span class="step-verb">Add </span>Text<span class="step-verb">, then export</span> <kbd>T</kbd></strong><span class="step-description">Click to type a note, press Enter, then choose PNG and Export to save your marked-up capture.</span></span>
+          </button>
         </div>
-        
-        <div class="pro-features-demo-window">
-          <div class="demo-canvas-viewport">
-            <div class="demo-image-card">
-              <!-- Basic simulated dashboard layout -->
-              <div class="db-logo" style="margin-bottom:12px;"><div class="db-logo-icon"></div></div>
-              <div style="width:100%;height:10px;background:rgba(255,255,255,0.06);border-radius:2px;margin-bottom:8px;"></div>
-              <div style="width:70%;height:10px;background:rgba(255,255,255,0.04);border-radius:2px;margin-bottom:20px;"></div>
-              <div style="flex-grow:1;display:flex;align-items:center;justify-content:center;">
-                
-                <!-- Arrow demo visualization -->
-                <div class="demo-visual-block active" id="demo-visual-arrow">
-                  <svg class="arrow-demo-svg" viewBox="0 0 400 250" aria-hidden="true">
-                    <rect x="110" y="55" width="180" height="140" rx="6" stroke="#ef4444" stroke-width="4" fill="none" class="rect-glow-line" />
-                  </svg>
-                </div>
-                
-                <!-- Blur demo visualization -->
-                <div class="demo-visual-block" id="demo-visual-blur">
-                  <div class="blur-demo-overlay">
-                    <div class="blur-box-simulation"><span class="blur-text">api_key_8x10f...</span></div>
-                    <span class="blur-label">Hidden before you share</span>
-                  </div>
-                </div>
-                
-                <!-- Text demo visualization -->
-                <div class="demo-visual-block" id="demo-visual-text">
-                  <div class="text-demo-overlay">Change this typography!</div>
-                </div>
-                
-              </div>
+
+        <div class="annotation-preview" id="annotation-preview" role="tabpanel" aria-labelledby="annotation-step-1" tabindex="0">
+          <figure>
+            <div class="annotation-preview-heading"><span>Workflow preview</span><span>Sample capture</span></div>
+            <p class="annotation-instruction">Click and drag toward the issue. Adjust the colour and line width.</p>
+            <div class="annotation-toolbar" aria-hidden="true">
+              <span>Pan</span><span>Crop</span><span data-preview-tool="blur">Blur</span><span class="selected" data-preview-tool="arrow">Arrow</span><span data-preview-tool="shape">Shape</span><span data-preview-tool="text">Text</span>
             </div>
-          </div>
+            <div class="annotation-options" aria-hidden="true">
+              <span data-options="1">Arrow <span class="annotation-swatch"></span> Red · 4 px (example)</span>
+              <span data-options="2" hidden>Shape · Rectangle <span class="annotation-swatch"></span> Red · 4 px (example)</span>
+              <span data-options="3" hidden>Blur · Gaussian · Strength 20</span>
+              <span data-options="4" hidden>Text <span class="annotation-swatch"></span> Red · 24 px (example)</span>
+            </div>
+            <svg class="annotation-capture" viewBox="0 0 640 418" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="annotation-email-blur" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="4"/></filter>
+                <clipPath id="annotation-email-bounds"><rect id="annotation-email-region" x="330" y="156" width="164" height="28"/></clipPath>
+              </defs>
+              <rect width="640" height="418" fill="#f6f7fb"/>
+              <g font-family="Arial, sans-serif">
+                <text x="32" y="46" fill="#18243a" font-size="24" font-weight="700">Account settings</text>
+                <text x="32" y="76" fill="#526078" font-size="15">Update your profile and preferences.</text>
+                <rect x="30" y="104" width="580" height="204" rx="8" fill="white" stroke="#d9deea"/>
+                <g fill="#526078" font-size="14"><text x="50" y="137">Name</text><text x="320" y="137">Email</text></g>
+                <g fill="#f8f9fc" stroke="#d9deea"><rect x="50" y="148" width="246" height="46" rx="4"/><rect x="320" y="148" width="266" height="46" rx="4"/></g>
+                <text x="64" y="177" fill="#25334c" font-size="17">Jamie Rivera</text>
+                <g clip-path="url(#annotation-email-bounds)"><text class="annotation-email" x="334" y="177" fill="#25334c" font-size="17">demo@example.test</text></g>
+                <use class="annotation-blur-selection" href="#annotation-email-region" fill="none" stroke="#4a90d9" stroke-width="2"/>
+                <rect x="50" y="223" width="18" height="18" rx="3" fill="#edf0f8" stroke="#a8b2c6"/>
+                <text x="78" y="237" fill="#526078" font-size="15">Email me product updates</text>
+                <rect x="383" y="238" width="202" height="46" rx="5" fill="#e6e9f0"/>
+                <text x="484" y="267" text-anchor="middle" fill="#5b6880" font-size="17">Save changes</text>
+                <g fill="none" stroke="#ff0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M180 284 L365 266 M351 259 L365 266 L353 276"/>
+                  <rect class="annotation-layer" data-layer="2" x="375" y="230" width="218" height="62"/>
+                </g>
+                <text class="annotation-layer" data-layer="4" x="62" y="358" fill="#ff0000" font-size="24">Enable after editing</text>
+                <text x="32" y="396" fill="#526078" font-size="13">Sample content · no customer data</text>
+              </g>
+            </svg>
+            <div class="annotation-export" aria-hidden="true"><span>PNG</span><span class="annotation-export-label">Export</span></div>
+            <figcaption class="annotation-caption" aria-live="polite">
+              <span data-caption="1">Arrow points to the disabled Save changes button. Next, outline the control.</span>
+              <span data-caption="2" hidden>The arrow stays in place while a rectangle frames the affected button.</span>
+              <span data-caption="3" hidden>Only the sample email is blurred. Its label and the rest of the report stay readable.</span>
+              <span data-caption="4" hidden>“Enable after editing” explains the fix. Choose PNG and Export in the editor to save all your edits together.</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
 
@@ -834,75 +854,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Pro Features Interactive demo tabs
-  const tabItems = document.querySelectorAll('.pro-feature-item');
-  const demoVisualBlocks = document.querySelectorAll('.demo-visual-block');
-  
-  let demoInterval = null;
-  let demoTimeouts = [];
+  // One cumulative workflow. User selection owns the state; no autoplay.
+  const workflow = document.querySelector('.annotation-workflow');
+  const steps = [...workflow.querySelectorAll('[role="tab"]')];
+  const preview = workflow.querySelector('[role="tabpanel"]');
+  const caption = workflow.querySelector('.annotation-caption');
+  const captions = [...caption.querySelectorAll('[data-caption]')].map((item) => item.textContent);
+  caption.textContent = captions[0];
+  const compactWorkflow = window.matchMedia('(max-width: 860px)');
+  function updateStepOrientation() {
+    workflow.querySelector('[role="tablist"]').setAttribute('aria-orientation', compactWorkflow.matches ? 'horizontal' : 'vertical');
+  }
+  compactWorkflow.addEventListener('change', updateStepOrientation);
+  updateStepOrientation();
 
-  function clearDemoIntervals() {
-    if (demoInterval) {
-      clearInterval(demoInterval);
-      demoInterval = null;
-    }
-    demoTimeouts.forEach(t => clearTimeout(t));
-    demoTimeouts = [];
+  function selectStep(selected) {
+    const step = selected.dataset.step;
+    workflow.dataset.step = step;
+    preview.setAttribute('aria-labelledby', selected.id);
+    steps.forEach((tab) => {
+      const active = tab === selected;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    workflow.querySelectorAll('[data-preview-tool]').forEach((tool) => {
+      tool.classList.toggle('selected', tool.dataset.previewTool === selected.dataset.tool);
+    });
+    workflow.querySelectorAll('[data-options]').forEach((content) => {
+      content.hidden = content.dataset.options !== step;
+    });
+    workflow.querySelector('.annotation-instruction').textContent = selected.querySelector('.step-description').textContent;
+    caption.textContent = captions[Number(step) - 1];
   }
 
-  function runDemoCycle(block) {
-    block.classList.remove('draw-line');
-    
-    // Force reflow to reset CSS transitions properly
-    void block.offsetWidth;
-    
-    // 1. Draw line
-    block.classList.add('draw-line');
-    
-    
-    // 2. Reset after total 2.8s
-    const t1 = setTimeout(() => {
-      block.classList.remove('draw-line');
-    }, 2800);
-    demoTimeouts.push(t1);
-  }
-
-  function startDemoLoop(selectedDemo) {
-    clearDemoIntervals();
-    
-    const block = document.getElementById(`demo-visual-${selectedDemo}`);
-    if (!block) return;
-    
-    if (selectedDemo === 'arrow' || selectedDemo === 'blur') {
-      runDemoCycle(block);
-      demoInterval = setInterval(() => {
-        runDemoCycle(block);
-      }, 3200); // 2.8s cycle + 0.4s pause before restart
-    }
-  }
-
-  tabItems.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // Toggle active states on text items
-      tabItems.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      
-      // Swap active states on visual panels
-      const selectedDemo = tab.getAttribute('data-demo');
-      demoVisualBlocks.forEach(block => {
-        block.classList.remove('active');
-        if (block.id === `demo-visual-${selectedDemo}`) {
-          block.classList.add('active');
-        }
-      });
-      
-      // Control loops
-      startDemoLoop(selectedDemo);
+  steps.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectStep(tab));
+    tab.addEventListener('keydown', (event) => {
+      let next;
+      if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = (index + 1) % steps.length;
+      else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = (index - 1 + steps.length) % steps.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = steps.length - 1;
+      else return;
+      event.preventDefault();
+      selectStep(steps[next]);
+      steps[next].focus();
     });
   });
-
-  // Start the default demo loop on load
-  startDemoLoop('arrow');
 });
 </script>
 
