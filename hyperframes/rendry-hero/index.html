@@ -7,7 +7,7 @@
   <style>
     @font-face {
       font-family: "Plus Jakarta Sans";
-      src: local("Arial");
+      src: url("assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
       font-weight: 300 800;
     }
     * { box-sizing: border-box; }
@@ -113,7 +113,7 @@
     .toggle { width: 42px; height: 24px; padding: 3px; display: flex; justify-content: flex-end; border-radius: 20px; background: #10B981; }
     .toggle i { display: block; width: 18px; height: 18px; background: #F8FAFC; border-radius: 50%; }
     .capture-button { width: 100%; height: 48px; border: 0; border-radius: 10px; color: #F8FAFC; background: #3553DB; font: 800 17px "Plus Jakarta Sans"; box-shadow: 0 8px 24px rgba(74,108,247,.32); }
-    .scan-line { position: absolute; left: 0; right: 0; top: 58px; height: 4px; z-index: 26; opacity: 0; background: #4A6CF7; box-shadow: 0 0 22px #4A6CF7; }
+    .scan-line { position: absolute; left: 24px; right: 24px; top: 82px; height: 4px; z-index: 26; opacity: 0; background: #4A6CF7; box-shadow: 0 0 22px #4A6CF7; }
     .capture-status { position: absolute; left: 34px; bottom: 28px; z-index: 25; opacity: 0; display: flex; align-items: center; gap: 10px; padding: 10px 15px; border: 1px solid rgba(74,108,247,.35); border-radius: 999px; background: rgba(15,22,36,.94); color: #DCE4FF; font-size: 17px; font-weight: 700; }
     .pulse { width: 10px; height: 10px; border-radius: 50%; background: #4A6CF7; box-shadow: 0 0 12px #4A6CF7; }
     .segments { position: absolute; right: 30px; bottom: 26px; width: 130px; height: 160px; z-index: 25; opacity: 0; }
@@ -126,7 +126,8 @@
     .editor { position: absolute; inset: 58px 0 0; z-index: 40; opacity: 0; background: #040609; }
     .toolbar { height: 58px; display: flex; align-items: center; justify-content: space-between; padding: 0 22px; border-bottom: 1px solid rgba(255,255,255,.08); background: #0F131A; }
     .tools, .actions { display: flex; align-items: center; gap: 8px; }
-    .tool { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #B4BECE; border: 1px solid rgba(255,255,255,.04); font-size: 19px; }
+    .tool { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #B4BECE; border: 1px solid rgba(255,255,255,.04); }
+    .tool svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .tool.active { color: #F8FAFC; background: #3553DB; }
     .divider { width: 1px; height: 24px; background: rgba(255,255,255,.1); margin: 0 4px; }
     .actions { color: #B4BECE; font-size: 16px; }
@@ -143,12 +144,11 @@
       box-shadow: 0 28px 65px rgba(0,0,0,.58);
     }
     .stitched { background-image: url("capture/screenshots/full-page.png"); background-size: 100% auto; background-position: top center; background-repeat: no-repeat; }
-    .blur-box { position: absolute; opacity: 0; border: 2px solid #4A6CF7; border-radius: 4px; overflow: hidden; background: rgba(74,108,247,.1); backdrop-filter: blur(9px); box-shadow: 0 0 18px rgba(74,108,247,.34); }
-    .b1 { left: 247px; top: 353px; width: 180px; height: 19px; }
-    .b2 { left: 247px; top: 374px; width: 180px; height: 19px; }
-    .b3 { left: 247px; top: 396px; width: 180px; height: 19px; }
-    .b4 { left: 195px; top: 435px; width: 233px; height: 42px; }
-    .b5 { left: 195px; top: 494px; width: 398px; height: 72px; }
+    /* The screenshot and every redaction share this 1920×2185 source plane.
+       SVG scales with the image, so a responsive preview cannot drift the masks. */
+    .redaction-layer { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 2; pointer-events: none; }
+    .redaction-pixels { opacity: 0; }
+    .detection-outline { fill: none; stroke: #4A6CF7; stroke-width: 1; vector-effect: non-scaling-stroke; opacity: 0; }
     .redact-chip { position: absolute; left: 24px; bottom: 24px; opacity: 0; display: flex; align-items: center; gap: 10px; padding: 11px 16px; border-radius: 999px; color: #F8FAFC; background: #0F1624; border: 1px solid rgba(16,185,129,.45); box-shadow: 0 12px 28px rgba(0,0,0,.38); font-size: 17px; font-weight: 800; }
     .redact-chip i { width: 10px; height: 10px; display: block; border-radius: 50%; background: #10B981; box-shadow: 0 0 10px #10B981; }
     .selection-svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
@@ -188,15 +188,37 @@
       </div>
       <div data-hf-id="hf-6k2j" class="editor">
         <div data-hf-id="hf-6uyx" class="toolbar">
-          <div data-hf-id="hf-kwbd" class="tools"><span data-hf-id="hf-hfav" class="tool">↖</span><span data-hf-id="hf-1410" class="tool">⌗</span><span data-hf-id="hf-351j" class="tool">▦</span><span data-hf-id="hf-p9dg" class="divider"></span><span data-hf-id="hf-th5x" class="tool rect-tool">□</span><span data-hf-id="hf-odr1" class="tool">T</span></div>
+          <div data-hf-id="hf-kwbd" class="tools">
+            <span data-hf-id="hf-hfav" class="tool" aria-label="Pan"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /></svg></span>
+            <span data-hf-id="hf-1410" class="tool" aria-label="Crop"><svg viewBox="0 0 24 24"><path d="M6 2v14a2 2 0 0 0 2 2h14M18 22V8a2 2 0 0 0-2-2H2" /></svg></span>
+            <span data-hf-id="hf-351j" class="tool" aria-label="Blur"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" opacity=".4" /><rect x="7" y="7" width="10" height="10" rx="1" /></svg></span>
+            <span data-hf-id="hf-p9dg" class="divider"></span>
+            <span data-hf-id="hf-th5x" class="tool rect-tool" aria-label="Shape"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /></svg></span>
+            <span data-hf-id="hf-odr1" class="tool" aria-label="Text"><svg viewBox="0 0 24 24"><path d="M4 7V4h16v3M12 4v16M8 20h8" /></svg></span>
+          </div>
           <div data-hf-id="hf-zgc1" class="actions"><span data-hf-id="hf-k7an">100%</span><span data-hf-id="hf-4xxo" class="divider"></span><span data-hf-id="hf-tpfs">PNG</span><span data-hf-id="hf-ftx3" class="copy">Copy</span></div>
         </div>
         <div data-hf-id="hf-e8vj" class="workspace">
           <div data-hf-id="hf-us68" class="stitched">
-            <span data-hf-id="hf-8f5x" class="blur-box b1"></span><span data-hf-id="hf-cd9y" class="blur-box b2"></span><span data-hf-id="hf-gbdz" class="blur-box b3"></span><span data-hf-id="hf-k9i0" class="blur-box b4"></span><span data-hf-id="hf-n8rl" class="blur-box b5"></span>
+            <svg data-hf-id="hf-redact" class="redaction-layer" data-layout-allow-overflow="" viewBox="0 0 1920 2185" role="img" aria-label="Sixteen precisely bounded Smart Redact matches in the sample capture">
+              <defs>
+                <filter id="redact-blur" x="-8%" y="-8%" width="116%" height="116%"><feGaussianBlur stdDeviation="18" /></filter>
+                <clipPath id="detected-ranges">
+                  <!-- Each rect is a detected value in full-page.png source pixels. -->
+                  <rect x="740" y="836" width="189" height="18" /><rect x="975" y="838" width="122" height="11" /><rect x="1122" y="838" width="179" height="11" />
+                  <rect x="740" y="877" width="191" height="18" /><rect x="976" y="879" width="104" height="11" /><rect x="1122" y="879" width="178" height="11" />
+                  <rect x="740" y="920" width="210" height="14" /><rect x="975" y="920" width="101" height="11" /><rect x="1122" y="920" width="167" height="11" />
+                  <rect x="863" y="1030" width="95" height="11" /><rect x="863" y="1072" width="214" height="11" />
+                  <rect x="772" y="1172" width="168" height="14" /><rect x="748" y="1196" width="260" height="14" /><rect x="730" y="1220" width="336" height="14" />
+                  <rect x="723" y="1243" width="508" height="14" /><rect x="794" y="1267" width="139" height="12" />
+                </clipPath>
+              </defs>
+              <g class="redaction-pixels"><image href="capture/screenshots/full-page.png" x="0" y="0" width="1920" height="2185" preserveAspectRatio="none" filter="url(#redact-blur)" clip-path="url(#detected-ranges)" /></g>
+              <g class="detection-outlines"></g>
+            </svg>
             <svg data-hf-id="hf-4txp" class="selection-svg" viewBox="0 0 790 610" aria-hidden="true"><rect data-hf-id="hf-9wy7" x="172" y="325" width="450" height="195" rx="8" /></svg>
           </div>
-          <div data-hf-id="hf-eojy" class="redact-chip"><i data-hf-id="hf-0l8b"></i><span data-hf-id="hf-6ese">12 sensitive items hidden locally</span></div>
+          <div data-hf-id="hf-eojy" class="redact-chip"><i data-hf-id="hf-0l8b"></i><span data-hf-id="hf-6ese">16 sensitive items redacted in this capture.</span></div>
         </div>
       </div>
     </div>
@@ -207,6 +229,16 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
   <script>
     window.__timelines = window.__timelines || {};
+    // Geometry is authored only in the clip path. Build the outline layer from
+    // those exact rects before GSAP constructs the synchronous timeline.
+    const svgNs = 'http://www.w3.org/2000/svg';
+    const outlines = document.querySelector('.detection-outlines');
+    document.querySelectorAll('#detected-ranges rect').forEach((mask) => {
+      const outline = document.createElementNS(svgNs, 'rect');
+      ['x', 'y', 'width', 'height'].forEach((name) => outline.setAttribute(name, mask.getAttribute(name)));
+      outline.classList.add('detection-outline');
+      outlines.appendChild(outline);
+    });
     const tl = gsap.timeline({ paused: true });
 
     tl.fromTo('.browser', { opacity: 0, scale: .975 }, { opacity: 1, scale: 1, duration: .55, ease: 'power3.out' }, .18);
@@ -219,15 +251,15 @@
     tl.fromTo('.toggle-row', { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: .32, ease: 'expo.out' }, 1.08);
     tl.fromTo('.capture-button', { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .34, ease: 'back.out(1.5)' }, 1.18);
     tl.fromTo('.cursor', { opacity: 0, x: 1080, y: 700 }, { opacity: 1, x: 1030, y: 330, duration: .72, ease: 'power2.inOut' }, 1.18);
-    tl.fromTo('.click-ring', { opacity: 0, scale: .3, x: 1027, y: 327 }, { opacity: 1, scale: 1.8, x: 1027, y: 327, duration: .26, ease: 'expo.out' }, 1.92);
+    tl.fromTo('.click-ring', { opacity: 0, scale: .3, x: 1027, y: 327 }, { opacity: 1, scale: 1.8, x: 1027, y: 327, duration: .26, ease: 'expo.out', immediateRender: false }, 1.92);
     tl.to('.click-ring', { opacity: 0, duration: .18, ease: 'power2.in' }, 2.18);
     tl.to('.capture-button', { scale: .96, duration: .12, yoyo: true, repeat: 1, ease: 'power1.inOut' }, 1.96);
     tl.to('.popup', { opacity: 0, y: -14, scale: .96, duration: .3, ease: 'power2.in' }, 2.18);
-    tl.fromTo('.scan-line', { opacity: 0, y: 0 }, { opacity: 1, y: 694, duration: 3.1, ease: 'none' }, 2.35);
+    tl.fromTo('.scan-line', { opacity: 0, y: 0 }, { opacity: 1, y: 706, duration: 3.1, ease: 'none' }, 2.35);
     tl.fromTo('.capture-status', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(1.4)' }, 2.35);
     tl.fromTo('.segments', { opacity: 0, x: 22 }, { opacity: 1, x: 0, duration: .46, ease: 'power3.out' }, 2.7);
-    tl.to('.full-page', { y: -690, duration: 1.45, ease: 'sine.inOut' }, 2.48);
-    tl.to('.full-page', { y: -1335, duration: 1.45, ease: 'sine.inOut' }, 4.0);
+    tl.to('.full-page', { y: -345, duration: 1.45, ease: 'sine.inOut' }, 2.48);
+    tl.to('.full-page', { y: -689, duration: 1.45, ease: 'sine.inOut' }, 4.0);
     tl.fromTo('.segment:nth-child(2)', { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: .3, ease: 'circ.out' }, 3.28);
     tl.fromTo('.segment:nth-child(3)', { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: .3, ease: 'expo.out' }, 4.35);
     tl.fromTo('.stitch-label', { opacity: 0, scale: .8 }, { opacity: 1, scale: 1, duration: .38, ease: 'back.out(1.6)' }, 5.15);
@@ -239,19 +271,16 @@
     tl.fromTo('.stitched', { opacity: 0, y: 35, scale: .92 }, { opacity: 1, y: 0, scale: 1, duration: .68, ease: 'expo.out' }, 5.82);
     tl.fromTo('.tools', { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .38, ease: 'circ.out' }, 5.96);
     tl.fromTo('.actions', { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: .38, ease: 'back.out(1.3)' }, 6.04);
-    tl.fromTo('.b1', { opacity: 0, scaleX: .2 }, { opacity: 1, scaleX: 1, duration: .32, ease: 'power4.out' }, 6.55);
-    tl.fromTo('.b2', { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: .34, ease: 'expo.out' }, 6.82);
-    tl.fromTo('.b3', { opacity: 0, scale: .8 }, { opacity: 1, scale: 1, duration: .36, ease: 'back.out(1.4)' }, 7.08);
-    tl.fromTo('.b4', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .4, ease: 'power3.out' }, 7.34);
-    tl.fromTo('.b5', { opacity: 0, scaleX: .3 }, { opacity: 1, scaleX: 1, duration: .48, ease: 'circ.out' }, 7.62);
+    tl.fromTo('.redaction-pixels', { opacity: 0 }, { opacity: 1, duration: .3, ease: 'power2.out' }, 6.5);
+    tl.fromTo('.detection-outline', { opacity: 0, scale: .78, transformOrigin: 'center' }, { opacity: 1, scale: 1, duration: .24, stagger: .09, ease: 'power3.out' }, 6.52);
     tl.fromTo('.redact-chip', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: .48, ease: 'back.out(1.5)' }, 8.12);
     tl.to('.cursor', { x: 210, y: 90, duration: .68, ease: 'power2.inOut' }, 8.55);
     tl.to('.rect-tool', { backgroundColor: '#3553DB', color: '#F8FAFC', duration: .18, ease: 'power1.out' }, 9.12);
-    tl.fromTo('.click-ring', { opacity: 0, scale: .3, x: 207, y: 87 }, { opacity: 1, scale: 1.5, x: 207, y: 87, duration: .22, ease: 'expo.out' }, 9.1);
+    tl.fromTo('.click-ring', { opacity: 0, scale: .3, x: 207, y: 87 }, { opacity: 1, scale: 1.5, x: 207, y: 87, duration: .22, ease: 'expo.out', immediateRender: false }, 9.1);
     tl.to('.click-ring', { opacity: 0, duration: .14, ease: 'power1.in' }, 9.32);
-    tl.to('.cursor', { x: 355, y: 392, duration: .44, ease: 'power2.inOut' }, 9.42);
+    tl.to('.cursor', { x: 414, y: 471, duration: .44, ease: 'power2.inOut' }, 9.42);
     tl.fromTo('.selection-svg rect', { strokeDashoffset: 1430 }, { strokeDashoffset: 0, duration: 1.08, ease: 'power1.inOut' }, 9.86);
-    tl.to('.cursor', { x: 805, y: 588, duration: 1.05, ease: 'power1.inOut' }, 9.86);
+    tl.to('.cursor', { x: 864, y: 666, duration: 1.05, ease: 'power1.inOut' }, 9.86);
     tl.to('.ambient', { scale: 1.035, opacity: .85, duration: 1.2, ease: 'sine.inOut' }, 10.25);
     tl.to('.loop-cover', { opacity: 1, duration: .55, ease: 'sine.inOut' }, 11.42);
 
